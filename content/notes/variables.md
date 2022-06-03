@@ -2,18 +2,14 @@
 title: "01 - Variables"
 ---
 
-[Index](_index.md) / 01 - Variables
-
-# 01 - Variables
-
-## Définition
+# Définition
 
 Une variable est un **_conteneur_** défini par
 
 -   Son **type** : le type de données qu'elle pourra contenir
 -   Son **nom** : le nom à utiliser pour récupérer la valeur qu'elle contient
 
-## Types
+# Types
 
 Les types de variables dits **primitifs** sont les types inhérents au langage (ici, Java), on retrouve notamment
 
@@ -32,7 +28,7 @@ Note : On peut forcer un nombre décimal à être évalué comme un `float` ou u
 
 Processing propose un type spécifique pour gérer les couleurs : `color`
 
-## Déclaration
+# Déclaration
 
 Déclarer une variable permet de créer une nouvelle variable qui sera désormais utilisable dans la suite du code. Pour déclarer une variable, il faut impérativement indiquer son type et son nom :
 
@@ -46,12 +42,12 @@ Dans ce cas-ci, la variable `i` existe maintenant en processing, mais ne contien
 int i = 5;
 ```
 
-### Erreurs
+## Erreurs
 
 -   Lorsque l'on veut utiliser une variable qui n'existe pas, qui n'a pas été déclarée, processing affichera une erreur du type `The variable "j" does not exist`
 -  Lorsque l'on déclare une variable avec le même nom qu'une autre variable, processing renverra une erreur du type `Duplicate local variable i`
 
-## Assignation
+# Assignation
 
 L'assignation consiste à définir la (nouvelle) valeur d'une variable déclarée :
 
@@ -69,7 +65,7 @@ Le symbole **=** est **toujours** l'opérateur qui permet d'assigner une valeur 
 
 On peut mettre à droite d'une assignation tout ce qui sera _évalué_ par Processing au **même type** que la variable à laquelle on va assigner cette valeur.
 
-### Exemples
+## Exemples
 
 ```java
 // Déclarations
@@ -85,11 +81,11 @@ i = j; // i va contenir j -> évalué à 10
 i = j * 2; // i va contenir j * 2 -> évalué à 10 * 2 -> évalué à 20
 ```
 
-### Erreurs
+## Erreurs
 
 - Lorsque l'on veut assigner à une variable une valeur d'un type incompatible, par exemple `int i = 3.14;`, processing affichera une erreur du type `Type mismatch, "float" does not match with "int"`
 
-## Evaluation
+# Evaluation
 
 L'**évaluation** est l'interprétation, par Processing, d'un morceau de code pour en déduire une **valeur.** Peuvent être évalués :
 
@@ -114,9 +110,9 @@ i = i + 1;
 println(i); // On affiche ce que contient la variable i
 ```
 
-### Exercices
+## Exercices
 
-Que sera-t-il affiché dans la console lorsqu'on exécute le code suivant
+1. Que sera-t-il affiché dans la console lorsqu'on exécute le code suivant ?
 
 ```java
 int i = 1;
