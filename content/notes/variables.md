@@ -123,6 +123,9 @@ println(i);
 println(j);
 ```
 
+
+{{< spoiler text="Click to reveal text" >}} You found me! {{< /spoiler >}}
+
 <details> 
   <summary>Solution</summary>
   <pre><code>1
