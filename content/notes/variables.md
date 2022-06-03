@@ -123,13 +123,24 @@ println(i);
 println(j);
 ```
 
-
-{{< spoiler text="Click to reveal text" >}} You found me! {{< /spoiler >}}
-
 <details> 
   <summary>Solution</summary>
-  <pre><code>1
-3
-3
-12</code></pre>
+<div class="highlight">
+<div class="chroma">
+<table class="lntable">
+<tbody>
+<tr>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line">1</span>
+<span class="line">3</span>
+<span class="line">3</span>
+<span class="line">12</span>
+</code>
+</pre>
+</td>
+</tr>
+</tbody>
+</table>		
+</div>
+</div>
 </details>

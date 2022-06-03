@@ -23,3 +23,10 @@
   --lightgray: #292633 !important;
   --outlinegray: #343434 !important;
 }
+
+summary {
+  font-family: Source Sans Pro;
+  color: var(--gray);
+  line-height: 1.5em;
+  padding-top: 1em;
+}
