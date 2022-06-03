@@ -109,7 +109,7 @@ println(i); // On affiche ce que contient la variable i
 
 ## Exercices
 
-\1. Que sera-t-il affiché dans la console lorsqu'on exécute le code suivant ?
+1. Que sera-t-il affiché dans la console lorsqu'on exécute le code suivant ?
 
 ```java
 int i = 1;
@@ -123,7 +123,7 @@ println(i);
 println(j);
 ```
 
-%%<details> 
+<details> 
 <summary>Solution</summary>
 <div class="highlight">
 <div class="chroma">
@@ -141,4 +141,4 @@ println(j);
 </table>		
 </div>
 </div>
-</details>%%
+</details>
