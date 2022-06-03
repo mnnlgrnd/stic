@@ -1,3 +1,7 @@
+---
+title: "01 - Variables"
+---
+
 [Index](_index.md) / 01 - Variables
 
 # 01 - Variables
