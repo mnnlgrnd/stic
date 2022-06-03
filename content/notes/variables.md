@@ -123,7 +123,7 @@ println(i);
 println(j);
 ```
 
-<details> 
+<details class="solution"> 
 <summary>Solution</summary>
 <div class="highlight">
 <div class="chroma">
