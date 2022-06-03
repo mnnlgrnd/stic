@@ -14,7 +14,7 @@ Une variable est un **_conteneur_** défini par
 Les types de variables dits **primitifs** sont les types inhérents au langage (ici, Java), on retrouve notamment
 
 | Type | Valeurs |
-| --- | --- |
+| :-- | :-- |
 | `boolean` | `true` ou `false` |
 | `char` | Caractère, toujours écrit entre `''`, par exemple `'a'`
 | `short` | Petit nombre entier entre `-128` et `127`
