@@ -1,4 +1,4 @@
-name: Jacky Zhao
+name: Manon Legrand
 enableToc: true
 openToc: false
 enableLinkPreview: true
@@ -8,12 +8,9 @@ enableFooter: true
 enableContextualBacklinks: true
 enableRecentNotes: false
 description:
-  Host your second brain and digital garden for free. Quartz features extremely fast full-text search,
-  Wikilink support, backlinks, local graph, tags, and link previews.
+  Synthèse Java/processing
 page_title:
-  "🪴 Quartz 3.2"
-links:
-  - link_name: Twitter
-    link: https://twitter.com/_jzhao
-  - link_name: Github
-    link: https://github.com/jackyzha0
+  "STIC-B450/455"
+# links:
+#   - link_name: Name
+#     link: url
