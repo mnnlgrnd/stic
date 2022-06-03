@@ -123,7 +123,7 @@ println(i);
 println(j);
 ```
 
-<details> 
+%%<details> 
 <summary>Solution</summary>
 <div class="highlight">
 <div class="chroma">
@@ -141,4 +141,4 @@ println(j);
 </table>		
 </div>
 </div>
-</details>
+</details>%%
