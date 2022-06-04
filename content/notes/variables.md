@@ -84,14 +84,14 @@ i = j * 2; // i va contenir j * 2 -> évalué à 10 * 2 -> évalué à 20
 
 ## Evaluation
 
-L'**évaluation** est l'interprétation, par Processing, d'un morceau de code pour en déduire une **valeur.** Peuvent être évalués :
+L'**évaluation** est l'interprétation, par Processing, d'un morceau de code, une **expression**, pour en déduire une **valeur.** Une expression peut être 
 
 -   Une valeur (par exemple `1`, `'a'`, `true`, etc.)
 -   Une variable
 -   Un appel de fonction : le type de la valeur sera le type de retour de cette fonction
 -   Un calcul impliquant des valeurs, variables ou appels de fonction : processing respectera alors l'ordre des opérateurs/parenthèses
 
-Une valeur évaluée peut donc être utilisée :
+Une expression peut donc être utilisée
 
 -   Pour une assignation
 
