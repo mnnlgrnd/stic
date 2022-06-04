@@ -488,5 +488,4 @@ println(integers[2]);
 
 ### Erreurs
 
-- Lorsque l'on essaie d'accéder à un élément dont l'indice est supérieur à la taille du tableau, c'est-à-dire à une position **hors** du tableau, l'exécution du code provoquera une erreur du type `ArrayIndexOutOfBoundsException: 10
-` avec l'indice auquel on a voulu accéder.
+- Lorsque l'on essaie d'accéder à un élément dont l'indice est supérieur à la taille du tableau, c'est-à-dire à une position **hors** du tableau, l'exécution du code provoquera une erreur du type `ArrayIndexOutOfBoundsException` avec l'indice auquel on a voulu accéder.
