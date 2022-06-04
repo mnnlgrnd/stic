@@ -485,3 +485,8 @@ println(integers[0]);
 // Evalue la variable à l'indice 2 dans le tableau et affiche 3
 println(integers[2]); 
 ```
+
+### Erreurs
+
+- Lorsque l'on essaie d'accéder à un élément dont l'indice est supérieur à la taille du tableau, c'est-à-dire à une position **hors** du tableau, l'exécution du code provoquera une erreur du type `ArrayIndexOutOfBoundsException: 10
+` avec l'indice auquel on a voulu accéder.
