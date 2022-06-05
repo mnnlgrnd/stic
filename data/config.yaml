@@ -11,6 +11,6 @@ description:
   Synthèse Java/processing
 page_title:
   "Algorithmes et Programmation"
-# links:
-#   - link_name: Name
-#     link: url
+links:
+  - link_name: About me
+    link: https://openprocessing.org/sketch/1592113
