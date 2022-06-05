@@ -34,11 +34,11 @@ int status = PLAYING;
 // ... Some code
 
 if (status == WON) {
-	// Do something if we won
+  // Do something if we won
 } else if (status == LOST) {
-	// Do something else if we lost
+  // Do something else if we lost
 } else {
-	// Continue playing
+  // Continue playing
 }
 ```
 
@@ -60,11 +60,11 @@ Tout dessin processing doit définir la fonction `setup` dans laquelle il convie
 
 ```java
 void setup() {
-	size(800, 600);
+  size(800, 600);
 
-	// Some global drawing parameters
+  // Some global drawing parameters
 
-	// Data initialization
+  // Data initialization
 	
 }
 ```
@@ -75,12 +75,12 @@ La "boucle principale" est une boucle implicite qui permet de passer à l'étape
 
 ```java
 void draw() {
-	background(0); // Hide previous frame if needed
+  background(0); // Hide previous frame if needed
 
-	// Update state
+  // Update state
 	
 
-	// Draw state
+  // Draw state
 
 }
 ```
@@ -113,13 +113,13 @@ int x1 = 0; int y1 = 0;
 int x2 = 10; int y2 = 20;
 
 void setup() {
-	size(500, 500);
+  size(500, 500);
 
-	fill(int(random(256)));
-	ellipse(x1, y1, 20, 20);
+  fill(int(random(256)));
+  ellipse(x1, y1, 20, 20);
 	
-	fill(int(random(256)));
-	ellipse(x2, y2, 20, 20);
+  fill(int(random(256)));
+  ellipse(x2, y2, 20, 20);
 }
 ```
 
@@ -130,14 +130,14 @@ int x1 = 0; int y1 = 0;
 int x2 = 10; int y2 = 20;
 
 void setup() {
-	size(500, 500);
-	drawCircleWithRandomColor(x1, y1);
-	drawCircleWithRandomColor(x2, y2);
+  size(500, 500);
+  drawCircleWithRandomColor(x1, y1);
+  drawCircleWithRandomColor(x2, y2);
 }
 
 void drawCircleWithRandomColor(float x, float y) {
-	fill(int(random(256)));
-	ellipse(x, y, 20, 20);
+  fill(int(random(256)));
+  ellipse(x, y, 20, 20);
 }
 ```
 
