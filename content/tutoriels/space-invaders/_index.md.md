@@ -1,7 +1,6 @@
 ---
 title: "Space Invaders simplifié"
-aliases:
-  - /tutoriels/space-invaders/
+url: "/tutoriels/space-invaders/"
 ---
 
 ## [Consignes](tutoriels/space-invaders/consignes.md)
