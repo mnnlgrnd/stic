@@ -3,8 +3,12 @@ title: "Algorithmes et Programmation"
 ---
 
 
-## [01 - Variables](notes/variables.md)
-## [02 - Tableaux](notes/tableaux.md)
+## Leçons
+### [01 - Variables](notes/variables.md)
+### [02 - Tableaux](notes/tableaux.md)
 
+## Tutoriels
+### [Structurer une solution processing](tutoriels/structurer-une-solution.md)
+### [Débugger (WIP)](tutoriels/debugger.md)
+### [Jeu : Space Invaders simplifié (WIP)](tutoriels/space-invaders/_index.md)
 
-[💩](notes/poop.md)
