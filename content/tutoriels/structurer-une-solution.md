@@ -95,7 +95,7 @@ Pour une entrée clavier, il y aura toujours deux événèments :
 - `void keyPressed()` quand on appuie sur la touche du clavier
 - `void keyReleased()` quand on relâche la touche
 
-Attention, maintenir une touche du clavier enfoncée peut provoquer plusieurs appels consécutifs à `keyPressed` mais ce comportent et la fréquence à laquelle l'évènement est produit dépendent du système d'exploitation. Par conséquent, utiliser `keyPressed` pour bouger des parties du dessin (comme un personnage) causera des mouvements saccadés, moins fluides que si l'évolution des coordonnées était réalisée dans le `draw`. 
+Attention, maintenir une touche du clavier enfoncée peut provoquer plusieurs appels consécutifs à `keyPressed` mais ce comportement et la fréquence à laquelle l'évènement est produit dépendent du système d'exploitation. Par conséquent, utiliser `keyPressed` pour bouger des parties du dessin (comme un personnage) causera des mouvements saccadés, moins fluides que si l'évolution des coordonnées était réalisée dans le `draw`. 
 
 ### Souris
 
