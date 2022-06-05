@@ -89,7 +89,7 @@ void draw() {
 
 Les différentes entrées possibles en processing sont accessibles via des fonctions qui seront appelées quand l'évènement correspondant survient, entre deux appels de `draw`. Il ne faut définir chaque fonction qu'une seule fois.
 
-#### Clavier
+### Clavier
 
 Pour une entrée clavier, il y aura toujours deux événèments :
 - `void keyPressed()` quand on appuie sur la touche du clavier
@@ -97,7 +97,7 @@ Pour une entrée clavier, il y aura toujours deux événèments :
 
 Attention, maintenir une touche du clavier enfoncée peut provoquer plusieurs appels consécutifs à `keyPressed` mais ce comportent et la fréquence à laquelle l'évènement est produit dépendent du système d'exploitation. Par conséquent, utiliser `keyPressed` pour bouger des parties du dessin (comme un personnage) causera des mouvements saccadés, moins fluides que si l'évolution des coordonnées était réalisée dans le `draw`. 
 
-#### Souris
+### Souris
 
 Pour une entrée souris, il y aura toujours les évènements :
 - `void mousePressed()` quand on appuie sur la touche de la souris
@@ -143,7 +143,30 @@ void drawCircleWithRandomColor(float x, float y) {
 
 ## Classes
 
-Les classes permettent de définir des concepts complexes et d'y regrouper les différentes informations (= attributs) et comportements (= méthodes) de ces concepts. Elles permettent, comme les fonctions, d'améliorer la structure et la lisibilité du code.
+Les classes permettent de définir des concepts complexes et d'y regrouper les différentes informations (= attributs) et comportements (= méthodes) de ces concepts. Elles permettent, comme les fonctions, d'améliorer la structure et la lisibilité du code. 
+
+Il n'est pas nécessaire de faire des classes (ou des fonctions), mais il est parfois plus facile de concevoir directement la solution en orienté objet ("je vais faire des objets Balle"). Bien souvent, lorsque l'on détermine les informations nécessaires, elles-mêmes sont déduites des concepts qui peuvent directement être traduits en classes.
+
+```java
+class CircleWithRandomColor {
+  int x, y;
+  int diameter;
+  int c;
+
+  CircleWithRandomColor(int x, int y, int diameter) {
+	this.x = x;
+	this.y = y;
+	this.diameter = diameter;
+	this.c = int(random(256)));	  
+  }
+
+  void display() {
+    ellipseMode(DIAMETER);
+    fill(c);
+    ellipse(x, y, diameter, diameter);
+  }
+}
+```
 
 ## Conseils généraux
 - Aller à l'essentiel, d'abord faire fonctionner ce qu'on veut puis seulement essayer d'améliorer ou de simplifier
