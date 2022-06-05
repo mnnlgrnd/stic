@@ -8,7 +8,7 @@ Un **tableau** est une collection ordonnée de variables du même type. On accè
 
 ## Déclaration
 
-On déclare un tableau comme on déclare une [variable](notes/variables.md#déclaration), à ceci près qu'il faut rajouter l'opérateur `[]` pour indiquer qu'il s'agit d'un tableau. On peut ajouter cet opérateur soit après le **type** de données du tableau, soit après son nom. Il s'agit de déclarations équivalentes.
+On déclare un tableau comme on déclare une [variable](notes/variables.md), à ceci près qu'il faut rajouter l'opérateur `[]` pour indiquer qu'il s'agit d'un tableau. On peut ajouter cet opérateur soit après le **type** de données du tableau, soit après son nom. Il s'agit de déclarations équivalentes.
 
 ```java
 int[] integers;
