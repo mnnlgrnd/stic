@@ -158,7 +158,7 @@ class CircleWithRandomColor {
 	this.x = x;
 	this.y = y;
 	this.diameter = diameter;
-	this.c = int(random(256)));	  
+	this.c = int(random(256));	  
   }
 
   void display() {
@@ -173,7 +173,7 @@ class CircleWithRandomColor {
 - Aller à l'essentiel, d'abord faire fonctionner ce qu'on veut puis seulement essayer d'améliorer ou de simplifier
 - Isoler des fonctionnalités pour seulement ensuite les intégrer au code principal
 - Avancer petit à petit, ne pas essayer de tout faire en une fois
-- Débugger, via le debugger de processing ou en affichant en console ce qu'il se passe, les valeurs, etc.
+- [Débugger](tutoriels/debugger.md), via le debugger de processing ou en affichant en console ce qu'il se passe, les valeurs, etc.
 
 ## Exemple
 
