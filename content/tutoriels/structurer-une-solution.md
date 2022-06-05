@@ -155,10 +155,10 @@ class CircleWithRandomColor {
   int c;
 
   CircleWithRandomColor(int x, int y, int diameter) {
-	this.x = x;
-	this.y = y;
-	this.diameter = diameter;
-	this.c = int(random(256));	  
+    this.x = x;
+    this.y = y;
+    this.diameter = diameter;
+    this.c = int(random(256));	  
   }
 
   void display() {
