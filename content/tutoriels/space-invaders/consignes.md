@@ -34,7 +34,7 @@ Vous pouvez utiliser les dimensions suivantes :
 - Les aliens et le vaisseau sont des rectangles de 50x50 pixels
 - Les lasers sont des rectangles de 5x30 pixels 
 
-### Démonstration
+#### Démonstration
 <p align="center">
 <iframe src="https://openprocessing.org/sketch/1592175/embed/?plusEmbedHash=YTc3Mzc1ODI5ODMzYzhkMTdkYzAyM2U4Yjk1MDc4YWJiZTEyMzc2ZjVmZTRmMTQ4NTQ1MGY5NDdmN2VlNTdlNGMwMWI1ZDNjMzc2NjkyZGEyMThiMWIxZGNmODYyZjEyNmM3ODE3YWUyMjZmMDEyMGVhN2NiYTgwYWNkN2U3Y2RrdGg2VWk4NXkxVWNWVitBZitsbXozUTdOVFQ5UERTd0c2dmpZM0VybXloKzFUMUxDb1dvTU9JWWpBWnlEUVdoSlFscFl5SW1TWXRyeWN2ZWhWVEVBUT09&plusEmbedTitle=true" width="600" height="500"></iframe>
 </p>
@@ -57,6 +57,8 @@ Lorsque la vague d’aliens est détruite, un nouvelle vague arrive. Chaque vagu
 
 Si vous gérez également la difficulté des vagues, le taux d’opacité d’un alien diminue en fonction du nombre de lasers qui l’ont déjà touché, pour un minimum de 50%. Par exemple, à la vague 3, un alien sera initialement visible à 100%, à 75% après le premier coup et à 50% après le deuxième ; il sera détruit après le troisième coup.
 
-### Démonstration
+#### Démonstration
 
-// TODO
+<p align="center">
+<iframe src="https://openprocessing.org/sketch/1592193/embed/?plusEmbedHash=YmI5ZWNkMzIwYzFiZGNhODBkOGM0NzYyN2ZmMTAyNjBiYzc5OGQ4OTk0OTY2YmJmNTUwMjRlOWZmOWU4MmNiMzQ5ODhmOTg5M2E1MTA0ZjU3OWFkMzRjZThjZTliZmU5NDBiNjcyZmIyNmVhNWQ5YmZmOTkyOWRhM2NjOTI0NzFzSkRWU29QRzRzOTZYOXArekUvTmk3OFhNWWRRRjFCbXVwNkUrZ2ZSNmp4UHlwOUlpaE55WUt5NEc0Y1VubWhNM1JlWWJhVnhaQ3N0RmJQL0xyeXJTUT09&plusEmbedTitle=true" width="600" height="500"></iframe>
+</p>
