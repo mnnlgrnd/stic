@@ -17,8 +17,9 @@
       {{$l := printf "%s%s/" $host $lnk}}
       {{$l = cond (eq $l "//") "/" $l}}
       {{with (index $contentTable $lnk)}}
+      {{$adaptedLink := replace $lnk "/_index.md" "/"}}
       <li>
-        <a href="{{$l}}" data-ctx="{{$ctx}}" data-src="{{$lnk}}" class="internal-link">{{index (index . "title")}}</a>
+        <a href="{{$l}}" data-ctx="{{$ctx}}" data-src="{{$adaptedLink}}" class="internal-link">{{index (index . "title")}}</a>
       </li>
       {{end}}
     {{- end -}}
