@@ -78,7 +78,6 @@ void draw() {
   background(0); // Hide previous frame if needed
 
   // Update state
-	
 
   // Draw state
 
