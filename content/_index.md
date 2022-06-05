@@ -10,5 +10,5 @@ title: "Algorithmes et Programmation"
 ## Tutoriels
 ### [Structurer une solution processing](tutoriels/structurer-une-solution.md)
 ### [Débugger (WIP)](tutoriels/debugger.md)
-### [Jeu : Space Invaders simplifié (WIP)](tutoriels/space-invaders/_index.md)
+### [Jeu : Space Invaders simplifié (WIP)](tutoriels/space-invaders)
 
