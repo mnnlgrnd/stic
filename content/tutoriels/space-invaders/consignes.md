@@ -6,8 +6,8 @@ title: "Space Invaders simplifié"
 
 Space Invaders est un jeu d’arcade créé en 1978. Il s’agit du tout premier jeu "shooter' fixe. Dans ce jeu, le joueur incarne un vaisseau qui se déplace latéralement et tente de repousser une vague d’envahisseurs à l’aide d’un canon laser. Les aliens se rapprochent lentement mais sûrement du vaisseau et tirent également des lasers vers le vaisseau. Les lasers se déplacent verticalement et disparaissent quand ils touchent un ennemi ou atteignent le bord de l’écran de jeu. Il y a des obstacles entre le vaisseau et les envahisseurs qui sont progressivement détruits par les lasers.
 
-![Test](https://images.theconversation.com/files/221251/original/file-20180531-69508-1oenzpj.png?ixlib=rb-1.1.0&q=45&auto=format&w=1000&fit=clip)
-![SpaceInvaders](/tutoriels/images/SpaceInvadersOriginal2.png)
+
+![SpaceInvaders](/images/SpaceInvadersOriginal2.png)
 
 ## Version minimale
 
