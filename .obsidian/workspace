@@ -1,0 +1,95 @@
+{
+  "main": {
+    "id": "4686823dd902e700",
+    "type": "split",
+    "children": [
+      {
+        "id": "2a73434126c0fe0c",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "content/tutoriels/space-invaders/consignes.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3b2c79706420d184",
+    "type": "split",
+    "children": [
+      {
+        "id": "f2431d9aaedf31b7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "074c774a76ceaf64",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "e441e04542c6b1bb",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "2aafef68241bb9f1",
+    "type": "split",
+    "children": [
+      {
+        "id": "14bd75b0a095025f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f9817e360cb7242a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "content/tutoriels/space-invaders/consignes.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "2a73434126c0fe0c",
+  "lastOpenFiles": [
+    "content/tutoriels/space-invaders/consignes.md",
+    "content/notes/variables.md",
+    "content/notes/tableaux.md"
+  ]
+}
