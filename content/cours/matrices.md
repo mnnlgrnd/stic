@@ -41,7 +41,7 @@ On peut donc ainsi créer des tableaux de dimension complètement arbitraire :
 int[][][][][] whyNot = new int[3][6][9][6][3];
 ```
 
-2. On peut créer une matrice en indiquant directement les valeurs qu'elle contient entre `{}`, la taille sera alors déterminée automatiquement.
+2. On peut créer une matrice en indiquant directement les valeurs qu'elle contient entre `{}`, les tailles des tableaux seront alors alors déterminées automatiquement.
 
 ```java
 int[] integers = new int[] { 
