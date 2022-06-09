@@ -10,7 +10,8 @@
           "type": "markdown",
           "state": {
             "file": "content/tutoriels/space-invaders/consignes.md",
-            "mode": "source"
+            "mode": "source",
+            "source": false
           }
         }
       }
@@ -75,7 +76,7 @@
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               }
             }
           }
@@ -83,8 +84,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "active": "2a73434126c0fe0c",
   "lastOpenFiles": [
