@@ -28,11 +28,17 @@ boolean[][] t3; // Tableau de tableaux de booléens
 
 Comme pour un tableau "classique", à 1 dimension, une matrice peut être créée de deux façons :
 
-1. On peut créer une matrice vide en indiquant la taille du tableau (le nombre de lignes), et la taille des tableaux se trouvant dans ce tableau principal (le nombre de colonnes) dans l'opérateur `[]` (un par par dimension).
+1. On peut créer une matrice vide en indiquant la taille du tableau (le nombre de lignes), et la taille des tableaux se trouvant dans ce tableau principal (le nombre de colonnes) dans l'opérateur `[]` (un par dimension).
 
 ```java
 // Tableau contenant 3 tableaux de 10 éléments chacun
 int[][] integers = new int[3][10]; 
+```
+
+On peut donc ainsi créer des tableaux de dimension complètement arbitraire :
+
+```java
+int[][][][][] whyNot = new int[3][6][9][6][3];
 ```
 
 2. On peut créer une matrice en indiquant directement les valeurs qu'elle contient entre `{}`, la tailel sera alors déterminée automatiquement.
