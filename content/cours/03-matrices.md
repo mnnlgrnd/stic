@@ -6,7 +6,7 @@ nextClass: "fonctions"
 
 ## Définition
 
-Un [tableau](cours/tableaux.md) étant un type de données, il est tout à fait possible de définir un tableau *de tableaux*, c'est-à-dire un tableau dont tous les éléments sont des références vers des tableaux d'un (même) type de données. On peut ainsi avoir un tableau de tableaux d'entiers (2 dimensions), un tableau de tableaux de tableaux de booléen (3 dimensions), etc. Tous les tableaux d'une même dimension auront la même taille, puisque la taille d'un tableau est statique et définie à sa création.
+Un [tableau](cours/02-tableaux.md) étant un type de données, il est tout à fait possible de définir un tableau *de tableaux*, c'est-à-dire un tableau dont tous les éléments sont des références vers des tableaux d'un (même) type de données. On peut ainsi avoir un tableau de tableaux d'entiers (2 dimensions), un tableau de tableaux de tableaux de booléen (3 dimensions), etc. Tous les tableaux d'une même dimension auront la même taille, puisque la taille d'un tableau est statique et définie à sa création.
 
 
 <p class="svg-container" align="center">
