@@ -17,7 +17,7 @@ Une matrice est un tableau de tableaux, et on peut donc le considérer comme un 
 
 ## Déclaration
 
-Pour déclarer une matrice, il faut simplement déclarer un tableau dont le type d'éléments est lui-même tableau, c'est-à-dire en rajoutant `[]` après le type d'éléments du tableau. Par exemple, pour un tableau d'entiers `int[]`, un tableau de tableau d'entiers sera noté `int[][]`. 
+Pour déclarer une matrice, il faut simplement déclarer un tableau dont le type d'éléments est lui-même tableau, c'est-à-dire en rajoutant `[]` après le type d'éléments de ce tableau. Par exemple, pour un tableau d'entiers `int[]`, un tableau de tableau d'entiers sera noté `int[][]`. 
 
 ```java
 int[][] t1; // Tableau de tableaux d'entiers
