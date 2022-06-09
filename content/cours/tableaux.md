@@ -1,7 +1,7 @@
 ---
 title: "02 - Tableaux"
-prev: "variables"
-next: "matrices"
+prevClass: "variables"
+nextClass: "matrices"
 ---
 
 ## Définition
@@ -439,13 +439,13 @@ On déclare ici une variable appelée `integers` qui est un tableau de nombres e
 
 Il existe deux façons de créer un tableau :
 
-- On peut créer un tableau vide en indiquant sa taille, le nombre d'éléments qu'il contient :
+1. On peut créer un tableau vide en indiquant sa taille, le nombre d'éléments qu'il contient.
 
 ```java
 int[] integers = new int[6];
 ```
 
-- On peut créer un tableau en indiquant directement les valeurs qu'il contient :
+2. On peut créer un tableau en indiquant directement les valeurs qu'il contient entre `{}`. La taille du tableau sera donc le nombre d'éléments qu'on définit.
 
 ```java
 int[] integers = new int[] { 1, 2, 4, 8, 16, 32 };
@@ -453,15 +453,13 @@ int[] integers = new int[] { 1, 2, 4, 8, 16, 32 };
 
 Dans les deux cas, l'utilisation du mot clé `new` est obligatoire. Ce mot clé indique qu'on crée une nouvelle **référence** et est responsable de l'allocation en mémoire.
 
->⚠️ La taille d'un tableau est fixe et ne peut pas être modifiée après sa création. Si on voulait par exemple ajouter un nouvel élément au tableau, il faudrait en réalité créer un nouveau tableau de plus grande taille.
-
 ## Manipulation
 
 Une fois un tableau déclaré et créé, on peut accéder à sa taille et aux différents éléments qu'il contient.
 
 ### Taille du tableau
 
-La taille d'un tableau est déterminée à sa création et ne peut pas être changée, on peut la récupérer grâce au champ spécial `length` du tableau, de la façon suivante :
+La taille d'un tableau **est déterminée à sa création et ne peut pas être changée**, on peut la récupérer grâce au champ spécial `length` du tableau, de la façon suivante :
 
 ```java
 int[] integers = new int[] { 1, 2, 3 };

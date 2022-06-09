@@ -1,6 +1,6 @@
 ---
 title: "01 - Variables"
-next: "cours/variables.md"
+nextClass: "variables"
 ---
 
 ## Définition
