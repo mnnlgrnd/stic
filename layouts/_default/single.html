@@ -25,7 +25,7 @@
       {{partial "navigation.html" . }}
       {{partial "toc.html" .}}
       {{partial "textprocessing.html" . }}
-      {{ if or (.Params.prev_class)(.Params.next_class) }}
+      {{ if or (.Params.prev_class) (.Params.next_class) }}
         <hr/>
         {{partial "navigation.html" . }}
       {{ end }}
