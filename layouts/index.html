@@ -13,7 +13,7 @@
         {{partial "darkmode.html" .}}
     </header>
     <article>
-        {{partial "navigation.html"}}
+        {{partial "navigation.html" .}}
         {{partial "toc.html" .}}
         {{partial "textprocessing.html" . }}
         {{if $.Site.Data.config.enableRecentNotes}}
