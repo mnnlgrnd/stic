@@ -33,9 +33,25 @@
   cursor: pointer;
 }
 
+.class-link {
+  padding: 0.25em 1em;
+  border: var(--outlinegray)1px solid;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 50%;
+}
+
 .class-link-container-left, .class-link-container-right {
   display: grid;
   grid-template-columns: auto auto;
+}
+
+.class-link-container-right {
+  text-align: right;
+}
+
+.class-link.container-left {
+  text-align: left;
 }
 
 
