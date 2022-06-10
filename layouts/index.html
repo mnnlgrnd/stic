@@ -16,10 +16,7 @@
         {{partial "navigation.html" .}}
         {{partial "toc.html" .}}
         {{partial "textprocessing.html" . }}
-        {{ if or (.Params.prev_class) (.Params.next_class) }}
-            <hr/>
-            {{partial "navigation.html" . }}
-       {{ end }}
+        {{partial "navigation.html" . }}
         {{if $.Site.Data.config.enableRecentNotes}}
           {{partial "recent.html" . }}
         {{end}}

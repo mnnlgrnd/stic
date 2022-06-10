@@ -25,10 +25,7 @@
       {{partial "navigation.html" . }}
       {{partial "toc.html" .}}
       {{partial "textprocessing.html" . }}
-      {{ if or (.Params.prev_class) (.Params.next_class) }}
-        <hr/>
-        {{partial "navigation.html" . }}
-      {{ end }}
+      {{partial "navigation.html" . }}
     </article>
     {{partial "footer.html" .}}
 </div>
