@@ -1,7 +1,7 @@
 ---
 title: "Fonctions"
-prevClass: "matrices"
-nextClass: "récursivité"
+prevClass: "06-boucles"
+nextClass: "08-récursivité"
 ---
 
 ## Définition
