@@ -1,7 +1,7 @@
 ---
-title: "Fonctions"
-prevClass: "06-boucles"
-nextClass: "08-récursivité"
+title: "07 - Fonctions"
+prev_class: "06-boucles"
+next_class: "08-récursivité"
 ---
 
 ## Définition
