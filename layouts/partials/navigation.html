@@ -1,13 +1,13 @@
 
 Navigation
 
-{{ if $.Params.prev_class or $.Params.next_class }}
+{{ if $.Param "prev_class" or $.Param "next_class" }}
 
 <div class="navigation">
 TEST
 
-Prev : {{ $.Params.prev_class }} 
-Next : {{ $.Params.next_class }}
+Prev : {{ $.Params "prev_class" }} 
+Next : {{ $.Params "next_class" }}
 </div>
 
 {{ end }}
