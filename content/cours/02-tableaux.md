@@ -19,7 +19,7 @@ Lorsqu'un programme processing s'exécute, il possède sa propre mémoire dans l
 - La mémoire dite dynamique, le *heap*, qui contient notamment des tableaux et des [objets](cours/09-classes.md)
 
 <p class="svg-container" align="center">
-<img src="/images/stack_heap.svg"/>
+<embed src="/stic/images/stack_heap.svg"/>
 </p>
 
 > ⚠️ Le stockage en mémoire est en réalité plus complexe, l'important ici est de comprendre la différence entre une valeur et une référence. Pour plus de détails sur la gestion de la mémoire lors de l'exécution d'un programme Java, Google est votre ami.
