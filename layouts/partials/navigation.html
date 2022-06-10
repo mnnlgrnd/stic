@@ -1,10 +1,10 @@
-{{ if (isset .Params "prevClass") or (isset .Params "nextClass") }}
+{{ if $.Params.prev_class or $.Params.next_class }}
 
 <div class="navigation">
 TEST
 
-Prev : {{ .Params.prevClass }} 
-Next : {{ .Params.nextClass }}
+Prev : {{ $.Params.prev_class }} 
+Next : {{ $.Params.next_class }}
 </div>
 
 {{ end }}

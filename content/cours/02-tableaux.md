@@ -1,7 +1,7 @@
 ---
 title: "02 - Tableaux"
-prevClass: "01-variables"
-nextClass: "03-matrices"
+prev_class: "01-variables"
+next_class: "03-matrices"
 ---
 
 ## Définition

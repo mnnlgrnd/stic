@@ -1,7 +1,7 @@
 ---
 title: "03 - Matrices"
-prevClass: "02-tableaux"
-nextClass: "04-strings"
+prev_class: "02-tableaux"
+next_class: "04-strings"
 ---
 
 ## Définition
