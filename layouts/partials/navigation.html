@@ -4,21 +4,28 @@
 			<td align="left">{{ if .Params.prev_class }}
 					{{ $page := printf "/cours/%s.md" .Params.prev_class }}
 					{{ with .Site.GetPage $page}}
-					<div class="class-link-container-left">
-					<div class="icon"><span><i class="fas fa-chevron-left"/></span></div>
+				<div class="class-link-container-left">
+					<div class="icon">
+						<span>
+							<i class="fas fa-chevron-left"/>
+						</span>
+					</div>
 					<div class="header">Leçon précédente</div>
 					<div class="link">
 						<a href="{{ .RelPermalink }}}" data-src="{{ .RelPermalink }}" class="internal-link">{{ .Title }}</a>
 					</div>
-				</div>
-				{{ end }}
+				</div>{{ end }}
 				{{ end }}
 			</td>
 			<td align="right">{{ if .Params.next_class }}
 					{{ $page := printf "/cours/%s.md" .Params.next_class }}
 					{{ with .Site.GetPage $page}}
 				<div class="class-link-container-right">
-					<div class="icon"><span><i class="fas fa-chevron-right"/></span></div>
+					<div class="icon">
+						<span>
+							<i class="fas fa-chevron-right"/>
+						</span>
+					</div>
 					<div class="header">Leçon suivante</div>
 					<div class="link">
 						<a href="{{ .RelPermalink }}}" data-src="{{ .RelPermalink }}" class="internal-link">{{ .Title }}</a>
