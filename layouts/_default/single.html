@@ -22,6 +22,7 @@
           <li><a href="{{ .Permalink }}">{{ .LinkTitle | humanize }}</a></li>
           {{ end }}
       </ul>
+      {{partial "navigation.html" . }}
       {{partial "toc.html" .}}
       {{partial "textprocessing.html" . }}
     </article>
