@@ -1,5 +1,6 @@
 ---
 title: "02 - Tableaux"
+url: "cours/02-tableaux"
 prev_class: "01-variables"
 next_class: "03-matrices"
 ---

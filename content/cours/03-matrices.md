@@ -1,5 +1,6 @@
 ---
 title: "03 - Matrices"
+url: "cours/03-matrices"
 prev_class: "02-tableaux"
 next_class: "04-strings"
 ---
