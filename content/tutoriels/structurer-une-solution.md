@@ -1,5 +1,6 @@
 ---
 title: "Structurer une solution processing"
+url: "tutoriels/structurer-une-solution"
 ---
 
 ## Vue d'ensemble

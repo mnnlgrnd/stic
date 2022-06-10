@@ -1,5 +1,6 @@
 ---
 title: "Space Invaders simplifié"
+url: "tutoriels/space-invaders/consignes"
 ---
 
 ## Introduction
