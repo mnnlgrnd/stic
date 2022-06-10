@@ -1,6 +1,6 @@
 ---
 title: "01 - Variables"
-nextClass: "variables"
+nextClass: "02-tableaux"
 ---
 
 ## Définition
