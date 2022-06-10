@@ -18,8 +18,8 @@
       {{$l = cond (eq $l "//") "/" $l}}
       {{$adaptedl := replace $l "/_index.md" "/"}}
       {{$adaptedLink := replace $lnk "/_index.md" "/"}}
-      {{$adaptedl := replace $adaptedl "//" "/"}}
-      {{$adaptedLink := replace $adaptedLink "//" "/"}}
+<!--       {{$adaptedl := replace $adaptedl "//" "/"}}
+      {{$adaptedLink := replace $adaptedLink "//" "/"}} -->
       {{with (index $contentTable $lnk)}}
       <li>
         <a href="{{$adaptedl}}" data-ctx="{{$ctx}}" data-src="{{$adaptedLink}}" class="internal-link">{{index (index . "title")}}</a>
