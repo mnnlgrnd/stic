@@ -33,17 +33,14 @@
   cursor: pointer;
 }
 
-.class-link {
+.class-link-container-left, .class-link-container-right {
+  display: grid;
+  grid-template-columns: auto auto;
   padding: 0.25em 1em;
   border: var(--outlinegray)1px solid;
   border-radius: 5px;
   cursor: pointer;
-  width: 50%;
-}
-
-.class-link-container-left, .class-link-container-right {
-  display: grid;
-  grid-template-columns: auto auto;
+  width: fit-content;
 }
 
 .class-link-container-right {
