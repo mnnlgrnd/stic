@@ -32,17 +32,13 @@
   padding-bottom: 1em;
   cursor: pointer;
 }
-/*
-.class-link-container-left {
+
+.class-link-container-left, .class-link-container-right {
   display: grid;
   grid-template-columns: auto auto;
 }
 
-.class-link-container-right {
-  display: grid;
-  grid-template-columns: auto auto;
-}
-
+/**
 .class-link-container-right .icon {
   grid-row-start: 1;
   grid-row-end: 3;
