@@ -1,4 +1,4 @@
-{{ if (or .Params.prevClass .Params.nextClass) }}
+{{ if (isset .Params "prevClass") or (isset .Params "nextClass") }}
 
 <div class="navigation">
 TEST
