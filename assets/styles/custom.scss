@@ -33,11 +33,21 @@
   cursor: pointer;
 }
 
+table.class-nav {
+  padding-left:  0 !important;
+  padding-right: 0 !important;
+}
+
+table.class-nav:empty {
+  display: none;
+}
+
 .class-link-container-left, .class-link-container-right {
   display: grid;
   grid-template-columns: auto auto;
+  column-gap: 1em;
   padding: 0.25em 1em;
-  border: var(--outlinegray)1px solid;
+  border: var(--outlinegray) 1px solid;
   border-radius: 5px;
   cursor: pointer;
   width: fit-content;
