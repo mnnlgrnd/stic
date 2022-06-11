@@ -112,10 +112,10 @@ p.svg-container {
   line-height: normal !important;
 }
 
-.svg-light-mode[saved-theme="dark"] {
+[saved-theme="dark"] .svg-light-mode {
   display: none;
 }
 
-.svg-dark-mode[saved-theme="light"] {
+[saved-theme="light"] .svg-dark-mode {
   display: none;
 }
