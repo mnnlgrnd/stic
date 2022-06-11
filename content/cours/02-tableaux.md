@@ -18,15 +18,10 @@ Lorsqu'un programme processing s'exécute, il possède sa propre mémoire dans l
 - La mémoire dite statique, le *stack*, qui contient notamment les variables (locales) de type primitif et des **références** vers des données stockées dans le *heap*
 - La mémoire dite dynamique, le *heap*, qui contient notamment des tableaux et des [objets](cours/09-classes.md)
 
-<p class="svg-dark-mode" align="center">
-<img src="/stic/images/stack_heap_dm.svg"/>
-</p>
-<p class="svg-light-mode" align="center">
-<img src="/stic/images/stack_heap_lm.svg"/>
-</p>
+<img src="/stic/images/stack_heap_dm.svg" class="svg-dark-mode"/>
+<img src="/stic/images/stack_heap_lm.svg" class="svg-light-mode"/>
 
 > ⚠️ Le stockage en mémoire est en réalité plus complexe, l'important ici est de comprendre la différence entre une valeur et une référence. Pour plus de détails sur la gestion de la mémoire lors de l'exécution d'un programme Java, Google est votre ami.
-
 
 ## Déclaration
 
