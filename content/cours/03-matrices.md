@@ -47,7 +47,7 @@ int[][][][][] whyNot = new int[3][6][9][6][3];
 int[][] integers = new int[][] { 
   { 1, 2, 3 }, // Première ligne
   { 4, 5, 6 }, // Deuxième ligne
-  { 7, 8, 9 } // Troisième ligne
+  { 7, 8, 9 }  // Troisième ligne
 };
 ```
 
