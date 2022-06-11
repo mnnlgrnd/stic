@@ -72,7 +72,7 @@ int nbColumns = m[0].length; // m[0] = première ligne
 
 ### Élements de la matrice
 
-On accède aux **lignes** du matrice de la même façon qu'un tableau, avec l'opérateur `[]`, et aux éléments d'une ligne en réutilisant l'opérateur `[]` sur la ligne récupérée.
+On accède aux **lignes** d'une matrice de la même façon qu'un tableau, avec l'opérateur `[]`, et aux éléments d'une ligne en réutilisant l'opérateur `[]` sur la ligne récupérée.
 
 // TODO schéma
 
