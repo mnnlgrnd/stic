@@ -18,8 +18,11 @@ Lorsqu'un programme processing s'exécute, il possède sa propre mémoire dans l
 - La mémoire dite statique, le *stack*, qui contient notamment les variables (locales) de type primitif et des **références** vers des données stockées dans le *heap*
 - La mémoire dite dynamique, le *heap*, qui contient notamment des tableaux et des [objets](cours/09-classes.md)
 
-<p class="svg-container" align="center">
-<img src="/images/stack_heap.svg"/>
+<p class="svg-dark-mode" align="center">
+<img src="/stic/images/stack_heap_dm.svg"/>
+</p>
+<p class="svg-light-mode" align="center">
+<img src="/stic/images/stack_heap_lm.svg"/>
 </p>
 
 > ⚠️ Le stockage en mémoire est en réalité plus complexe, l'important ici est de comprendre la différence entre une valeur et une référence. Pour plus de détails sur la gestion de la mémoire lors de l'exécution d'un programme Java, Google est votre ami.
@@ -72,9 +75,9 @@ int[] integers = new int[] { 1, 2, 3 };
 println(integers.length); // Affiche 3
 ```
 
-### Elements du tableau
+### Élements du tableau
 
-Pour accéder à un élément particulier du tableau, il faut utiliser l'opérateur de tableau et l'indice de l'élément après le nom du tableau, par exemple `[1]`.
+Pour accéder à un élément particulier du tableau, il faut utiliser l'opérateur de tableau et l'indice de l'élément après le nom du tableau, par exemple `integers[1]`.
 
 > ⚠️ En informatique, on commence à compter à partir de 0. Le premier élément aura donc l'indice 0, le deuxième l'indice 1, ainsi de suite.
 
@@ -95,6 +98,10 @@ println(integers[0]);
 // Evalue la variable à l'indice 2 dans le tableau et affiche 3
 println(integers[2]); 
 ```
+
+### Parcourir le tableau
+
+Pour parcourir un tableau, c'est-à-dire pour *itérer* sur chacun de ces éléments, il faudra utiliser une boucle dont les explications sont disponibles dans la leçon [06 - Boucles](cours/06-boucles.md).
 
 ### Erreurs
 
