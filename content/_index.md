@@ -14,11 +14,11 @@ author: "Manon Legrand"
 #### [05 - Alternatives](cours/05-alternatives.md)
 #### [06 - Boucles](cours/06-boucles.md)
 #### [07 - Fonctions](cours/07-fonctions.md)
-#### [08 - Récursivité](cours/08-récursivité.md)
+#### [08 - Récursivité](cours/08-recursivite.md)
 #### [09 - Classes](cours/09-classes.md)
 
 ### Processing
-#### [10 - Géométrie](cours/10-géométrie.md)
+#### [10 - Géométrie](cours/10-geometrie.md)
 #### [11 - Transformations](cours/11-transformations.md)
 
 
