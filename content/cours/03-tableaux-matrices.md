@@ -4,7 +4,9 @@ prev_class: "02-expressions"
 next_class: "04-strings"
 ---
 
-## Tableau
+## Tableaux
+
+### Définition
 
 Un **tableau** est une collection ordonnée de variables du même type. On accède a une variable du tableau grâce au nom du tableau et à la position de la variable dans celui-ci.
 
@@ -113,7 +115,7 @@ Un [tableau](cours/03-tableaux-matrices.md) étant un type de données, il est t
 
 Une matrice est un tableau de tableaux : un tableau à deux dimensions, comme dans Excel, par exemple. On parlera ainsi de **lignes** pour la première dimension et de **colonnes** pour la deuxième dimension.
 
-### Déclaration et création
+### Déclaration
 
 Pour déclarer une matrice, il faut simplement déclarer un tableau dont le type d'éléments est lui-même tableau, c'est-à-dire en rajoutant `[]` après le type d'éléments de ce tableau. Par exemple, un tableau de tableaux d'entiers sera noté `int[][]`. 
 
@@ -122,6 +124,8 @@ int[][] t1; // Tableau de tableaux d'entiers
 float[][] t2; // Tableau de tableaux de float
 boolean[][] t3; // Tableau de tableaux de booléens
 ```
+
+### Création
 
 Comme pour un tableau "classique", à une seule dimension, une matrice peut être créée de deux façons :
 
