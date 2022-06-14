@@ -12,5 +12,5 @@ export const attachSPARouting = (draw) => {
   // We need on initial load, then subsequent redirs
   // requestAnimationFrame() delays graph draw until SPA routing is finished
   reload(draw)
-  // window.addEventListener("DOMContentLoaded", () => requestAnimationFrame(draw))
+  window.addEventListener("DOMContentLoaded", () => requestAnimationFrame(draw))
 }
