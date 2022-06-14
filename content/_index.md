@@ -8,7 +8,7 @@ author: "Manon Legrand"
 
 ### Théorie
 #### [01 - Variables et littéraux](cours/01-variables-litteraux.md)
-#### [02 - Expressions](cours/expressions.md)
+#### [02 - Expressions](cours/02-expressions.md)
 #### [03 - Tableaux et matrices](cours/03-tableaux-matrices.md)
 #### [04 - Strings](cours/04-strings.md)
 #### [05 - Alternatives](cours/05-alternatives.md)
