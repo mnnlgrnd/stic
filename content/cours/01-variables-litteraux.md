@@ -161,7 +161,7 @@ Tout comme une variable, un littéral a un type, mais celui est en général imp
 - Les littéraux de type caractère (`char`) comme `'a'`, `'+'`, etc. ; tous les caractères entre deux `'`
 - Les littéraux de chaînes de caractères (strings), vu dans la leçon [04 - Strings](cours/04-strings.md)
 
-#### Assignation à une variable
+### Assignation à une variable
 
 Lorsque l'on utilise un littéral dans une assignation pour stocker sa valeur dans sa variable, il faut donc que ce type *corresponde* à celui de la variable. 
 
