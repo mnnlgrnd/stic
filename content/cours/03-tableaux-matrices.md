@@ -4,7 +4,7 @@ prev_class: "02-expressions"
 next_class: "04-strings"
 ---
 
-## Définition
+## Tableau
 
 Un **tableau** est une collection ordonnée de variables du même type. On accède a une variable du tableau grâce au nom du tableau et à la position de la variable dans celui-ci.
 

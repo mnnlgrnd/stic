@@ -3,6 +3,8 @@ title: "01 - Variables et littéraux"
 next_class: "02-expressions"
 ---
 
+# Variables
+
 ## Définition
 
 Une variable est un **_conteneur_** défini par
@@ -23,8 +25,6 @@ Les types de variables dits **primitifs** sont les types inhérents au langage (
 | `long`    | Très grand nombre entier                                |
 | `float`   | Nombre décimal, par exemple `3.14`                      |
 | `double`  | Nombre décimal plus précis                              |
-
-Note : On peut forcer un nombre décimal à être évalué comme un `float` ou un `double` en écrivant respectivement f ou d à la fin du nombre, par exemple `3.14f` ou `3.14d`
 
 ## Déclaration
 
@@ -143,3 +143,28 @@ println(j);
 </div>
 </div>
 </details>
+
+# Littéraux
+
+## Définition
+
+A la différence d'une variable, un *littéral* qualifie une valeur constante utilisée directement dans du code. 
+
+## Type
+
+Tout comme une variable, un littéral a un type, mais celui est en général implicite et inféré directement par le langage. On retrouve différents littéraux :
+- `true` et `false`, les littéraux de type booléen
+- Les littéraux de nombres entiers comme `1`, `23094`, etc.
+- Les littéraux de nombres à virgule, comme `3.14`, `-23.45`, etc. On peut forcer le type d'un littéral de nombre à être `float` ou `double`  en utilisant `f` ou `d` après le littéral :
+	- `1f` est de type `float`
+	- `3.14d` est de type `double`
+- Les littéraux de type caractère (`char`) comme `'a'`, `'+'`, etc. ; tous les caractères entre deux `'`
+- Les littéraux de chaînes de caractères (strings), vu dans la leçon [04 - Strings](cours/04-strings.md)
+
+### Assignation à une variable
+
+Lorsque l'on utilise un littéral dans une assignation pour stocker sa valeur dans sa variable, il faut donc que ce type *corresponde* à celui de la variable. 
+
+> **Correspondance n'est ici pas équivalence**. 
+
+Le littéral `10` est de type entier, mais peut tout à fait être stocké dans une variable de type `float` puisque float peut contenir des nombres de plus grande précision. Le contraire n'est pas vrai ; par exemple, le littéral `3.14` contient un nombre à virgule qui ne peut pas être stocké dans une variable entière (`int`,  `long`) car la précision du littéral est plus grande que celle du type de la variable. Il faut alors convertir explicitement le littéral en entier via la fonction de conversion `int(3.14)` qui ne conservera que la partie entière du nombre.
