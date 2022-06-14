@@ -108,7 +108,7 @@ Pour parcourir un tableau, c'est-à-dire pour *itérer* sur chacun de ces élém
 
 ### Tableau de tableaux
 
-Un [tableau](cours/03-tableaux-matrices.md) étant un type de données, il est tout à fait possible de définir un tableau *de tableaux*, c'est-à-dire un tableau dont tous les éléments sont des références vers des tableaux d'un (même) type de données. On peut ainsi avoir un tableau de tableaux d'entiers (2 dimensions), un tableau de tableaux de tableaux de booléens (3 dimensions), etc. Tous les tableaux d'une même dimension auront la même taille, puisque la taille d'un tableau est statique et définie à sa création.
+Un tableau étant un type de données, il est tout à fait possible de définir un tableau *de tableaux*, c'est-à-dire un tableau dont tous les éléments sont des références vers des tableaux d'un (même) type de données. On peut ainsi avoir un tableau de tableaux d'entiers (2 dimensions), un tableau de tableaux de tableaux de booléens (3 dimensions), etc. Tous les tableaux d'une même dimension auront la même taille, puisque la taille d'un tableau est statique et définie à sa création.
 
 <img src="/stic/images/matrix_dm.svg" class="svg-dark-mode"/>
 <img src="/stic/images/matrix_lm.svg" class="svg-light-mode"/>
