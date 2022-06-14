@@ -9,4 +9,8 @@ next_class: "08-récursivité"
 
 ## Signature
 
+// Différence fonctions void et avec type de retour
+
 ## Appel
+
+// Stack d'appel, contexte, scope

@@ -7,10 +7,10 @@ author: "Manon Legrand"
 ## Leçons
 
 ### Théorie
-#### [01 - Variables](cours/01-variables.md)
-#### [02 - Tableaux](cours/02-tableaux.md)
-#### [03 - Matrices](cours/03-matrices.md)
-#### [04 - String](cours/04-strings.md)
+#### [01 - Variables et littéraux](cours/01-variables-litteraux.md)
+#### [02 - Expressions](cours/expressions.md)
+#### [03 - Tableaux et matrices](cours/03-tableaux-matrices.md)
+#### [04 - Strings](cours/04-strings.md)
 #### [05 - Alternatives](cours/05-alternatives.md)
 #### [06 - Boucles](cours/06-boucles.md)
 #### [07 - Fonctions](cours/07-fonctions.md)

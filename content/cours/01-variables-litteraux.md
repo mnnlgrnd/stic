@@ -1,7 +1,6 @@
 ---
-title: "01 - Variables"
-url: "cours/01-variables"
-next_class: "02-tableaux"
+title: "01 - Variables et littéraux"
+next_class: "02-expressions"
 ---
 
 ## Définition
