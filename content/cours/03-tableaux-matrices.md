@@ -152,7 +152,7 @@ int[][] integers = new int[][] {
 };
 ```
 
-#### Taille de la matrice
+### Taille de la matrice
 
 Pour la taille de la matrice, on parlera plus simplement de son nombre de lignes et de colonnes qui sont, respectivement, la taille du tableau de la première dimension et la taille des tableaux de la deuxième dimension. On peut récupérer ces informations comme on le ferait pour un tableau quelconque.
 
@@ -167,7 +167,7 @@ int nbLines = m.length;
 int nbColumns = m[0].length; // m[0] = première ligne
 ```
 
-#### Élements de la matrice
+### Élements de la matrice
 
 On accède aux **lignes** d'une matrice de la même façon qu'un tableau, avec l'opérateur `[]`, et aux éléments d'une ligne en réutilisant l'opérateur `[]` sur la ligne récupérée.
 
@@ -194,6 +194,6 @@ On parlera en général de coordonnées *i* et *j* des éléments dans la matric
 
 // TODO Schéma
 
-#### Parcourir une matrice
+### Parcourir une matrice
 
 Pour parcourir une matrice, c'est-à-dire pour *itérer* sur chacun de ces éléments, il faudra utiliser des boucles imbriquées dont les explications sont disponibles dans la leçon [06 - Boucles](cours/06-boucles.md).
