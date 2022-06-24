@@ -199,4 +199,4 @@ On parlera en général de coordonnées *i* et *j* des éléments dans la matric
 
 ### Parcourir une matrice
 
-Pour parcourir une matrice, c'est-à-dire pour *itérer* sur chacun de ces éléments, il faudra utiliser des boucles imbriquées dont les explications sont disponibles dans la leçon [06 - Boucles](cours/06-boucles.md).
+Pour parcourir une matrice, c'est-à-dire pour *itérer* sur chacun de ses éléments, il faudra utiliser des boucles imbriquées dont les explications sont disponibles dans la leçon [06 - Boucles](cours/06-boucles.md).
