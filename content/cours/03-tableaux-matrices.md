@@ -154,7 +154,7 @@ int[][] integers = new int[][] {
 
 ### Taille de la matrice
 
-Pour la taille de la matrice, on parlera plus simplement de son nombre de lignes et de colonnes qui sont, respectivement, la taille du tableau de la première dimension et la taille des tableaux de la deuxième dimension. On peut récupérer ces informations comme on le ferait pour un tableau quelconque.
+Pour la taille de la matrice, on parlera plus simplement de son nombre de lignes et de colonnes, qui sont, respectivement, la taille du tableau de la première dimension et la taille des tableaux de la deuxième dimension. On peut récupérer ces informations comme on le ferait pour un tableau quelconque.
 
 ```java
 int[] m = new int[] { 
@@ -169,7 +169,7 @@ int nbColumns = m[0].length; // m[0] = première ligne
 
 ### Élements de la matrice
 
-On accède aux **lignes** d'une matrice de la même façon qu'un tableau, avec l'opérateur `[]`, et aux éléments d'une ligne en réutilisant l'opérateur `[]` sur la ligne récupérée.
+On accède aux **lignes** d'une matrice de la même façon qu'on manipule un tableau, avec l'opérateur `[]`, et aux éléments d'une ligne en réutilisant l'opérateur `[]` sur la ligne récupérée, puisqu'il s'agit également d'un tableau.
 
 ```java
 int[] m = new int[] { 
