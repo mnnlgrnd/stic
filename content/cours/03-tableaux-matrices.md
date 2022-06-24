@@ -192,10 +192,10 @@ On parlera en général de coordonnées *i* et *j* des éléments dans la matric
 - i est l'indice de la ligne, à utiliser dans les premiers `[]`
 - j est l'indice de la colonne, à utiliser dans les deuxièmes `[]` (les crochets qui s'appliquent donc sur la ligne, le tableau, récupérée par les premiers crochets)
 
-
-<img src="/stic/images/matrix_ix_dm.svg" class="svg-dark-mode" width="300"/>
-<img src="/stic/images/matrix_ix_lm.svg" class="svg-light-mode" width="300"/>
-
+<p align="center">
+<img src="/stic/images/matrix_ix_dm.svg" class="svg-dark-mode w-50"/>
+<img src="/stic/images/matrix_ix_lm.svg" class="svg-light-mode w-50"/>
+</p>
 
 ### Parcourir une matrice
 
