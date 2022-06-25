@@ -40,7 +40,7 @@ println(true && false); // Affiche false
 println(true || false && false); // Affiche true car on fait d'abord le &&
                                  // Ca équivaut donc à true || false -> true
 println((true || false) && false); // Affiche false car on respecte les parenthèses
-                                 // Ca équivaut donc à true && false -> false
+                                   // Ca équivaut donc à true && false -> false
 ``` 
 
 Les opérateurs de comparaison ont tous le même ordre d'importance, et sont :
