@@ -163,7 +163,7 @@ Tout comme une variable, un littéral a un type, mais celui est en général imp
 
 ### Assignation à une variable
 
-Lorsque l'on utilise un littéral dans une assignation pour stocker sa valeur dans sa variable, il faut donc que ce type *corresponde* à celui de la variable. 
+Lorsque l'on utilise un littéral dans une assignation pour stocker sa valeur dans une variable, il faut donc que ce type *corresponde* à celui de la variable. 
 
 > **Correspondance n'est ici pas équivalence**. 
 
