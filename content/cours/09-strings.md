@@ -10,8 +10,8 @@ next_class: "10-geometrie"
 Comme toute variable, on déclare un string en indiquant son type, `String`, et le nom de la variable. En Java, une chaîne de caractères est délimitée par des guillemets. Ainsi, toute valeur entre `" "` sera évaluée par processing comme étant du type `String`.
 
 ```java
-String s = "Hello, world!";
-println(s); // Affiche Hello, world!
+String s = "Hello World!";
+println(s); // Affiche Hello World!
 ```
 
 ### Objets et littéraux
@@ -110,7 +110,41 @@ println(s2.length()); // Affiche 2
 
 #### `split`
 
+La méthode `split` permet de scinder une chaîne de caractères sur base d'un séparateur, une chaîne de caractères à passer en paramètre. Le `split` renvoie un tableau de `String` correspondant aux différentes parties de la chaîne initiale qui étaient séparées par le séparateur. Par exemple, utiliser `split(" ")` permet de couper une phrase sur les espaces et de récupérer un tableau de mots.
 
+```java
+String s = "Hello World!";
+String[] parts = s.split(" ");
+println(parts.length); // Affiche 2
+println(parts[0]); // Affiche Hello
+println(parts[1]); // Affiche World!
+```
 
-#### `substr` et `substring`
+#### `charAt`
 
+La méthode `charAt` permet de récupérer le caractère (type `char`) se trouvant à l'indice passé en paramètre.
+
+```java
+String s = "Hello World!";
+char h = s.charAt(0);
+char d  = s.charAt(10);
+println(h); // Affiche H
+println(d); // Affiche d
+```
+
+#### `substring`
+
+La méthode `substring` permet de récupérer une partie de la chaîne de caractères initiale. On peut appeler cette méthode de deux façons :
+
+- Avec un seul paramètre de type entier, qui est l'indice du caractère à partir duquel on veut la sous-chaîne de caractères, qui ira jusqu'à la fin de la chaîne de caractères initiale
+```java
+String s = "Hello World!";
+String world = s.substring(6);
+println(world); // Affiche World!
+```
+- Avec deux paramètres de type entier ; le premier est toujours l'indice du premier caractère de la sous-chaîne voulue, et le deuxième est l'indice du caractère (non-compris) de fin de la sous-chaîne
+```java
+String s = "Hello World!";
+String hello = s.substring(0, 5);
+println(hello); // Affiche Hello
+```
