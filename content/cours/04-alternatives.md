@@ -127,7 +127,8 @@ if (i > 0) {
   if (i > 5) {
     println("i est plus grand que 5");
   }
-}```
+}
+```
 
 ### Notation alternative
 
