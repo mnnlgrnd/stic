@@ -271,11 +271,11 @@
 				<foreignObject height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;" width="100%">
 					<div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 38px; height: 1px; padding-top: 60px; margin-left: 371px;" xmlns="http://www.w3.org/1999/xhtml">
 						<div data-drawio-colors="color: rgb(251, 255, 254); " style="box-sizing: border-box; font-size: 0px; text-align: center; max-height: 36px; overflow: hidden;">
-							<div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(251, 255, 254); line-height: 1.2; pointer-events: none; white-space: normal; overflow-wrap: normal;">0</div>
+							<div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(251, 255, 254); line-height: 1.2; pointer-events: none; white-space: normal; overflow-wrap: normal;">2</div>
 						</div>
 					</div>
 				</foreignObject>
-				<text fill="rgb(251, 255, 254)" font-family="Helvetica" font-size="12px" text-anchor="middle" x="390" y="64">2</text>
+				<text fill="rgb(251, 255, 254)" font-family="Helvetica" font-size="12px" text-anchor="middle" x="390" y="64">0</text>
 			</switch>
 		</g>
 		<path d="M 410 40 M 450 40 M 450 80 M 410 80" fill="none" pointer-events="none" stroke="rgb(251, 255, 254)" stroke-linecap="square" stroke-linejoin="round" stroke-miterlimit="10"/>
