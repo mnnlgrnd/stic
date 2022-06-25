@@ -1,7 +1,7 @@
 ---
 title: "03 - Tableaux et matrices"
 prev_class: "02-expressions"
-next_class: "04-strings"
+next_class: "04-alternatives"
 ---
 
 ## Tableaux
