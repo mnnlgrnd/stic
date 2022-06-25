@@ -16,9 +16,9 @@ On commence toujours une alternative par le mot clé `if` suivi de la condition 
 int i = int(random(-10, 10));
 
 if (i == 0) {
-	// Bloc de code conditionnel
-	// Exécuté uniquement si i est à égal à 0
-	println("i est égal à 0");
+  // Bloc de code conditionnel
+  // Exécuté uniquement si i est à égal à 0
+  println("i est égal à 0");
 }
 
 println("Après le if");
@@ -32,13 +32,13 @@ Le mot clé `else` permet d'exécuter un bloc de code optionnel, différent, lor
 int i = int(random(-10, 10));
 
 if (i == 0) {
-	// Bloc de code conditionnel
-	// Exécuté uniquement si i est à égal à 0
-	println("i est égal à 0");
+  // Bloc de code conditionnel
+  // Exécuté uniquement si i est à égal à 0
+  println("i est égal à 0");
 } else {
-	// Bloc de code conditionnel
-	// Exécuté uniquement si i n'est pas égal à 0
-	println("i n'est pas égal à 0");
+  // Bloc de code conditionnel
+  // Exécuté uniquement si i n'est pas égal à 0
+  println("i n'est pas égal à 0");
 }
 
 println("Après le if/else");
@@ -56,17 +56,17 @@ Dans le cas d'un branchement multiple, le branchement `else`, si présent, ne se
 int i = int(random(-10, 10));
 
 if (i == 0) {
-	// Bloc de code conditionnel
-	// Exécuté uniquement si i est à égal à 0
-	println("i est égal à 0");
+  // Bloc de code conditionnel
+  // Exécuté uniquement si i est à égal à 0
+  println("i est égal à 0");
 } else if (i > 0) {
-	// Bloc de code conditionnel
-	// Exécuté uniquement si i est strictement supérieur à 0
-	println("i est plus grand que 0");
+  // Bloc de code conditionnel
+  // Exécuté uniquement si i est strictement supérieur à 0
+  println("i est plus grand que 0");
 } else {
-	// Bloc de code conditionnel
-	// Exécuté uniquement si i n'est ni égal, ni supérieur à 0
-	println("i n'est pas égal ni plus grand que 0");
+  // Bloc de code conditionnel
+  // Exécuté uniquement si i n'est ni égal, ni supérieur à 0
+  println("i n'est pas égal ni plus grand que 0");
 }
 
 println("Après le if/else");
@@ -81,23 +81,23 @@ On parle d'*imbrication* lorsqu'on utilise un branchement conditionnel à l'int�
 int i = int(random(-10, 10));
 
 if (i == 0) {
-	// Bloc de code conditionnel
-	// Exécuté uniquement si i est à égal à 0
-	println("i est égal à 0");
+  // Bloc de code conditionnel
+  // Exécuté uniquement si i est à égal à 0
+  println("i est égal à 0");
 } else if (i > 0) {
-	// Bloc de code conditionnel
-	// Exécuté uniquement si i est strictement supérieur à 0
-	println("i est plus grand que 0");
-	if (i > 5) {
-		println("i est plus grand que 5");
-	}
+  // Bloc de code conditionnel
+  // Exécuté uniquement si i est strictement supérieur à 0
+  println("i est plus grand que 0");
+  if (i > 5) {
+    println("i est plus grand que 5");
+  }
 } else {
-	// Bloc de code conditionnel
-	// Exécuté uniquement si i n'est ni égal, ni supérieur à 0
-	println("i n'est pas égal ni plus grand que 0");
-	if (i < -5) {
-		println("i est plus petit que -5");
-	}
+  // Bloc de code conditionnel
+  // Exécuté uniquement si i n'est ni égal, ni supérieur à 0
+  println("i n'est pas égal ni plus grand que 0");
+  if (i < -5) {
+    println("i est plus petit que -5");
+  }
 }
 
 println("Après le if/else");
@@ -123,10 +123,10 @@ println("i est plus grand que 5");
 
 // Avec accolades
 if (i > 0) {
-	println("i plus grand que 0");
-	if (i > 5) {
-		println("i est plus grand que 5");
-	}
+  println("i plus grand que 0");
+  if (i > 5) {
+    println("i est plus grand que 5");
+  }
 }```
 
 ### Notation alternative
@@ -138,15 +138,15 @@ int i = int(random(-10, 10));
 
 // Avec accolades
 if (i > 0) {
-	if (i > 5) {
-		println("i est plus grand que 5");
-	}
+  if (i > 5) {
+    println("i est plus grand que 5");
+  }
 }
 
 // Sans accolades
 if (i > 0)
-	if (i > 5)
-		println("i est plus grand que 5");
+  if (i > 5)
+    println("i est plus grand que 5");
 ```
 
 Comme on le voit ici, le `if` imbriqué et ce qu'il contient ne sont considérés que comme un seul bloc exécutable, et on peut donc se passer des accolades autour même s'il s'agit, visuellement, de plus qu'une seule ligne de code.
