@@ -159,7 +159,7 @@ Tout comme une variable, un littéral a un type, mais celui est en général imp
 	- `1f` est de type `float`
 	- `3.14d` est de type `double`
 - Les littéraux de type caractère (`char`) comme `'a'`, `'+'`, etc. ; n'importe quel caractère entre deux `'`
-- Les littéraux de chaînes de caractères (strings), vu dans la leçon [04 - Strings](cours/09-strings.md)
+- Les littéraux de chaînes de caractères (strings), vu dans la leçon [09 - Strings](cours/09-strings.md)
 
 ### Assignation à une variable
 
