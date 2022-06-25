@@ -94,6 +94,6 @@ L'utilisation du modulo permet de transformer une suite continue en un cycle de 
 
 
 <p align="center">
-<img src="/stic/images/modulo_dm.svg" class="svg-dark-mode w-33"/>
-<img src="/stic/images/modulo_lm.svg" class="svg-light-mode w-33"/>
+<img src="/stic/images/modulo_dm.svg" class="svg-dark-mode w-50"/>
+<img src="/stic/images/modulo_lm.svg" class="svg-light-mode w-50"/>
 </p>
