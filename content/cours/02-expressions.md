@@ -25,7 +25,7 @@ Les expressions booléennes sont des expressions dont le type est `boolean`, c'e
 
 Les opérateurs possibles dans les expressions booléennes sont donc les opérateurs logiques de base ainsi que les opérateurs de comparaison entre nombres.
 
-Les opérateurs logiques principaux sont, dans l'ordre des priorités :
+Les opérateurs logiques sont, dans l'ordre des priorités :
 
 - `!`, la négation 
 - `&&`, le ET logique
