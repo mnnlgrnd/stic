@@ -95,7 +95,7 @@ println(abc.equals(bcd)); // Affiche false
 println(abc.equals("abc")); // Affiche true
 ```
 
-### Fonctions utiles
+### Méthodes utiles
 
 #### `length`
 
