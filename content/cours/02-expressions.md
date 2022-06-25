@@ -72,7 +72,7 @@ Les expressions mathématiques sont des expressions dont le résultat est de typ
 
 Il faut bien faire attention aux types des valeurs que l'on utilise dans une expression car ce sont eux qui déterminent le type du résultat. 
 
-Lorsqu'une expression ne contient que des valeurs entières, le résultat sera lui-même entier, et ce même si la vraie expression mathématique correspondante ne l'est pas. Ainsi, l'expression `1/2` ne contient que des entiers, et le résultat sera donc le résultat de la *division entière* de 1 par 2, qui vaut donc `0`.
+Lorsqu'une expression ne contient que des valeurs entières, le résultat sera lui-même entier, et ce même si la vraie expression mathématique correspondante ne l'est pas. Ainsi, l'expression `1 / 2` ne contient que des entiers, et le résultat sera donc le résultat de la *division entière* de 1 par 2, qui vaut donc `0`.
 
 Si une expression contient différents types, des entiers et des flottants, le résultat sera du type ayant la plus grande précision, donc flottant. Par exemple, `1.0 / 2` est une division normale, et le résultat sera la valeur flottante `0.5`.
 
@@ -88,7 +88,7 @@ On peut également utiliser l'opérateur `%` pour le "modulo", le reste de la di
 ```java
 println(1 % 4); // Affiche 1
 println(10 % 4); // Affiche 2
-println(12 % 4); Affiche 0
+println(12 % 4); // Affiche 0
 ```
 
 L'utilisation du modulo permet de transformer une suite continue en un cycle de valeurs allant de 1 à la valeur du modulo
