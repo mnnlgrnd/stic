@@ -99,7 +99,7 @@ println(10 % 4); // Affiche 2
 println(12 % 4); // Affiche 0
 ```
 
-L'utilisation du modulo permet de transformer une suite continue en un cycle de valeurs allant de 1 à la valeur du modulo :
+L'utilisation du modulo permet de transformer une suite continue en un cycle de valeurs allant de 0 à la valeur du modulo - 1 :
 
 
 <p align="center">
