@@ -68,13 +68,21 @@ Les expressions mathématiques sont des expressions dont le résultat est de typ
 - `*` et `/` pour la multiplication et la division
 - `+` et `-` pour l'addition et la soustraction
 
+```java
+println(1 + 1); // Affiche 2
+println(3 * 3); // Affiche 9
+println(2 + 2 * 2); // Affiche 6
+```
+
 #### Entiers et flottants
 
 Il faut bien faire attention aux types des valeurs que l'on utilise dans une expression car ce sont eux qui déterminent le type du résultat. 
 
-Lorsqu'une expression ne contient que des valeurs entières, le résultat sera lui-même entier, et ce même si la vraie expression mathématique correspondante ne l'est pas. Ainsi, l'expression `1 / 2` ne contient que des entiers, et le résultat sera donc le résultat de la *division entière* de 1 par 2, qui vaut donc `0`.
+Lorsqu'une expression ne contient que des valeurs entières, le résultat sera lui-même entier, et ce même si la vraie expression mathématique correspondante ne l'est pas. Ainsi, l'expression `1 / 2` ne contient que des entiers, et le résultat sera donc le résultat de la *division entière* de 1 par 2, qui vaut donc `0`. 
 
-Si une expression contient différents types, des entiers et des flottants, le résultat sera du type ayant la plus grande précision, donc flottant. Par exemple, `1.0 / 2` est une division normale, et le résultat sera la valeur flottante `0.5`.
+De façon plus générale, si une expression ne contient que des valeurs du même type, ce sera aussi le type de l'expression. Si par contre l'expression contient des valeurs de différents types, l'expression prendra le type ayant la plus grande précision (voir [01 - Variables et littéraux](cours/01-variables-litteraux.md)).
+
+Ainsi, si une expression contient des valeurs de type `int` et des valeurs de type `float`, donc flottantes, l'expression sera de type `float`. Par exemple, le résultat de `1.0 / 2` est flottant, et il s'agit donc de la division normale dont le résultat `0.5`.
 
 ```java
 int m = 1 / 2; // 0
