@@ -24,7 +24,7 @@ while (i < 5) {
 ```
 
 Le code ci-dessus affichera donc successivement, dans la console :
-```console
+```bash
 0
 1
 2
