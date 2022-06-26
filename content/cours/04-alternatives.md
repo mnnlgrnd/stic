@@ -1,6 +1,6 @@
 ---
 title: "04 - Alternatives"
-prev_class: "03-matrices"
+prev_class: "03-tableaux-matrices"
 next_class: "05-boucles"
 ---
 
