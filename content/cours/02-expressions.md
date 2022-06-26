@@ -74,7 +74,7 @@ println(3 * 3); // Affiche 9
 println(2 + 2 * 2); // Affiche 6
 ```
 
-#### Entiers et flottants
+### Entiers et flottants
 
 Il faut bien faire attention aux types des valeurs que l'on utilise dans une expression car ce sont eux qui déterminent le type du résultat. 
 
@@ -89,7 +89,7 @@ int m = 1 / 2; // 0
 float n = 1.0 / 2; // 0.5
 ```
 
-#### Modulo
+### Modulo
 
 On peut également utiliser l'opérateur `%` pour le "modulo", le reste de la division entière. 
 
