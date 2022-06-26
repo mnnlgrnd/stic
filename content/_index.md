@@ -13,7 +13,7 @@ author: "Manon Legrand"
 #### [04 - Alternatives](cours/04-alternatives.md)
 #### [05 - Boucles](cours/05-boucles.md)
 #### [06 - Fonctions](cours/06-fonctions.md)
-#### [07 - blocs-contextes](cours/07-blocs-contextes.md)
+#### [07 - Blocs et contextes](cours/07-blocs-contextes.md)
 #### [08 - Récursivité](cours/08-recursivite.md)
 #### [09 - Classes](cours/09-classes.md)
 #### [10 - Strings](cours/10-strings.md)
