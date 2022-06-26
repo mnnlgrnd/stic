@@ -85,11 +85,11 @@ i = j * 2; // i va contenir j * 2 -> évalué à 10 * 2 -> évalué à 20
 
 ### Evaluation
 
-L'**évaluation** est l'interprétation, par Processing, d'un morceau de code, une **expression**, pour en déduire une **valeur.** Une expression peut être 
+L'**évaluation** est l'interprétation, par Processing, d'un morceau de code, une **[expression](cours/02-expressions.md)**, pour en déduire une **valeur.** Une expression peut être 
 
 -   Une valeur (par exemple `1`, `'a'`, `true`, etc.)
 -   Une variable
--   Un appel de fonction : le type de la valeur sera le type de retour de cette fonction
+-   Un appel de fonction : le type de la valeur sera le type de retour de cette fonction, par exemple `float f = random(0, 1);`, on assigne à la variable `f` un nombre aléatoire entre 0 et 1 que nous retourne la fonction `random`
 -   Un calcul impliquant des valeurs, variables ou appels de fonction : processing respectera alors l'ordre des opérateurs/parenthèses
 
 Une expression peut donc être utilisée
@@ -107,42 +107,6 @@ i = i + 1;
 ```java
 println(i); // On affiche ce que contient la variable i
 ```
-
-#### Exercices
-
-1. Que sera-t-il affiché dans la console lorsqu'on exécute le code suivant ?
-
-```java
-int i = 1;
-int j = 2;
-println(i);
-println(i + j);
-i = i + j;
-j = 2 * i;
-j = 2 * j;
-println(i);
-println(j);
-```
-
-<details class="solution"> 
-<summary>Solution</summary>
-<div class="highlight">
-<div class="chroma">
-<table class="lntable">
-<tbody>
-<tr>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line">1</span>
-<span class="line">3</span>
-<span class="line">3</span>
-<span class="line">12</span></code></pre>
-</td>
-</tr>
-</tbody>
-</table>		
-</div>
-</div>
-</details>
 
 ## Littéraux
 
