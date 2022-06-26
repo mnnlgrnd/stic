@@ -1,11 +1,11 @@
 ---
-title: "09 - Strings"
-prev_class: "08-classes"
-next_class: "10-geometrie"
+title: "10 - Strings"
+prev_class: "09-classes"
+next_class: "11-geometrie"
 ---
 
 ## Définition
- Un **string** est un type de données particulier permettant de contenir une chaîne de caractères, du texte. Il ne s'agit pas d'un type primitif comme `int`, `float`, etc. mais d'une [classe](cours/08-classes.md) `String` existante dans le langage Java de base.
+ Un **string** est un type de données particulier permettant de contenir une chaîne de caractères, du texte. Il ne s'agit pas d'un type primitif comme `int`, `float`, etc. mais d'une [classe](cours/09-classes.md) `String` existante dans le langage Java de base.
 
 Comme toute variable, on déclare un string en indiquant son type, `String`, et le nom de la variable. En Java, une chaîne de caractères est délimitée par des guillemets. Ainsi, toute valeur entre `" "` sera évaluée par processing comme étant du type `String`.
 

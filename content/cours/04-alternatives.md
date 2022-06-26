@@ -153,3 +153,5 @@ if (i > 0)
 Comme on le voit ici, le `if` imbriqué et ce qu'il contient ne sont considérés que comme un seul bloc exécutable, et on peut donc se passer des accolades autour même s'il s'agit, visuellement, de plus qu'une seule ligne de code.
 
 > ⚠️ Pour éviter des problèmes, je conseille d'éviter cette notation et de toujours utiliser les accolades pour délimiter les blocs.
+
+

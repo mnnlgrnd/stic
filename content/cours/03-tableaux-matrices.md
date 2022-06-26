@@ -17,7 +17,7 @@ Un tableau est un type de données au même titre que le sont `int`, `float`, et
 Lorsqu'un programme processing s'exécute, il possède sa propre mémoire dans laquelle seront stockées toutes les variables et tout ce qu'il se déroule dans le programme (appels de fonction, etc.). Cette mémoire se compose de deux parties :
 
 - La mémoire dite statique, le *stack*, qui contient notamment les variables (locales) de type primitif et des **références** vers des données stockées dans le *heap*
-- La mémoire dite dynamique, le *heap*, qui contient notamment des tableaux et des [objets](cours/08-classes.md)
+- La mémoire dite dynamique, le *heap*, qui contient notamment des tableaux et des [objets](cours/09-classes.md)
 
 <img src="/stic/images/stack_heap_dm.svg" class="svg-dark-mode"/>
 <img src="/stic/images/stack_heap_lm.svg" class="svg-light-mode"/>
@@ -157,7 +157,7 @@ int[][] integers = new int[][] {
 Pour la taille de la matrice, on parlera plus simplement de son nombre de lignes et de colonnes, qui sont, respectivement, la taille du tableau de la première dimension et la taille des tableaux de la deuxième dimension. On peut récupérer ces informations comme on le ferait pour un tableau quelconque.
 
 ```java
-int[] m = new int[] { 
+int[][] m = new int[][] { 
   { 1, 2, 3 }, 
   { 4, 5, 6 }, 
   { 7, 8, 9 } 
@@ -172,7 +172,7 @@ int nbColumns = m[0].length; // m[0] = première ligne
 On accède aux **lignes** d'une matrice de la même façon qu'on manipule un tableau, avec l'opérateur `[]`, et aux éléments d'une ligne en réutilisant l'opérateur `[]` sur la ligne récupérée, puisqu'il s'agit également d'un tableau.
 
 ```java
-int[] m = new int[] { 
+int[][] m = new int[][] { 
   { 1, 2, 3 }, 
   { 4, 5, 6 }, 
   { 7, 8, 9 } 
