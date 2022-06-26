@@ -106,3 +106,54 @@ L'utilisation du modulo permet de transformer une suite continue en un cycle de 
 <img src="/stic/images/modulo_dm.svg" class="svg-dark-mode w-75"/>
 <img src="/stic/images/modulo_lm.svg" class="svg-light-mode w-75"/>
 </p>
+
+### Sucres syntaxiques
+(A prononcer avec l'accent québecois car c'est la seule bonne raison de traduire un terme anglais)
+
+Les sucres syntaxiques, ou *syntactic sugars*, sont des facilités, des raccourcis de code qu'un langage met à disposition des utilisateurs.
+
+Pour les opérations mathématiques, Java propose des raccourcis pour les calculs de la forme *x = x \<opérateur\> \<expression\>*. C'est-à-dire quand on assigne à une variable le résultat d'une opération simple entre cette variable et une autre expression. On peut éviter de répéter la variable *x* en utilisant le sucre syntaxique correspondant *x \<opérateur\>= \<expression\>*. Ceci est valable pour les 4 opérateurs mathématiques standards `+`, `-`, `*` et `/`.
+
+```java
+int i = 0;
+
+i = i + 5; // Forme normale
+i += 5; // Sucre syntaxique 
+
+i = i * (45 / 3); // Forme normale
+i *= 45 / 3; // Sucre syntaxique
+```
+
+De plus, lorsque le calcul est de type *x = x + 1* ou *x = x - 1*, on peut davantage simplifier la ligne de code en utilisant les opérateurs d'incrémentation `++` et de décrémentation `--`.
+
+```java
+int i = 0;
+
+i = i + 1; // Forme normale
+i++; // Incrémentation
+
+i = i - 1; // Forme normale
+i--; // Décrémentation
+```
+
+Les opérateurs `++` et `--` peuvent s'utiliser avant ou après la variable à incrémenter/décrémentér. Dans les deux cas, la valeur de la variable sera mise à jour avec le résultat de l'addition/soustraction avec 1.
+
+La différence réside dans le fait qu'il s'agit d'une expression ; on peut donc utiliser l'incrémentation/décrémentation comme expression pour une assignation : `int y = x++`. Dans ce cas, l'ordre dans lequel Java va effecter le calcul et l'évaluation de la valeur à assigner à la deuxième variable dépend du placement de l'opérateur `++` ou `--` :
+
+- Si l'opérateur se situe *après* la variable `x` , alors Java va d'abord évaluer la valeur actuelle de cette variable. Cette valeur sera assignée à la variable `y`, puis le calcul incrémental/décrémental sera effectué et la valeur de `x` changée
+
+```java
+int x = 0;
+int y = x++;
+println(x); // Affiche 1
+println(y); // Affiche 0
+```
+
+- Si l'opération se situe *avant* la variable `x`, c'est l'inverse. C'est d'abord l'incrémentation/décrémentation qui est faite, puis cette nouvelle valeur de `x` sera assignée à `y`.
+
+```java
+int x = 0;
+int y = ++x;
+println(x); // Affiche 1
+println(y); // Affiche 1
+```

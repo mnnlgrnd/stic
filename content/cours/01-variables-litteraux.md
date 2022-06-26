@@ -89,7 +89,7 @@ L'**évaluation** est l'interprétation, par Processing, d'un morceau de code, u
 
 -   Une valeur (par exemple `1`, `'a'`, `true`, etc.)
 -   Une variable
--   Un appel de fonction : le type de la valeur sera le type de retour de cette fonction, par exemple `float f = random(0, 1);`, on assigne à la variable `f` un nombre aléatoire entre 0 et 1 que nous retourne la fonction `random`
+-   Un appel de fonction : le type de la valeur sera le type de retour de cette fonction, par exemple `float f = random(0, 1)`, on assigne à la variable `f` un nombre aléatoire entre 0 et 1 que nous retourne la fonction `random`
 -   Un calcul impliquant des valeurs, variables ou appels de fonction : processing respectera alors l'ordre des opérateurs/parenthèses
 
 Une expression peut donc être utilisée
