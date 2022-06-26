@@ -23,6 +23,13 @@ while (i < 5) {
 }
 ```
 
-
+Le code ci-dessus affichera donc successivement, dans la console :
+```terminal
+0
+1
+2
+3
+4
+```
 
 ## Boucle `for`

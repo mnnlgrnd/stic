@@ -112,6 +112,8 @@ L'utilisation du modulo permet de transformer une suite continue en un cycle de 
 
 Les sucres syntaxiques, ou *syntactic sugars*, sont des facilités, des raccourcis de code qu'un langage met à disposition des utilisateurs.
 
+#### Raccourcis mathématiques
+
 Pour les opérations mathématiques, Java propose des raccourcis pour les calculs de la forme *x = x \<opérateur\> \<expression\>*. C'est-à-dire quand on assigne à une variable le résultat d'une opération simple entre cette variable et une autre expression. On peut éviter de répéter la variable *x* en utilisant le sucre syntaxique correspondant *x \<opérateur\>= \<expression\>*. Ceci est valable pour les 4 opérateurs mathématiques standards `+`, `-`, `*` et `/`.
 
 ```java
@@ -124,6 +126,8 @@ i = i * (45 / 3); // Forme normale
 i *= 45 / 3; // Sucre syntaxique
 ```
 
+#### Incrémentation et décrémentation
+
 De plus, lorsque le calcul est de type *x = x + 1* ou *x = x - 1*, on peut davantage simplifier la ligne de code en utilisant les opérateurs d'incrémentation `++` et de décrémentation `--`.
 
 ```java
@@ -135,6 +139,8 @@ i++; // Incrémentation
 i = i - 1; // Forme normale
 i--; // Décrémentation
 ```
+
+##### 🕵‍♀ Comme expression
 
 Les opérateurs `++` et `--` peuvent s'utiliser avant ou après la variable à incrémenter/décrémentér. Dans les deux cas, la valeur de la variable sera mise à jour avec le résultat de l'addition/soustraction avec 1.
 
