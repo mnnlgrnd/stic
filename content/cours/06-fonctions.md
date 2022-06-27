@@ -45,8 +45,8 @@ int bar(int i) {
 }
 
 void setup() {
-  foo();
-  println(bar(1));
+  foo(); // Appelle la fonction foo, qui va afficher foo 
+  println(bar(1)); // Affiche le résultat de l'appel à bar(1) : 2
 }
 ```
 

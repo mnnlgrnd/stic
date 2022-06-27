@@ -6,7 +6,7 @@ next_class: "08-recursivite"
 
 ## Blocs
 
-Un *bloc de code* est une série de lignes de code délimitée par des accolades `{}`. Ces blocs sont, comme vu précédemment, liés à des [branchements conditionnels](cours/04-alternatives), des [boucles](cours/05-boucles) ou des [fonctions](cours/07-fonctions.md). Chaque bloc a son propre *contexte*.
+Un *bloc de code* est une série de lignes de code délimitée par des accolades `{}`. Ces blocs sont, comme vu précédemment, liés à des [branchements conditionnels](cours/04-alternatives), des [boucles](cours/05-boucles) ou des [fonctions](cours/06-fonctions.md). Chaque bloc a son propre *contexte*.
 
 ## Contexte et portée
 La *portée* d'une variable définit dans quel contexte celle-ci est visible par du code et donc utilisable. Chaque bloc a accès aux variables déclarées dans son propre contexte et à celles déclarées dans le contexte "parent" ou englobant.

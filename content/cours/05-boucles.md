@@ -51,7 +51,7 @@ while (i < 5) { // i ne change pas et on ne sort jamais de la boucle
  - Une condition pour continuer à boucler. On veut en général que la variable compteur soit plus petite qu'une *borne* (le nombre de répétitions souhaitées).
  - Une itération, une assignation qui modifie la valeur de la variable compteur pour passer à l'étape suivante.
 
-La boucle est donc de la forme *for (\<initialisation\>; \<condition\>; \<assignation\/) {  }*
+La boucle est donc de la forme *for (\<initialisation\>; \<condition\>; \<assignation\>) {  }*
 
 ```java
 // Avec while
@@ -102,7 +102,7 @@ Le code ci-dessus affichera donc successivement, dans la console :
 ```
 
 ## Parcourir des tableaux
-Les boucles sont particulièrement utiles lorsque l'on manipule des tableaux. On peut utiliser une boucle pour parcourir tous les éléments du tableau et exécuter un bloc de code similaire pour chaque élément. Le plus simple est alors d'utiliser une boucle `for` qui itère sur chaque position dans le tableau, donc de `0`  à la taille du tableau - 1. Pour rappel, on peut obtenir la taille d'un tableau grâce au champ `length` de ce tableau.
+Les boucles sont particulièrement utiles lorsque l'on manipule des [tableaux](cours/03-tableaux-matrices). On peut utiliser une boucle pour parcourir tous les éléments du tableau et exécuter un bloc de code similaire pour chaque élément. Le plus simple est alors d'utiliser une boucle `for` qui itère sur chaque position dans le tableau, donc de `0`  à la taille du tableau - 1. Pour rappel, on peut obtenir la taille d'un tableau grâce au champ `length` de ce tableau.
 
 ```java
 int[] t = new int[] { 1, 2, 3, 4, 5 };

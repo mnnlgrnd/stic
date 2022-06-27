@@ -21,6 +21,9 @@ author: "Manon Legrand"
 ### Processing
 #### [11 - Géométrie](cours/11-geometrie.md)
 #### [12 - Transformations](cours/12-transformations.md)
+#### [13 - IntList et FloatList](cours/13-intlist-floatlist.md)
+#### [14 - Images et pixels](cours/14-images-pixels)
+
 
 
 ## Tutoriels
