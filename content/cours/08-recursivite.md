@@ -77,8 +77,10 @@ void foo(int i) {
 
 Si on appelle initialement la fonction en passant 0 en paramètre : `foo(0)`, l'exécution ressemblera à
 
-<img src="/stic/images/recursion-dm.svg" class="svg-dark-mode"/>
-<img src="/stic/images/recursion-lm.svg" class="svg-light-mode"/>
+<p align="center">
+<img src="/stic/images/recursion-dm.svg" class="svg-dark-mode w-50"/>
+<img src="/stic/images/recursion-lm.svg" class="svg-light-mode w-50"/>
+</p>
 
 ## Construire une solution récursive
 
