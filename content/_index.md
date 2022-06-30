@@ -22,7 +22,7 @@ author: "Manon Legrand"
 #### [11 - Géométrie](cours/11-geometrie.md)
 #### [12 - Transformations](cours/12-transformations.md)
 #### [13 - IntList et FloatList](cours/13-intlist-floatlist.md)
-#### [14 - Images et pixels](cours/14-images-pixels)](cours/13-intlist-floatlist.md)
+#### [14 - Images et pixels](cours/14-images-pixels)
 #### [15 - Tables](cours/15-tables.md)
 
 
@@ -30,5 +30,5 @@ author: "Manon Legrand"
 ## Tutoriels
 ### [Structurer une solution processing](tutoriels/structurer-une-solution.md)
 ### [Débugger (WIP)](tutoriels/debugger.md)
-### [Jeu : Space Invaders simplifié (WIP)](tutoriels/space-invaders)
+### [Jeu : Space Invaders simplifié](tutoriels/space-invaders.md)
 
