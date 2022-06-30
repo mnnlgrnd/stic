@@ -1,7 +1,7 @@
 ---
 title: "10 - Strings"
 prev_class: "09-classes"
-next_class: "11-geometrie"
+next_class: "11-bases-processing"
 ---
 
 ## Définition

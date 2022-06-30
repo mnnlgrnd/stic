@@ -18,11 +18,10 @@ author: "Manon Legrand"
 #### [10 - Strings](cours/10-strings.md)
 
 ### Processing
-#### [11 - Géométrie](cours/11-geometrie.md)
-#### [12 - Transformations](cours/12-transformations.md)
-#### [13 - IntList et FloatList](cours/13-intlist-floatlist.md)
-#### [14 - Images et pixels](cours/14-images-pixels)
-#### [15 - Tables](cours/15-tables.md)
+#### [11 - Bases de processing](cours/11-bases-processing.md)
+#### [12 - IntList et FloatList](cours/12-intlist-floatlist.md)
+#### [13 - Images et pixels](cours/13-images-pixels.md)
+#### [14 - Tables](cours/14-tables.md)
 
 
 
