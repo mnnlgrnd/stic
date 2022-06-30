@@ -69,7 +69,8 @@ Considérons la fonction récursive suivante.
 
 ```java
 void foo(int i) {
-  if (i < 4) {
+  println(i);
+  if (i < 3) {
     foo(i + 1);
   }
 }
@@ -81,6 +82,15 @@ Si on appelle initialement la fonction en passant 0 en paramètre : `foo(0)`, l'
 <img src="/stic/images/recursion-dm.svg" class="svg-dark-mode w-50"/>
 <img src="/stic/images/recursion-lm.svg" class="svg-light-mode w-50"/>
 </p>
+
+Et affichera en console
+
+```plain
+0
+1
+2
+3
+```
 
 ## Construire une solution récursive
 

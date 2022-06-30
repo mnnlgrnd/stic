@@ -3,7 +3,6 @@ title: "Algorithmes et Programmation"
 author: "Manon Legrand"
 ---
 
-
 ## Leçons
 
 ### Théorie

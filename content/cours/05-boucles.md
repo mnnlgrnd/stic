@@ -86,7 +86,7 @@ while (i < 3) {
 
 Le code ci-dessus affichera donc successivement, dans la console :
 
-```bash
+```plain
 0
 0
 1
@@ -143,7 +143,7 @@ for (int i = 0; i < nbLines; i++) {
 
 Ce code affiche les coordonnées (ligne, colonne) de chaque élément de la matrice et la valeur de cet élément, en commençant par la première ligne et toutes ses colonnes, la deuxième ligne, etc. On verra donc, dans la console :
 
-```bash
+```plain
 0 0 1
 0 1 2
 0 2 3
