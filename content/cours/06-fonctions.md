@@ -50,6 +50,8 @@ void setup() {
 }
 ```
 
+Lorsque l'exécution du code est terminée, la ligne de code suivant celle de l'appel est la prochaine qui sera exécutée.
+
 > ⚠ Pour qu'un code avec des fonctions et appels de fonction soit exécutable en processing, il est obligatoire de mettre les appels de fonction dans une des fonctions de processing (setup, draw, etc.) et pas dans le contexte global.
 
 ## Retour de fonction
