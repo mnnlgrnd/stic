@@ -150,6 +150,7 @@ Peu importe le mode, les informations à passer à la fonction pour dessiner un 
 	- Le centre du rectangle est *(x1 + w / 2, y1 + h / 2)*
 	- *Ces calculs peuvent s'adapter en prenant d'autres paires de coins opposés ; il faudra notamment prendre la valeur absolue de la largeur et de la hauteur.*
 
+
 - `CENTER`, soit les coordonnées *(x, y)* du centre, la largeur *w* et la hauteur *h* :
 	- Le coin supérieur gauche est *(x - w / 2, y - w / 2)*
 	- Le coin supérieur droit est *(x + w / 2, y - h / 2)*
