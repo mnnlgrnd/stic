@@ -127,7 +127,18 @@ fill(color(255, 0, 0), 51); // Remplissage rouge à 20% d'opacité
 ```
 
 ### Lignes
+
+
+
 ### Rectangles
+
+<p align="center">
+<img src="/stic/images/rect-dm.svg" class="svg-dark-mode w-75"/>
+<img src="/stic/images/rect-lm.svg" class="svg-light-mode w-75"/>
+</p>
+
+
+
 ### Ellipses
 ### Textes
 

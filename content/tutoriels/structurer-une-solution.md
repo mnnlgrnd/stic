@@ -4,7 +4,7 @@ url: "tutoriels/structurer-une-solution"
 ---
 
 ## Vue d'ensemble
-Une solution processing contiendra
+Une solution [processing](cours/11-bases-processing.md) contiendra
 
 -   La déclaration de variables globales (visibles dans tous les blocs)
 -   Le `setup`
@@ -21,7 +21,7 @@ L'_état_ du code est l'ensemble des informations (~ variables) qui permettent, 
 
 ### Constantes
 
-Les variables **constantes** sont des valeurs qui ne changeront pas lors de l'exécution du code, mais qui seront amenées à être utilisées régulièrement. On préfère ainsi voir apparaître ce genre de valeurs dans des variables constantes, pour pouvoir facilement les changer sans devoir reparcourir tout le code. 
+Les [variables](cours/01-variables-litteraux.md) **constantes** sont des valeurs qui ne changeront pas lors de l'exécution du code, mais qui seront amenées à être utilisées régulièrement. On préfère ainsi voir apparaître ce genre de valeurs dans des variables constantes, pour pouvoir facilement les changer sans devoir reparcourir tout le code. 
 
 Lorsque ces variables sont bien nommées, elles peuvent également améliorer la lisibilité du code :
 
@@ -130,7 +130,7 @@ void keyReleased() {
 
 ## Fonctions et classes
 
-L'utilisation de fonctions et de classes n'est fondamentalement pas obligatoire pour mettre au point une solution, mais on se prive alors de mécanismes précieux permettant de simplifier le code, le rendre plus lisible, d'éviter la redondance, etc.
+L'utilisation de [fonctions](cours/06-fonctions.md) et de [classes](cours/09-classes.md) n'est fondamentalement pas obligatoire pour mettre au point une solution, mais on se prive alors de mécanismes précieux permettant de simplifier le code, le rendre plus lisible, d'éviter la redondance, etc.
 
 Prenons par exemple un dessin où un personnage glisse sur le sol jusqu'à rencontrer un obstacle, auquel cas il trouve une nouvelle direction "libre" et continue sa glissade. Le code suivant nous permet facilement de comprendre *ce que fait le dessin*. *Comment* le dessin est effectivement réalisé dépendra de la façon dont on aura défini et implémenté les différentes classes/fonctions.
 
