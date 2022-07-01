@@ -124,7 +124,7 @@ void setup() {
   rect(20, 20, 100, 50);
 
   rectMode(CORNERS);
-  rect(20, 20, 100, 50);
+  rect(20, 20, 120, 70);
 
   rectMode(CENTER);
   rect(70, 45, 100, 50);
