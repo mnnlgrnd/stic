@@ -31,7 +31,10 @@ L'environnement processing offre un outil de débuggage qui permet de mettre l'e
 
 Il s'agit en réalité d'un mode d'exécution du code différent, que l'on peut activer dans processing via le raccourci `ctrl-d` ou explicitement via le menu :
 
-{{ $image := .Resources.GetMatch "enable-debugger.png" }} {{ with $image }} <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"> {{ end }}
+{{ $image := .Resources.GetMatch "enable-debugger.png" }} 
+{{ with $image }} 
+<img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"> 
+{{ end }}
 
 //
 ![[tutoriels/images/enable-debugger.png]]
