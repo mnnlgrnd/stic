@@ -60,7 +60,7 @@ Pour une entrée souris, il y aura toujours les évènements :
 
 <p align="center">
 <img src="/stic/images/processing-loop-dm.svg" class="svg-dark-mode w-50"/>
-<img src="/stic/images/processing-loop.svg" class="svg-light-mode w-50"/>
+<img src="/stic/images/processing-loop-lm.svg" class="svg-light-mode w-50"/>
 </p>
 
 ## Variables processing
