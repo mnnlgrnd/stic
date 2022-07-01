@@ -139,6 +139,13 @@ fill(color(255, 0, 0), 51); // Remplissage rouge à 20% d'opacité
 
 
 ### Ellipses
+
+<p align="center">
+<img src="/stic/images/ellipse-dm.svg" class="svg-dark-mode w-75"/>
+<img src="/stic/images/ellipse-lm.svg" class="svg-light-mode w-75"/>
+</p>
+
+
 ### Textes
 
 
