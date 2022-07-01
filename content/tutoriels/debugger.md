@@ -33,7 +33,7 @@ Il s'agit en réalité d'un mode d'exécution du code différent, que l'on peut 
 
 {{ $image := .Resources.GetMatch "enable-debugger.png" }} 
 {{ with $image }} 
-<img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"> 
+  <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"> 
 {{ end }}
 
 //
