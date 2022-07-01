@@ -72,5 +72,5 @@ Pour une entrée souris, il y aura toujours les évènements :
 - `pmouseX` et `pmouseY` contiennent les coordonnées (x,y) de la position du curseur dans la frame précédente.
 - `keyCode` contient une représentation codifée de la touche sur laquelle on vient d'appuyer : par exemple `ENTER`. Toutes les touches ne sont pas codifiées.
 - `key` contient le caractère correspondant à la touche sur laquelle on vient d'appuyer : par exemple `' '` pour la touche espace.
-- Des constantes correspondant à des "codes", comme pour les touches standard du clavier (`ENTER`, `LEFT`, `RIGHT`, etc.)
+- Des constantes correspondant à des "codes", comme pour les touches standards du clavier (`ENTER`, `LEFT`, `RIGHT`, etc.)
 
