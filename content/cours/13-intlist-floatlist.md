@@ -1,7 +1,7 @@
 ---
-title: '12 - IntList et FloatList'
-prev_class: "11-bases-processing"
-next_class: '13-images-pixels'
+title: '13 - IntList et FloatList'
+prev_class: '12-dessins-geometrie'
+next_class: '14-images-pixels'
 ---
 
 ## Définition

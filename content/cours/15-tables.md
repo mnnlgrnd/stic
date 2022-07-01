@@ -1,6 +1,6 @@
 ---
-title: '14 - Tables'
-prev_class: '13-images-pixels'
+title: '15 - Tables'
+prev_class: '14-images-pixels'
 ---
 
 ## Classes

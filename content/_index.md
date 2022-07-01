@@ -19,9 +19,10 @@ author: "Manon Legrand"
 
 ### Processing
 #### [11 - Bases de processing](cours/11-bases-processing.md)
-#### [12 - IntList et FloatList](cours/12-intlist-floatlist.md)
-#### [13 - Images et pixels](cours/13-images-pixels.md)
-#### [14 - Tables](cours/14-tables.md)
+#### [12 - Dessins et géométrie](cours/12-dessins-geometrie.md)
+#### [13 - IntList et FloatList](cours/13-intlist-floatlist.md)
+#### [14 - Images et pixels](cours/14-images-pixels.md)
+#### [15 - Tables](cours/15-tables.md)
 
 
 
