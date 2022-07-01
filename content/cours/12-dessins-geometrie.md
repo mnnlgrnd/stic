@@ -1,7 +1,7 @@
 ---
 title: '12 - Dessins et géometrie'
 prev_class: '11-bases-processing'
-next_class: '13-images-pixels'
+next_class: '13-intlist-floatlist'
 ---
 
 ## Fenêtre
