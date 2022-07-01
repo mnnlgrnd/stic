@@ -323,7 +323,7 @@ Un point se situe à l'intérieur d'un rectangle si ses coordonnées sont compri
 
 ```java
 boolean isPointInRect(float x, float y,
-                      float rx, ry, rw, rh) {
+                      float rx, float ry, float rw, float rh) {
   return x >= rx && x <= rx+rw &&
          y >= ry && y <= ry+rh;				  
 }
