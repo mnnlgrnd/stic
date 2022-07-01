@@ -104,6 +104,8 @@ L'appel à background remplit le fond avec la couleur passée en paramètre en *
 Quand on appelle `stroke` ou `fill`, la couleur ne changera pas jusqu'à ce qu'on appelle à nouveau cette fonction avec une autre valeur.
 
 ```java
+background(255); // Fond blanc
+
 stroke(0); // A partir d'ici, les traits sont noirs
 fill(color(255, 0, 0)); // A partir d'ici, le remplissage est en rouge
 
