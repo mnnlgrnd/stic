@@ -55,120 +55,115 @@ Les variables non constantes sont amenées à changer lors de l'exécution du co
 - L'évolution naturelle (dans le `draw`)
 - L'évolution forcée en réaction aux entrées clavier/souris de l'utilisateur
 
-## Initialisation `setup`
+## Initialisation
 
-Tout dessin processing complexe, c'est-à-dire qui va utiliser des fonctions, doit définir la fonction `setup` dans laquelle il convient d'initialiser l'état, les valeurs initiales des données. On peut aussi y configurer certains paramètres globaux du dessin (largeur des lignes, etc.)
+C'est en général dans le `setup` qu'on va initialiser l'état, les valeurs initiales des données. On peut aussi y configurer certains paramètres globaux du dessin (largeur des lignes, etc.).
 
 ```java
 void setup() {
   size(800, 600);
 
-  // Some global drawing parameters
+  // Configuration globale du dessin
 
-  // Data initialization
+  // Initialisation des données
 	
 }
 ```
 
-## Boucle principale `draw`
+## Boucle principale
 
-La "boucle principale" est une boucle implicite qui permet de passer à l'étape suivante du code. En processing, cette boucle principale est la fonction `draw`, et une étape est une *frame* du dessin. C'est donc de cette fonction que partira la majorité de la logique du code : la représentation, le dessin, et l'évolution naturelle des données. L'ordre des différentes mises à jour de données et des dessins dépendra du comportement voulu
+C'est du `draw` que partira la majorité de la logique du code : la représentation, le dessin, et l'évolution naturelle des données. L'ordre des différentes mises à jour de données et des dessins dépendra du comportement voulu.
 
 ```java
 void draw() {
-  background(0); // Hide previous frame if needed
+  background(0);
 
-  // Update state
+  // Dessiner
 
-  // Draw state
+  // Faire évoluer les données
 
 }
 ```
 
 ## Réactions aux entrées
 
-Les différentes entrées possibles en processing sont accessibles via des fonctions qui seront appelées quand l'évènement correspondant survient, entre deux appels de `draw`. Il ne faut définir chaque fonction qu'une seule fois
+Il faudra définir les fonctions correspondant à toutes les entrées possibles pour le dessin et y ajouter la logique voulue. Cette logique est en général un changement dans l'état des données qui aura un impact sur l'évolution naturelle des données dans le `draw`.
 
-> ⚠️ Les réactions aux entrées ne fonctionnent que pour les dessins animés, c'est-à-dire les dessins pour lesquels on a défini le `draw`
-
-### Clavier
-
-Pour une entrée clavier, il y aura toujours deux événèments :
-- `void keyPressed()` quand on appuie sur la touche du clavier
-- `void keyReleased()` quand on relâche la touche
-
-> ⚠ Maintenir une touche du clavier enfoncée peut provoquer plusieurs appels consécutifs à `keyPressed` mais ce comportement et la fréquence à laquelle l'évènement est produit dépendent du système d'exploitation. Par conséquent, utiliser `keyPressed` pour bouger des parties du dessin (comme un personnage) causera des mouvements saccadés, moins fluides que si l'évolution des coordonnées était réalisée dans le `draw`. 
-
-### Souris
-
-Pour une entrée souris, il y aura toujours les évènements :
-- `void mousePressed()` quand on appuie sur la touche de la souris
-- `void mouseReleased()` quand on relâche la touche
-- `void mouseClicked()` quand on a appuyé et relâché une touche
-
-## Fonctions
-
-Ecrire des fonctions permet de ne définir qu'une seule fois un bloc de code qui sera amené à être utilisé plusieurs fois. On peut également écrire des fonctions simplement pour améliorer la lisibilité (à condition de bien nommer les fonctions) ou pour alléger un long bloc de code.
+On pourrait par exemple imaginer une voiture qui roule relativement vite sur une avenue dégagée. Le mouvement est continu, on ferait donc évoluer les informations de position dans le `draw`. Au loin, le conducteur aperçoit un feu de signalisation qui vient de passer orange. En *réaction* à ce *signal*, la position de la voiture ou sa vitesse ne va pas changer, mais le conducteur va appuyer sur le frein pour appliquer une décélaration qui fera diminuer la vitesse. Il faut donc en général concevoir les fonctions de réaction aux entrées comme une réaction ponctuelle à un signal sans directement appliquer la conséquence de cette réaction.
 
 ```java
-int x1 = 0; int y1 = 0;
-int x2 = 10; int y2 = 20;
+int x = 0;
+int speed = 10;
+int acceleration = 0;
 
 void setup() {
-  size(500, 500);
+  fullScreen();
+  noStroke();
+  fill(255);
+}
 
-  fill(int(random(256)));
-  ellipse(x1, y1, 20, 20);
-	
-  fill(int(random(256)));
-  ellipse(x2, y2, 20, 20);
+void draw() {
+  background(0);
+
+  ellipse(x, height / 2, 50, 50);
+
+  speed = constrain(speed + acceleration, -15, 30);
+  x += speed;
+}
+
+void keyPressed() {
+  // Signal, on appuie sur l'accélérateur ou le frein
+  // On ne modifie pas la vitesse directement
+  if (keyCode == LEFT) {
+    acceleration = -1;  
+  } else if (keyCode == RIGHT) {
+    acceleration = 1;  
+  }
+}
+
+void keyReleased() {
+  // Signal, on relâche l'accélérateur ou le frein
+  // On ne modifie pas la vitesse directement
+  acceleration = 0;
 }
 ```
 
-Devient
+## Fonctions et classes
+
+L'utilisation de fonctions et de classes n'est fondamentalement pas obligatoire pour mettre au point une solution, mais on se prive alors de mécanismes précieux permettant de simplifier le code, le rendre plus lisible, d'éviter la redondance, etc.
+
+Prenons par exemple un dessin où un personnage glisse sur le sol jusqu'à rencontrer un obstacle, auquel cas il trouve une nouvelle direction "libre" et continue sa glissade. Le code suivant nous permet facilement de comprendre *ce que fait le dessin*. *Comment* le dessin est effectivement réalisé dépendra de la façon dont on aura défini et implémenté les différentes classes/fonctions.
 
 ```java
-int x1 = 0; int y1 = 0;
-int x2 = 10; int y2 = 20;
+MyMap map;
+MyCharacter character;
 
 void setup() {
-  size(500, 500);
-  drawCircleWithRandomColor(x1, y1);
-  drawCircleWithRandomColor(x2, y2);
+  fullScreen();
+
+  map = new Map();
+  map.addRandomObstacles();
+  
+  character = new MyCharacter(width / 2, height / 2);
+  character.chooseRandomDirection();
 }
 
-void drawCircleWithRandomColor(float x, float y) {
-  fill(int(random(256)));
-  ellipse(x, y, 20, 20);
+void draw() {
+  background(0);
+
+  map.display();
+  character.display();
+
+  character.move();
+  
+  if (character.isFacingAnObstacle()) {
+    character.changeDirection();
+  }
+
 }
 ```
 
-## Classes
-
-Les classes permettent de définir des concepts complexes et d'y regrouper les différentes informations (= attributs) et comportements (= méthodes) de ces concepts. Elles permettent, comme les fonctions, d'améliorer la structure et la lisibilité du code. 
-
-Il n'est pas nécessaire de faire des classes (ou des fonctions), mais il est parfois plus facile de concevoir directement la solution en orienté objet ("je vais faire des objets Balle"). Bien souvent, lorsque l'on détermine les informations nécessaires, elles-mêmes sont déduites des concepts qui peuvent directement être traduits en classes.
-
-```java
-class CircleWithRandomColor {
-  int x, y;
-  int diameter;
-  int c;
-
-  CircleWithRandomColor(int x, int y, int diameter) {
-    this.x = x;
-    this.y = y;
-    this.diameter = diameter;
-    this.c = int(random(256));	  
-  }
-
-  void display() {
-    ellipseMode(DIAMETER);
-    fill(c);
-    ellipse(x, y, diameter, diameter);
-  }
-}
-```
+Il est parfois plus facile de concevoir directement la solution en orienté objet ("je vais faire des objets Balle"). Bien souvent, lorsque l'on détermine les informations nécessaires, elles-mêmes sont déduites des concepts qui peuvent directement être traduits en classes.
 
 ## Conseils généraux
 - Aller à l'essentiel, d'abord faire fonctionner ce qu'on veut puis seulement essayer d'améliorer ou de simplifier
@@ -178,6 +173,4 @@ class CircleWithRandomColor {
 
 ## Exemple
 
-Ci-dessous un tutoriel processing (disponible ici) montrant comment réaliser le dessin d'une balle qui part du centre de l'écran vers une direction aléatoire, et rebondit sur les bords
-
-// TODO
+Un tutoriel processing (disponible ici) montrant comment réaliser le dessin d'une balle qui part du centre de l'écran vers une direction aléatoire, et rebondit sur les bords, est disponible ici : [http://oppr.org/s/JADVJw4f](http://oppr.org/s/JADVJw4f)
