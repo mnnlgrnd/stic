@@ -27,6 +27,6 @@ author: "Manon Legrand"
 
 ## Tutoriels
 ### [Structurer une solution processing](tutoriels/structurer-une-solution.md)
-### [Débugger (WIP)](tutoriels/debugger.md)
+### [Débugger](tutoriels/debugger.md)
 ### [Jeu : Space Invaders simplifié](tutoriels/space-invaders.md)
 
