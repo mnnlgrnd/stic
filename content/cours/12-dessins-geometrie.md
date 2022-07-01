@@ -180,6 +180,7 @@ On définit le mode de dessin en appelant la fonction [`ellipseMode`](https://pr
 <img src="/stic/images/ellipse-dm.svg" class="svg-dark-mode w-75"/>
 <img src="/stic/images/ellipse-lm.svg" class="svg-light-mode w-75"/>
 </p>
+
 On remarque qu'il s'agit en fait exactement du même principe que pour les rectangles, sauf que le dessin concret sera l'ellipse inscrite dans le rectangle défini par les paramètres.
 
 Pour dessiner un cercle, il suffit d'utiliser la même valeur pour la largeur et la hauteur.
