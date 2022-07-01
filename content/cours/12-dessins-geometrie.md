@@ -148,7 +148,7 @@ Peu importe le mode, les informations à passer à la fonction pour dessiner un 
 	- La largeur *w* est égale à *x2 - x1*
 	- La hauteur *h* est égale *y2 - y1*
 	- Le centre du rectangle est *(x1 + w / 2, y1 + h / 2)*
-	*- Ces calculs peuvent s'adapter en prenant d'autres paires de coins opposés ; il faudra notamment prendre la valeur absolue de la largeur et de la hauteur.*
+	- *Ces calculs peuvent s'adapter en prenant d'autres paires de coins opposés ; il faudra notamment prendre la valeur absolue de la largeur et de la hauteur.*
 
 - `CENTER`, soit les coordonnées *(x, y)* du centre, la largeur *w* et la hauteur *h* :
 	- Le coin supérieur gauche est *(x - w / 2, y - w / 2)*
@@ -168,7 +168,6 @@ Peu importe le mode, les informations à passer à la fonction pour dessiner un 
 ### Ellipses
 
 On dessine des ellipses grâce à la fonction [`ellipse`](https://processing.org/reference/ellipse_.html) qui prend toujours 4 paramètres. Ce que *sont* ces paramètres dépend du mode de dessin des ellipses ; il existe 4 modes différents :
-
 
 - `CORNER` : on indique les coordonnées *(x, y)* du coin supérieur gauche, la largeur *w* et la hauteur *h* du rectangle qui "encadre" l'ellipse à dessiner
 - `CORNERS` : on indique les coordonnées *(x1, y1)* d'un coin et les coordonnées *(x2, y2)* du coin opposé du rectangle qui "encadre" l'ellipse à dessiner
