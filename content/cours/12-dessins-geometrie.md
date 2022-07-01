@@ -121,7 +121,7 @@ Peu importe le mode, les informations à passer à la fonction pour dessiner un 
 	- Le coin inférieur gauche est *(x1, y2)*
 	- La largeur *w* est égale à *x2 - x1*
 	- La hauteur *h* est égale *y2 - y1*
-	- Le centre du rectangle est *(x1 + w / 2, y + h / 2)*
+	- Le centre du rectangle est *(x1 + w / 2, y1 + h / 2)*
 - `CENTER`, soit les coordonnées *(x, y)* du centre, la largeur *w* et la hauteur *h* :
 	- Le coin supérieur gauche est *(x - w / 2, y - w / 2)*
 	- Le coin supérieur droit est *(x + w / 2, y - h / 2)*
