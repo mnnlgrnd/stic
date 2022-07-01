@@ -4,8 +4,7 @@ prev_class: '11-bases-processing'
 next_class: '13-images-pixels'
 ---
 
-## Dessins
-### Fenêtre
+## Fenêtre
 
 La fenêtre de processing est un repère à deux dimensions dans lequel une coordonnée *(x, y)* correspond à un pixel. L'axe horizontal, des x, croît de gauche à droite et l'axe vertical, des y, croît de bas en haut. L'origine *(0,0)* de ce repère est donc le coin supérieur gauche de la fenêtre.
 
@@ -13,6 +12,8 @@ La fenêtre de processing est un repère à deux dimensions dans lequel une coor
 <img src="/stic/images/grid-processing-dm.svg" class="svg-dark-mode w-50"/>
 <img src="/stic/images/grid-processing-lm.svg" class="svg-light-mode w-50"/>
 </p>
+
+## Dessins
 
 ### Couleurs
 Processing permet de travailler sur deux échelles de couleur différentes :
