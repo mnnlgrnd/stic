@@ -10,4 +10,5 @@ prev_class: '13-images-pixels'
 ## Manipulation
 ### Lecture
 ### Ecriture
-### Tris
+### Tri
+
