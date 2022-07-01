@@ -67,7 +67,7 @@
 				<foreignObject height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;" width="100%">
 					<div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 320px; margin-left: 121px;" xmlns="http://www.w3.org/1999/xhtml">
 						<div data-drawio-colors="color: rgb(251, 255, 254); background-color: rgb(20, 16, 33); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
-							<div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(251, 255, 254); line-height: 1.2; pointer-events: all; background-color: rgb(255, 255, 255); white-space: nowrap;">non</div>
+							<div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(251, 255, 254); line-height: 1.2; pointer-events: all; background-color: rgb(20, 16, 33); white-space: nowrap;">non</div>
 						</div>
 					</div>
 				</foreignObject>
@@ -81,7 +81,7 @@
 				<foreignObject height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;" width="100%">
 					<div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 390px; margin-left: 275px;" xmlns="http://www.w3.org/1999/xhtml">
 						<div data-drawio-colors="color: rgb(251, 255, 254); background-color: rgb(20, 16, 33); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
-							<div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(251, 255, 254); line-height: 1.2; pointer-events: all; background-color: rgb(255, 255, 255); white-space: nowrap;">oui</div>
+							<div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(251, 255, 254); line-height: 1.2; pointer-events: all; background-color: rgb(20, 16, 33); white-space: nowrap;">oui</div>
 						</div>
 					</div>
 				</foreignObject>
