@@ -98,18 +98,31 @@ Si on construit une solution récursive pour un certain problème, cela signifie
 
 Prenons par exemple un problème qui consiste à suivre une série de directions. La fonction récursive va extraire une partie du problème, la première direction à suivre, et la résoudre ; on suit la direction indiquée. Il reste maintenant toutes les autres directions à suivre, mais on peut, pour ce faire, appeler récursivement la fonction. La condition d'arrêt sera ici lorsqu'il n'y a plus de directions à suivre.
 
-```{r, tidy=FALSE, eval=FALSE, highlight=FALSE }
-function follow(directions) is
+```java
+void followDirections(int[] directions) { 
+  if (directions.length > 0) { 
+    int firstDirection = directions[0]; 
+    followDirection(firstDirection); 
 
-  firstDirection <- first(directions)
-  
-  // follow this one direction
-  
-  directionsLeft = directions - firstDirection
-  
-  if directionsLeft is not empty then
-    follow(directionsLeft)
-  end if
-   
-end
+    int[] remainingDirections = removeFirstElement(directions);
+    followDirections(remainingDirections);
+  }
+} 
+
+void followDirection(int direction) { 
+  // TODO 
+  println(direction);
+} 
+
+int[] removeFirstElement(int[] array) { 
+  if (array.length > 0) { 
+    int[] newArray = new int[array.length - 1]; 
+    for (int i = 1; i < array.length; i++) { 
+      newArray[i - 1] = array[i];
+    } 
+    return newArray;
+  } else { 
+    return new int[] {};
+  }
+}
 ```

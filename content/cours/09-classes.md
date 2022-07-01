@@ -196,6 +196,45 @@ human = null; // Supprime l'humain référencé
 
 Lorsque l'on essaie d'interagir avec une variable objet, soit en accédant à un de ses attributs, soit en appelant une méthode, mais que la variable ne contient rien, donc `null`, on aura une erreur du type `NullPointerException`.
 
+## Listes d'objets
+
+Si l'on doit manipuler un grand nombre d'objets du même type, il y a deux solutions possibles :
+- Ce nombre est fixe, on peut alors utiliser un tableau ; par exemple `Human[] humans = new Human[10];`
+- Ce nombre est variable et est amené à changer (nouveaux éléments, éléments en moins) pendant l'exécution du code. Dans ce cas, on peut utiliser une `ArrayList`, qui représente donc une liste d'éléments de taille variable.
+
+### ArrayList
+
+Pour déclarer une `ArrayList` d'un certain type d'objets, il faut spécifier ce type entre `<>` :
+
+```java
+ArrayList<Human> humans = new ArrayList<Human>();
+```
+
+On crée ici une liste initialement vide dans laquelle on pourra rajouter des objets.
+
+> ℹ Vous remarquez l'utilisation du mot clé `new` pour la création de la liste ; ArrayList est une *classe* existante en Java.
+
+La manipulation de la liste se fait via l'appel à différentes méthodes sur cette liste :
+
+- `add(object)` qui prend en paramètre un objet du type d'éléments de la liste, et ajoute cet élément "à la fin" de la liste
+- `get(i)` qui prend en paramètre l'indice d'un élément, et renvoie l'élément se trouvant à cette place dans la liste
+- `remove(i)` qui prend en paramètre l'indice d'un élément et le supprime de la liste
+- `size()` qui renvoie le nombre d'éléments que contient la liste
+
+```java
+ArrayList<Human> humans = new ArrayList<Human>();
+humans.add(new Human(true));
+humans.add(new Human());
+humans.add(new Human());
+println(humans.size()); // Affiche 3
+println(humans.get(0).hungry); // Affiche true
+humans.get(0).eat();
+println(humans.get(0).hungry); // Affiche false
+humans.remove(2);
+humans.remove(1);
+println(humans.size()); // Affiche 1
+```
+
 ## Utilité
 
 ### Structure
