@@ -99,15 +99,39 @@ void setup() {
 On dessine des rectangles grâce à la fonction [`rect`](https://processing.org/reference/rect_.html) qui prend toujours 4 paramètres. Ce que *sont* ces paramètres dépend du mode de dessin des rectangles ; il existe 4 modes différents :
 
 - `CORNER` : on indique les coordonnées *(x, y)* du coin supérieur gauche, la largeur *w* et la hauteur *h* du rectangle
-- `CORNERS` : on indique les coordonnées *(x1, y1)* du coin supérieur gauche et les coordnnées *(x2, y2)* du coin inférieur droit
+- `CORNERS` : on indique les coordonnées *(x1, y1)* d'un coin et les coordonnées *(x2, y2)* du coin opposé
 - `CENTER` : on indique les coordonnées *(x, y)* du centre du rectangle, la largeur *w* et la hauteur *h*
 - `RADIUS` : indique les coordonnées *(x, y)* du centre du rectangle, la moitié de la largeur *w* et la moitié de la hauteur *h* 
 
 On définit le mode de dessin en appelant la fonction [`rectMode`](https://processing.org/reference/rectMode_.html) avec le mode souhaité. Le mode `CORNER` est le mode par défaut.
+
 <p align="center">
 <img src="/stic/images/rect-dm.svg" class="svg-dark-mode w-75"/>
 <img src="/stic/images/rect-lm.svg" class="svg-light-mode w-75"/>
 </p>
+
+```java
+void setup() {
+  size(800, 600);
+  background(0);
+  stroke(255);
+  fill(255);
+
+  // Dessinons le même rectangle avec chaque mode
+
+  rectMode(CORNER);
+  rect(20, 20, 100, 50);
+
+  rectMode(CORNERS);
+  rect(20, 20, 100, 50);
+
+  rectMode(CENTER);
+  rect(70, 45, 100, 50);
+
+  rectMode(RADIUS);
+  rect(70, 45, 50, 25);
+}
+```
 
 Peu importe le mode, les informations à passer à la fonction pour dessiner un rectangle nous permettent toujours d'obtenir toutes les autres informations du rectangle : les coordonnées de tous ses coins, de son centre, sa largeur et sa hauteur.
 
@@ -124,7 +148,7 @@ Peu importe le mode, les informations à passer à la fonction pour dessiner un 
 	- La largeur *w* est égale à *x2 - x1*
 	- La hauteur *h* est égale *y2 - y1*
 	- Le centre du rectangle est *(x1 + w / 2, y1 + h / 2)*
-
+	*- Ces calculs peuvent s'adapter en prenant d'autres paires de coins opposés ; il faudra notamment prendre la valeur absolue de la largeur et de la hauteur.*
 
 - `CENTER`, soit les coordonnées *(x, y)* du centre, la largeur *w* et la hauteur *h* :
 	- Le coin supérieur gauche est *(x - w / 2, y - w / 2)*
@@ -143,11 +167,22 @@ Peu importe le mode, les informations à passer à la fonction pour dessiner un 
 
 ### Ellipses
 
+On dessine des ellipses grâce à la fonction [`ellipse`](https://processing.org/reference/ellipse_.html) qui prend toujours 4 paramètres. Ce que *sont* ces paramètres dépend du mode de dessin des ellipses ; il existe 4 modes différents :
+
+
+- `CORNER` : on indique les coordonnées *(x, y)* du coin supérieur gauche, la largeur *w* et la hauteur *h* du rectangle qui "encadre" l'ellipse à dessiner
+- `CORNERS` : on indique les coordonnées *(x1, y1)* d'un coin et les coordonnées *(x2, y2)* du coin opposé du rectangle qui "encadre" l'ellipse à dessiner
+- `CENTER` : on indique les coordonnées *(x, y)* du centre de l'ellipse, la largeur *w* (diamiètre sur l'axe horizontal) et la hauteur *h* (diamètre sur l'axe vertical)
+- `RADIUS` : indique les coordonnées *(x, y)* du centre de l'ellipse, la moitié de la largeur *w* (rayon sur l'axe horizontal) et la moitié de la hauteur *h* (rayon sur l'axe vertical)
+
+On définit le mode de dessin en appelant la fonction [`ellipseMode`](https://processing.org/reference/ellipseMode_.html) avec le mode souhaité. Le mode `CENTER` est le mode par défaut.
 <p align="center">
 <img src="/stic/images/ellipse-dm.svg" class="svg-dark-mode w-75"/>
 <img src="/stic/images/ellipse-lm.svg" class="svg-light-mode w-75"/>
 </p>
+On remarque qu'il s'agit en fait exactement du même principe que pour les rectangles, sauf que le dessin concret sera l'ellipse inscrite dans le rectangle défini par les paramètres.
 
+Pour dessiner un cercle, il suffit d'utiliser la même valeur pour la largeur et la hauteur.
 
 ### Textes
 
