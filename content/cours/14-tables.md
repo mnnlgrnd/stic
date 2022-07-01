@@ -4,8 +4,8 @@ prev_class: '13-images-pixels'
 ---
 
 ## Classes
-### `PTable`
-### `PTableRow`
+### `Table`
+### `TableRow`
 ## Chargement et sauvegarde
 ## Manipulation
 ### Lecture
