@@ -326,8 +326,8 @@ On utilise le coin supérieur gauche du rectangle, la largeur et la hauteur du r
 ```java
 boolean isPointInRect(float x, float y,
                       float rx, float ry, float rw, float rh) {
-  return x >= rx && x <= rx+rw &&
-         y >= ry && y <= ry+rh;				  
+  return x > rx && x < rx+rw &&
+         y > ry && y < ry+rh;				  
 }
 ```
 
@@ -356,7 +356,7 @@ boolean isPointInCircle(float x, float y,
   float dx = x - cx;
   float dy = y - cy;
   float distance = sqrt(dx * dx + dy * dy);
-  return distance <= cr;
+  return distance < cr;
 }
 ```
 
@@ -371,6 +371,8 @@ boolean isIntersectionCircles(
   float dx = x1 - x2;
   float dy = y1 - y2;
   float distance = sqrt(dx * dx + dy * dy);
-  return distance <= r1 + r2;
+  return distance < r1 + r2;
 }
 ```
+
+> ℹ Si on remplace `<` et `>` par `<=` et `>=` dans les conditions ci-dessus, on considère alors qu'il y a intersection si les bords se touchent ou si le point est sur le bord.
