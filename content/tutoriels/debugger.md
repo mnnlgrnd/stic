@@ -62,7 +62,7 @@ Le bouton step permet ainsi d'exécuter le code ligne par ligne et de voir tous 
 
 ![[tutoriels/images/debug.png]]
 
-- On clique sur le bouton "step" et on passe à la ligne 9. On voit dans la fenêtre des variables que `i` vaut maintenant 2 (résultat de `i` + 2 à la ligne d'avant.
+- On clique sur le bouton "step" et on passe à la ligne 9. On voit dans la fenêtre des variables que `i` vaut maintenant 2 (résultat de `i` + 2 à la ligne d'avant).
 
 ![[tutoriels/images/debug-2.png]]
 
