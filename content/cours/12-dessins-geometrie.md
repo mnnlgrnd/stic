@@ -1,5 +1,5 @@
 ---
-title: '12 - Dessins et géometrie
+title: '12 - Dessins et géometrie'
 prev_class: '11-bases-processing'
 next_class: '13-images-pixels'
 ---
