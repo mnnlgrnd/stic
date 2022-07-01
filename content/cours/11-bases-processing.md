@@ -40,7 +40,7 @@ La fonction [`draw`](https://processing.org/reference/draw_.html) est appelée a
 
 Les différentes entrées possibles en processing sont accessibles via des fonctions qui seront appelées quand l'évènement correspondant survient, entre deux appels de [`draw`](https://processing.org/reference/draw_.html). Il ne faut définir chaque fonction qu'une seule fois.
 
-> ⚠️ Les réactions aux entrées ne fonctionnent que pour les dessins animés, c'est-à-dire les dessins pour lesquels on a défini le [`draw`](https://processing.org/reference/draw_.html)
+> ⚠ Les réactions aux entrées ne fonctionnent que pour les dessins animés, c'est-à-dire les dessins pour lesquels on a défini le [`draw`](https://processing.org/reference/draw_.html)
 
 ### Clavier
 
