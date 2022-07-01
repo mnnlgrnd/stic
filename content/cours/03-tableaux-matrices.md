@@ -22,7 +22,7 @@ Lorsqu'un programme processing s'exécute, il possède sa propre mémoire dans l
 <img src="/stic/images/stack_heap_dm.svg" class="svg-dark-mode"/>
 <img src="/stic/images/stack_heap_lm.svg" class="svg-light-mode"/>
 
-> ⚠️ Le stockage en mémoire est en réalité plus complexe, l'important ici est de comprendre la différence entre une valeur et une référence. Pour plus de détails sur la gestion de la mémoire lors de l'exécution d'un programme Java, Google est votre ami.
+> ⚠ Le stockage en mémoire est en réalité plus complexe, l'important ici est de comprendre la différence entre une valeur et une référence. Pour plus de détails sur la gestion de la mémoire lors de l'exécution d'un programme Java, Google est votre ami.
 
 ## Déclaration
 
@@ -75,7 +75,7 @@ println(integers.length); // Affiche 3
 
 Pour accéder à un élément particulier du tableau, il faut utiliser l'opérateur de tableau et l'indice de l'élément après le nom du tableau, par exemple `integers[1]`.
 
-> ⚠️ En informatique, on commence à compter à partir de 0. Le premier élément aura donc l'indice 0, le deuxième l'indice 1, ainsi de suite.
+> ⚠ En informatique, on commence à compter à partir de 0. Le premier élément aura donc l'indice 0, le deuxième l'indice 1, ainsi de suite.
 
 Lorsque l'on accède à un élément du tableau, on récupère une variable (celle stockée dans le heap), et on peut donc s'en servir comme tel ; c'est-à-dire lui assigner une valeur, ou l'évaluer dans des expressions.
 

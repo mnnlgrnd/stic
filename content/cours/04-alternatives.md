@@ -72,7 +72,7 @@ if (i == 0) {
 println("Après le if/else");
 ```
 
-> ⚠️ Enchaîner plusieurs branchements `if` n'est pas équivalent à un branche `if`/`else if`.  Dans le cas de `if` consécutifs, chaque branchement/condition sera évalué ; dans le cas d'un branchement multiple `if`/`else if`, l'évaluation des conditions s'arrête dès lors que la condition d'une des branches est respectée.
+> ⚠ Enchaîner plusieurs branchements `if` n'est pas équivalent à un branche `if`/`else if`.  Dans le cas de `if` consécutifs, chaque branchement/condition sera évalué ; dans le cas d'un branchement multiple `if`/`else if`, l'évaluation des conditions s'arrête dès lors que la condition d'une des branches est respectée.
 
 ## Branchements imbriqués
 On parle d'*imbrication* lorsqu'on utilise un branchement conditionnel à l'intérieur d'un autre branchement conditionnel.
@@ -152,6 +152,6 @@ if (i > 0)
 
 Comme on le voit ici, le `if` imbriqué et ce qu'il contient ne sont considérés que comme un seul bloc exécutable, et on peut donc se passer des accolades autour même s'il s'agit, visuellement, de plus qu'une seule ligne de code.
 
-> ⚠️ Pour éviter des problèmes, je conseille d'éviter cette notation et de toujours utiliser les accolades pour délimiter les blocs.
+> ⚠ Pour éviter des problèmes, je conseille d'éviter cette notation et de toujours utiliser les accolades pour délimiter les blocs.
 
 
