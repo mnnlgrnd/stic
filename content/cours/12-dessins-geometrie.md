@@ -319,7 +319,9 @@ float distanceBetween(float x1, float y1, float x2, float y2) {
 
 #### Entre un point et un rectangle
 
-Un point se situe à l'intérieur d'un rectangle si ses coordonnées sont comprises entre les bords de ce rectangle.
+Un point se situe à l'intérieur d'un rectangle si ses coordonnées sont comprises entre les bords de ce rectangle. 
+
+On utilise le coin supérieur gauche du rectangle, la largeur et la hauteur du rectangle.
 
 ```java
 boolean isPointInRect(float x, float y,
@@ -332,6 +334,8 @@ boolean isPointInRect(float x, float y,
 #### Entre deux rectangles
 
 Il y a intersection entre deux rectangles lorsque le coin supérieur gauche de chaque rectangle se situe plus haut et plus à gauche que le coin inférieur droit de l'autre rectangle.
+
+On utilise les coordonnées du coin supérieur gauche, la largeur et la hauteur de chaque rectangle.
 
 ```java
 boolean isIntersectionRects(
@@ -349,8 +353,8 @@ Un point se situe à l'intérieur d'un cercle si la distance entre ce point et l
 ```java
 boolean isPointInCircle(float x, float y,
                         float cx, float cy, float cr) {
-  float dx = x1 - xc;
-  float dy = y1 - yc;
+  float dx = x - cx;
+  float dy = y - cy;
   float distance = sqrt(dx * dx + dy * dy);
   return distance <= cr;
 }
