@@ -136,7 +136,7 @@ void setup() {
 
 Peu importe le mode, les informations à passer à la fonction pour dessiner un rectangle nous permettent toujours d'obtenir toutes les autres informations du rectangle : les coordonnées de tous ses coins, de son centre, sa largeur et sa hauteur.
 
-- `CORNER`, soit les coordonnées *(x, y)*, la largeur *w* et la hauteur *h* :
+- `CORNER`, soit les coordonnées *(x, y)* du coin supérieur gauche, la largeur *w* et la hauteur *h* :
 	- Le coin supérieur droit est *(x + w, y)*
 	- Le coin inférieur gauche est *(x, y + h)*
 	- Le coin inférieur droit est *(x + w, y + h)*
