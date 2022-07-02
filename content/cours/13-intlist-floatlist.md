@@ -39,7 +39,7 @@ La manipulation d'une [`IntList`]https://processing.org/reference/IntList.html s
 - `get(i)` qui prend en paramètre l'indice d'un élément, et renvoie l'élément se trouvant à cette place dans la liste
 - `remove(i)` qui prend en paramètre l'indice d'un élément et le supprime de la liste
 - `size()` qui renvoie le nombre d'éléments que contient la liste
-- `set(i, value)` qui prend en paramètre un indice et un objet et remplace l'élément à cet indice dans la liste par l'objet passé en paramètre. A l'inverse de la même méthode sur une [`ArrayList`](rrayIndexOutOfBoundsException), on peut ici utiliser un indice `i` plus grand que la taille actuelle de la liste, processing rajoutera alors des valeurs 0 dans la liste jusqu'à l'indice où l'on souhaite insérer la valeur.
+- `set(i, value)` qui prend en paramètre un indice et un objet et remplace l'élément à cet indice dans la liste par l'objet passé en paramètre. A l'inverse de la même méthode sur une [`ArrayList`](https://processing.org/reference/ArrayList.html), on peut ici utiliser un indice `i` plus grand que la taille actuelle de la liste, processing rajoutera alors des valeurs 0 dans la liste jusqu'à l'indice où l'on souhaite insérer la valeur.
 
 ```java
 IntList list = new IntList();
