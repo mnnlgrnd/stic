@@ -20,6 +20,7 @@ Pour charger une image depuis un fichier existant, il faut utiliser la fonction 
 PImage img;
 
 void setup() {
+  fullScreen();
   img = loadImage("images/dog.png");
 }
 ```
@@ -37,12 +38,27 @@ passant en paramètre le chemin vers le fichier où on l'on veut sauver l'image.
 PImage img;
 
 void setup() {
+  fullScreen();
   img = loadImage("images/dog.png"); // Charge l'image dog.png
   img.save("images/renamedDog.png"); // Sauve l'image dans un autre fichier
 }
 ```
 
 ### Manipulation
+
+#### Affichage
+
+Pour afficher une image dans la fenêtre processing, il faut utiliser la fonction `image` avec, en paramètres, l'image à afficher et les coordonnées *(x, y)* ou placer le coin supérieur gauche de l'image.
+
+```java
+PImage img;
+
+void setup() {
+  fullScreen();
+  img = loadImage("images/dog.png"); // Charge l'image dog.png
+  image(img, 0, 0);
+}
+```
 
 #### Attributs
 
@@ -51,7 +67,7 @@ Une fois une image chargée, on a accès
 - A sa hauteur, via l'attribut `height`
 - Aux pixels qui la composent, stockés dans un attribut `pixels`, un *tableau à une dimension* de `color`.
 
-Comme les pixels sont stockés dans un tableau à une dimension, on ne peut pas directement accéder à un pixel via ses coordonnées *(x, y)*. Il faut d'abord convertir ces coordonnées dans un repère à deux dimensions (~ matrice) à leur coordonnée équivalente à une dimension. Ce calcul est relativement dès lors qu'on connaît la largeur de l'image (ou de la matrice), car le tableau a une dimension contient en fait le contenu de chaque *ligne* de la matrice, mise bout à bout.
+Comme les pixels sont stockés dans un tableau à une dimension, on ne peut pas directement accéder à un pixel via ses coordonnées "écran" *(x, y)*. Il faut d'abord convertir ces coordonnées dans un repère à deux dimensions (~ matrice) à leur coordonnée équivalente à une dimension. Ce calcul est relativement simple dès lors qu'on connaît la largeur de l'image (~ matrice), car le tableau a une dimension contient en fait le contenu de chaque *ligne* de la matrice, mise bout à bout.
 
 
 <p align="center">
@@ -70,8 +86,9 @@ Similairement, la formule pour passer de la coordonnée *k* à une dimension aux
 PImage img;
 
 void setup() {
+  fullScreen();
   img = loadImage("images/dog.png"); // Charge l'image dog.png
-
+  
   // Parcourir les pixels
   for (int k = 0; k < img.pixels.length; k++) {
     int x = k % img.width;
@@ -106,3 +123,5 @@ Il est plus facile d'interagir avec les pixels de l'image avec les méthodes `ge
 ## Pixels
 ### Chargement
 ### Manipulation
+
+Pour manipuler le tableau de pixels de la fenêtre processing, il faut d'abord appeler la méthode [`loadPixels()`](https://processing.org/reference/PImage_loadPixels_.html) . Si on modifie la valeur de certains pixels, il faut alors appeler la méthode [`updatePixels()`](https://processing.org/reference/PImage_updatePixels_.html) pour que ces changements soient répercutés sur l'affichage de l'image.
