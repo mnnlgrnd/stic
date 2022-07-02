@@ -74,7 +74,7 @@ Alternativement, on peut aussi dire à processing de ne *pas* coloriser les trai
 Enfin, on peut également appliquer un certain niveau d'opacité en rajoutant un paramètre aux appels de [`background`](https://processing.org/reference/background_.html),  [`stroke`](https://processing.org/reference/stroke_.html) et [`fill`](https://processing.org/reference/fill_.html). Ce paramètre est le niveau d'opacité allant de 0 (complètement opaque) à 255 (complètement transparent).
 
 ```java
-background(0, 255); // Fond noir complète opaque
+background(0, 255); // Fond noir complètement opaque
 stroke(0, 122); // Trait noir à 50% d'opacité
 fill(color(255, 0, 0), 51); // Remplissage rouge à 20% d'opacité
 ```
