@@ -196,6 +196,46 @@ human = null; // Supprime l'humain référencé
 
 Lorsque l'on essaie d'interagir avec une variable objet, soit en accédant à un de ses attributs, soit en appelant une méthode, mais que la variable ne contient rien, donc `null`, on aura une erreur du type `NullPointerException`.
 
+### Références
+
+Puisque les objets sont des *références* vers l'endroit en mémoire *heap* où sont stockées les informations de l'objet, le comportement d'un objet *passé en paramètre* d'une fonction ne sera pas le même que celui d'une simple variable de type primitif. Le comportement est celui d'un *passage par référence* et non d'un passage par valeur.
+
+Lorsque l'on passe un objet en paramètre, la fonction reçoit donc la *référence* et a accès aux vraies informations de l'objet. Si on modifie l'objet dans l'appel de la fonction, ce sera bien le même objet qui sera modifié.
+
+> ℹ Techniquement, en Java, l'objet contient la référence et c'est bien la *valeur* de cette référence qui est passée en paramètre ; il s'agit donc au sens propre du terme d'un passage par valeur, mais l'objet étant un type de référence et non primitif, il est plus facile de se représenter la situation comme un passage par référence classique. [https://www.educative.io/answers/pass-by-value-vs-pass-by-reference](https://www.educative.io/answers/pass-by-value-vs-pass-by-reference-)
+
+```java
+class MyClass {
+  int i;
+
+  MyClass() {
+    i = 0;
+  }
+}
+
+void setup() {
+  int i = 0;
+  MyClass object = new MyClass();
+  
+  println(i); // Affiche 0
+  println(object.i); // Affiche 0
+  
+  foo(i);
+  bar(object);
+
+  println(i); // Affiche 0
+  println(object.i); // Affiche 5
+}
+
+void foo(int i) {
+  i = 5;
+}
+
+void bar(MyClass o) {
+  o.i = 5;
+}
+```
+
 ## Listes d'objets
 
 Si l'on doit manipuler un grand nombre d'objets du même type, il y a deux solutions possibles :

@@ -90,8 +90,8 @@ void setup() {
 ```
 
 ## Paramètres
-
-Les paramètres, ou arguments, d'une fonction, sont des variables utilisables dans le code de la fonction et pour lesquelles il faudra passer une valeur à chaque fois qu'on appelle la fonction. Le nom des paramètres est arbitraire mais une fonction est plus compréhensible lorsque ses paramètres sont nommés intelligemment.
+### Utilisation
+Les paramètres, ou arguments, d'une fonction, sont des variables utilisables dans le code de la fonction et pour lesquelles il faudra passer *une valeur* à chaque fois qu'on appelle la fonction. Le nom des paramètres est arbitraire mais une fonction est plus compréhensible lorsque ses paramètres sont nommés intelligemment.
 
 ```java
 int square(int i) {
@@ -107,6 +107,22 @@ void setup() {
 ```
 
 On définit une fonction `square` qui va nous permettre de calculer le carré d'un nombre. Ce nombre, *n'importe lequel*, on le représente par le paramètre `i`, de type entier. La fonction calcule ensuite le carré de cette variable, `i * i` et renvoie cette valeur. Nous n'avons besoin de valeurs pour ce paramètre que lorsque l'on appelle effectivement la fonction, comme on le fait plus loin : `println(square(2))` par exemple, affiche en console le résultat de l'appel à la fonction `square` où le paramètre `i` vaut 2. L'appel renverra donc le carré de 2 : 4.
+
+### Passage par valeur
+Les variables de type primitif envoyées en paramètres à une fonction sont *passées par valeur*, comme dit plus haut. Concrètement, cela signifie que la fonction reçoit une *nouvelle* variable, locale à son propre [contexte](cours/07-blocs-contextes.md) qui contient la valeur passée en paramètre. Si on modifie cette variable, la variable potentiellement utilsée pour réaliser ce passage par valeur ne sera pas impactée.
+
+```java
+void setup() {
+  int i = 0;
+  println(i); // Affiche 0
+  foo(i);
+  println(i); // Affiche 0
+}
+
+void foo(int i) {
+  i = 5;
+}
+```
 
 ## Utilités
 Une fonction permet de ne définir qu'une seule fois un bout de code qui pourrait apparaître plusieurs fois : c'est ce qu'on appelle la *factorisation*. 
