@@ -63,7 +63,7 @@ Comme les pixels sont stockés dans un tableau à une dimension, on ne peut pas 
 La formule pour passer des coordonnées *(x, y)* à deux dimensions à la coordonnée *k* à une dimension, connaissant la largeur *w*, est `k = y x w + x`. On multiplie *y*, le nombre de lignes, par la largeur de l'image *w*, car on aura, avant le *x*, l'indice de la colonne, tous les éléments des lignes d'avant, sachant qu'on a *w* éléments par ligne et *y* lignes.
 
 Similairement, la formule pour passer de la coordonnée *k* à une dimension aux coordonnées *(x, y)*, connaissant la largeur w est :
-- `y = int(k / w)`, la division entière de *k* par la largeur, pour savoir combien de lignes *complètes* sont incluses jusqu'à la position *k*
+- `y = k / w`, la division ***entière*** de *k* par la largeur, pour savoir combien de lignes *complètes* sont incluses jusqu'à la position *k*
 -  `x = k % w`, le reste de la division entière de *k* par la largeur, pour savoir combien d'éléments il y a sur la ligne actuelle *incomplète* de la matrice où se situe *k*
 
 ```java
@@ -95,7 +95,7 @@ void setup() {
 
 #### Méthodes
 
-La classe `PImage` propose des méthodes utilitaires pour plus facilement manipuler des images :
+La classe [`PImage`](https://processing.org/reference/PImage.html) propose des méthodes utilitaires pour plus facilement manipuler des images :
 - `get(x, y)` qui renvoie la couleur (`color`) du pixel en position *(x, y)* sur l'image.
 - `get(x, y, w, h)` qui renvoie une sous partie de l'image ; un rectangle dont le coin supérieur gauche est en position *(x, y)*, de largeur *w* et de hauteur *h*.
 - `set(x, y, c)` qui change la couleur du pixel en position *(x, y)* par la couleur *c* passée en paramètre.
