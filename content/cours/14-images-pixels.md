@@ -120,8 +120,42 @@ La classe [`PImage`](https://processing.org/reference/PImage.html) propose des m
 
 Il est plus facile d'interagir avec les pixels de l'image avec les méthodes `get` et `set`, mais cela est moins efficace que d'accéder directement aux éléments du tableau de pixels.
 
-## Pixels
+## Pixels de la fenêtre
+
+La fenêtre de processing pouvant elle-même être considérée comme une image, processing permet d'en manipuler directement les pixels via un tableau de pixels `pixels`. 
+
 ### Chargement
+
+Pour pouvoir lire ou modifier directement les pixels de la fenêtre de processing, il faut d'abord les *charger* en appelant la fonction [`loadPixels()`](https://processing.org/reference/loadPixels_.html). Une fois cette fonction appelée, on aura accès à une variable globale processing `pixels`, qui est un tableau (à une dimension) de couleurs.
+
+```java
+void setup() {
+  size(20, 20);
+  background(0); // Fond noir
+  loadPixels(); // On charge les pixels de la fenêtre actuelle de processing
+  color p = pixels[0];
+  println(red(p)); // Composante rouge du premier pixel : 0
+  println(green(p)); // Composante verte du premier pixel : 0
+  println(blue(p)); // Composante bleue du premier pixel : 0
+}
+```
+
 ### Manipulation
 
-Pour manipuler le tableau de pixels de la fenêtre processing, il faut d'abord appeler la méthode [`loadPixels()`](https://processing.org/reference/PImage_loadPixels_.html) . Si on modifie la valeur de certains pixels, il faut alors appeler la méthode [`updatePixels()`](https://processing.org/reference/PImage_updatePixels_.html) pour que ces changements soient répercutés sur l'affichage de l'image.
+On peut manipuler les pixels de la fenêtre de la même façon qu'on manipule les pixels d'une image `PImage`, **mais** si on modifie la valeur de certains pixels, il faut alors appeler la fonction [`updatePixels()`](https://processing.org/reference/updatePixels_.html) pour que ces changements soient répercutés sur l'affichage de la fenêtre.
+
+```java
+void setup() {
+  size(20, 20);
+  background(0); // Fond noir
+  loadPixels(); // On charge les pixels de la fenêtre actuelle de processing
+  
+  pixels[10 * 20 + 10] = color(255, 0, 0);
+  // A ce stade, la fenêtre n'a pas changé et reste toute noire
+  
+  updatePixels(); // On met à jour la fenêtre processing
+  // Il y a maintenant un pixel rouge au centre
+}
+```
+
+> ℹ Manipuler les pixels de la fenêtre revient à dessiner des points grâce à la fonction `point`.
