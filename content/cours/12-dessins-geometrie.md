@@ -25,7 +25,7 @@ int middleGrey = 122;
 int white = 255;
 ```
 
-- En couleur ; la couleur est alors une valeur de type `color` contenant trois valeurs entières allant de 0 à 255 pour les composantes rouge, verte et bleue.
+- En couleur ; la couleur est alors une valeur de type `color` contenant trois valeurs entières allant de 0 à 255 pour les composantes rouge, verte et bleue. On peut créer des couleurs grâce à la fonction [`color(r, g, b)`](https://processing.org/reference/color_.html) qui prend les valeurs des composantes en paramètre, ou en utilisant directement la notation hexadécimage d'une couleur.
 
 ```
 color red = color(255, 0, 0);
@@ -34,10 +34,20 @@ color blue = color(0, 0, 255);
 color black = color(0, 0, 0);
 color white = color(255, 255, 255);
 color someColor = color(13, 201, 154);
+color fromHex = #ffffff;
+```
+
+Soit une couleur RGB, de type `color`, on peut récupérer la valeur de chacune des composantes R, G, B, grâce aux fonctions [`red`](https://processing.org/reference/red_.html), [`green`](https://processing.org/reference/green_.html), [`blue`](https://processing.org/reference/blue_.html) :
+
+```java
+color c = #FF10AA;
+float r = red(c); // 255
+float g = green(c); // 16
+float b = blue(c); // 170
 ```
 
 On peut utiliser une couleur pour définir :
-- La couleur du fond de la fenêtre via la fonction `background`
+- La couleur du fond de la fenêtre via la fonction [`background`](https://processing.org/reference/background_.html)
 - La couleur des *traits* (lignes) via la fonction [`stroke`](https://processing.org/reference/stroke_.html) 
 - La couleur de *remplissage* des formes géométriques et du texte via la fonction [`fill`](https://processing.org/reference/fill_.html)
 
@@ -61,9 +71,10 @@ fill(0); // A partir d'ici, le remplissage est noir
 
 Alternativement, on peut aussi dire à processing de ne *pas* coloriser les traits ou le remplissage, en appelant respectivant [`noStroke()`](https://processing.org/reference/noStroke_.html) ou [`noFill()`](https://processing.org/reference/noFill_.html). 
 
-Enfin, on peut également appliquer un certain niveau d'opacité en rajoutant un paramètre aux appels de [`stroke`](https://processing.org/reference/stroke_.html) et [`fill`](https://processing.org/reference/fill_.html). Ce paramètre est le niveau d'opacité allant de 0 (complètement opaque) à 255 (complètement transparent).
+Enfin, on peut également appliquer un certain niveau d'opacité en rajoutant un paramètre aux appels de [`background`](https://processing.org/reference/background_.html),  [`stroke`](https://processing.org/reference/stroke_.html) et [`fill`](https://processing.org/reference/fill_.html). Ce paramètre est le niveau d'opacité allant de 0 (complètement opaque) à 255 (complètement transparent).
 
 ```java
+background(0, 255); // Fond noir complète opaque
 stroke(0, 122); // Trait noir à 50% d'opacité
 fill(color(255, 0, 0), 51); // Remplissage rouge à 20% d'opacité
 ```
