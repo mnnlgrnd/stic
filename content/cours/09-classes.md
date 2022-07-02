@@ -204,7 +204,8 @@ Si l'on doit manipuler un grand nombre d'objets du même type, il y a deux solut
 
 ### ArrayList
 
-Pour déclarer une `ArrayList` d'un certain type d'objets, il faut spécifier ce type entre `<>` :
+#### Création
+Pour déclarer une [`ArrayList`](https://processing.org/reference/ArrayList.html) d'un certain type d'objets, il faut spécifier ce type entre `<>` :
 
 ```java
 ArrayList<Human> humans = new ArrayList<Human>();
@@ -214,12 +215,15 @@ On crée ici une liste initialement vide dans laquelle on pourra rajouter des ob
 
 > ℹ Vous remarquez l'utilisation du mot clé `new` pour la création de la liste ; ArrayList est une *classe* existante en Java.
 
+#### Manipulation
+
 La manipulation de la liste se fait via l'appel à différentes méthodes sur cette liste :
 
 - `add(object)` qui prend en paramètre un objet du type d'éléments de la liste, et ajoute cet élément "à la fin" de la liste
 - `get(i)` qui prend en paramètre l'indice d'un élément, et renvoie l'élément se trouvant à cette place dans la liste
 - `remove(i)` qui prend en paramètre l'indice d'un élément et le supprime de la liste
 - `size()` qui renvoie le nombre d'éléments que contient la liste
+- `set(i, object)` qui prend en paramètre un indice et un objet et remplace l'élément à cet indice dans la liste par l'objet passé en paramètre
 
 ```java
 ArrayList<Human> humans = new ArrayList<Human>();
@@ -233,7 +237,13 @@ println(humans.get(0).hungry); // Affiche false
 humans.remove(2);
 humans.remove(1);
 println(humans.size()); // Affiche 1
+humans.set(0, new Human(true));
+println(humans.get(0).hungry); // Affiche true
 ```
+
+#### Erreurs
+
+Comme pour les tableaux, si on essaie d'accéder à un élément hors du tableau, c'est-à-dire à une position plus grande que sa taille, on aura une erreur du type `IndexOutOfBoundsException`.
 
 ## Utilité
 

@@ -81,7 +81,7 @@ i = j * 2; // i va contenir j * 2 -> évalué à 10 * 2 -> évalué à 20
 
 #### Erreurs
 
-- Lorsque l'on veut assigner à une variable une valeur d'un type incompatible, par exemple `int i = 3.14;`, processing affichera une erreur du type `Type mismatch, "float" does not match with "int"`
+- Lorsque l'on veut assigner à une variable une valeur d'un type incompatible, par exemple `int i = 3.14;`, on aura une erreur du type `Type mismatch, "float" does not match with "int"`
 
 ### Evaluation
 
@@ -107,6 +107,18 @@ i = i + 1;
 ```java
 println(i); // On affiche ce que contient la variable i
 ```
+
+### Constantes
+
+Si la valeur contenue dans une variable n'est pas amenée à évoluer pendant l'exécution du programme, mais qu'elle restera toujours la même, on peut imposer cette contrainte en déclarant explicitement une variable *constante*. Pour ce faire, il faut utiliser le mot clé `final` avant le type de la variable.
+
+```java
+final int CONSTANT = 1;
+```
+
+Pour facilement différencier les variables constantes, qui sont donc des variables auxquelles on ne pourra assigner qu'une seule fois une valeur, il est conseillé de mettre leur nom entièrement en majuscule.
+
+Si, par inadvertance, on essaie malgré tout d'assigner une nouvelle valeur à une variable constante, on aura une erreur du type `Final local variable <name> may already have been assigned`.
 
 ## Littéraux
 
