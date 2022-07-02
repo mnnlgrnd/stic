@@ -5,7 +5,7 @@ prev_class: '14-images-pixels'
 
 ## Définition
 
-Processing permet de charger des fichiers tabulaires (`csv`) pour en manipuler les données, supprimer/rajouter des lignes, etc. Ces données sont stockées dans une *table*, représentée par la classe [`Table`](https://processing.org/reference/Table.html). On peut facilement se représenter de quoi il s'agit en visualisant une feuille Excel. On peut aussi créer soi même des tables et les sauvegarder dans fichiers.
+Processing permet de charger des fichiers tabulaires (`csv`) pour en manipuler les données, supprimer/rajouter des lignes, etc. Ces données sont stockées dans une *table*, représentée par la classe [`Table`](https://processing.org/reference/Table.html). On peut facilement se représenter de quoi il s'agit en visualisant une feuille Excel. On peut aussi créer soi même des tables et les sauvegarder dans des fichiers.
 
 ## Chargement, création et sauvegarde
 
