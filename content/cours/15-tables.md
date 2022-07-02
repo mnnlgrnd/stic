@@ -182,7 +182,7 @@ Pour des tris plus complexes qui demandent de comparer plusieurs colonnes, il fa
 
 ```java
 void setup() {
-  Table t = loadTable("data.csv");
+  Table table = loadTable("data.csv");
 
   // Bubble sort
   for (int k = table.getRowCount()-1; k > 0; k--) {
