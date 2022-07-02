@@ -80,5 +80,5 @@ Pour afficher des informations dans la console de processing, il existe plusieur
 	- `println()` fera juste un retour à la ligne dans la console
 	- `println("a")` imprimera `a` en console puis fera un retour à la ligne
 	- `println("a", "b", "c", "d", "e")` imprimera `a b c d e` en console puis fera un retour à la ligne
-- [`print`](https://processing.org/reference/print_.html) qui est similaire à `println` à la différence qu'il ne fait pas de retour à la ligne à la fin. En conséquence, si on imprime par la suite quelque chose d'autre dans le code, ce sera sur la même ligne qu'avant.
+- [`print`](https://processing.org/reference/print_.html) qui est similaire à [`println`](https://processing.org/reference/println_.html) à la différence qu'il ne fait pas de retour à la ligne à la fin. En conséquence, si on imprime par la suite quelque chose d'autre dans le code, ce sera sur la même ligne qu'avant.
 - [`printArray`](https://processing.org/reference/printArray_.html) qui prend en paramètre un [tableau](cours/03-tableaux-matrices.md) et affiche ses éléments (un par ligne) en console
