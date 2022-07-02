@@ -142,7 +142,7 @@ void setup() {
 
 ### Manipulation
 
-On peut manipuler les pixels de la fenêtre de la même façon qu'on manipule les pixels d'une image `PImage`, **mais** si on modifie la valeur de certains pixels, il faut alors appeler la fonction [`updatePixels()`](https://processing.org/reference/updatePixels_.html) pour que ces changements soient répercutés sur l'affichage de la fenêtre.
+On peut manipuler les pixels de la fenêtre de la même façon qu'on manipule les pixels d'une image [`PImage`](https://processing.org/reference/PImage.html), **mais** si on modifie la valeur de certains pixels, il faut alors appeler la fonction [`updatePixels()`](https://processing.org/reference/updatePixels_.html) pour que ces changements soient répercutés sur l'affichage de la fenêtre.
 
 ```java
 void setup() {
