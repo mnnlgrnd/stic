@@ -25,7 +25,7 @@ Une fonction peut ne pas avoir de paramètres si on ne met rien dans les parenth
 
 Le type de retour, le nom et le type des paramètres constituent ce qu'on appelle la **signature** d'une fonction. On ne peut pas créer deux fonctions ayant la même signature, le code affichera alors l'erreur `Duplicate method <signature>`.
 
->ℹ L'ordre dans lequel les fonctions sont définies n'a pas d'importance
+>ℹ L'ordre dans lequel les fonctions sont définies n'a pas d'importance.
 
 ## Appel et exécution
 
