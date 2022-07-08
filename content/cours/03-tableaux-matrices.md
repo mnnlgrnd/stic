@@ -19,8 +19,10 @@ Lorsqu'un programme processing s'exécute, il possède sa propre mémoire dans l
 - La mémoire dite statique, le *stack*, qui contient notamment les variables (locales) de type primitif et des **références** vers des données stockées dans le *heap*
 - La mémoire dite dynamique, le *heap*, qui contient notamment des tableaux et des [objets](cours/09-classes.md)
 
+<p align="center">
 <img src="/stic/images/stack_heap_dm.svg" class="svg-dark-mode"/>
 <img src="/stic/images/stack_heap_lm.svg" class="svg-light-mode"/>
+</p>
 
 > ⚠ Le stockage en mémoire est en réalité plus complexe, l'important ici est de comprendre la différence entre une valeur et une référence. Pour plus de détails sur la gestion de la mémoire lors de l'exécution d'un programme Java, Google est votre ami.
 
@@ -116,8 +118,10 @@ Pour parcourir un tableau, c'est-à-dire pour *itérer* sur chacun de ces élém
 
 Un tableau étant un type de données, il est tout à fait possible de définir un tableau *de tableaux*, c'est-à-dire un tableau dont tous les éléments sont des références vers des tableaux d'un (même) type de données. On peut ainsi avoir un tableau de tableaux d'entiers (2 dimensions), un tableau de tableaux de tableaux de booléens (3 dimensions), etc. Tous les tableaux d'une même dimension auront la même taille, puisque la taille d'un tableau est statique et définie à sa création.
 
+<p align="center">
 <img src="/stic/images/matrix_dm.svg" class="svg-dark-mode"/>
 <img src="/stic/images/matrix_lm.svg" class="svg-light-mode"/>
+</p>
 
 Une matrice est un tableau de tableaux : un tableau à deux dimensions, comme dans Excel, par exemple. On parlera ainsi de **lignes** pour la première dimension et de **colonnes** pour la deuxième dimension.
 
