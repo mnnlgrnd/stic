@@ -6,14 +6,14 @@ url: "tutoriels/structurer-une-solution"
 ## Vue d'ensemble
 Une solution [processing](cours/11-bases-processing.md) contiendra
 
--   La déclaration de variables globales (visibles dans tous les blocs)
+-   La déclaration de variables globales (visibles dans tous les [blocs](cours/07-blocs-contextes.md))
 -   Le `setup`
 -   Le `draw`
 -   Les fonctions de réaction aux inputs pertinantes (`mousePressed`, `keyPressed`, etc.)
 -   Des fonctions globales, utilitaires
 -   Des classes
 
-Il est plus facile d'écrire une classe dans un onglet spécifique pour cette classe, et, si le code devient trop long, de regrouper en différents onglets (~ bloc logique) les différentes fonctions.
+Il est plus facile d'écrire une classe dans un onglet spécifique pour cette classe, et, si le code devient trop long, de regrouper les différentes fonctions dans des onglets représentant des blocs logiques ou les parties constituantes du programme.
 
 ## Etat et données
 
@@ -89,7 +89,7 @@ void draw() {
 
 Il faudra définir les fonctions correspondant à toutes les entrées possibles pour le dessin et y ajouter la logique voulue. Cette logique est en général un changement dans l'état des données qui aura un impact sur l'évolution naturelle des données dans le `draw`.
 
-On pourrait par exemple imaginer une voiture qui roule relativement vite sur une avenue dégagée. Le mouvement est continu, on ferait donc évoluer les informations de position dans le `draw`. Au loin, le conducteur aperçoit un feu de signalisation qui vient de passer orange. En *réaction* à ce *signal*, la position de la voiture ou sa vitesse ne va pas changer, mais le conducteur va appuyer sur le frein pour appliquer une décélaration qui fera diminuer la vitesse. Il faut donc en général concevoir les fonctions de réaction aux entrées comme une réaction ponctuelle à un signal sans directement appliquer la conséquence de cette réaction.
+On pourrait par exemple imaginer une voiture qui roule relativement vite sur une avenue dégagée. Le mouvement est continu, on ferait donc évoluer les informations de position dans le `draw`. Au loin, le conducteur aperçoit un feu de signalisation qui vient de passer orange. En *réaction* à ce *signal*, la position de la voiture ou sa vitesse ne va pas changer, mais le conducteur va appuyer sur le frein pour appliquer une décélaration qui fera diminuer la vitesse. Il faut donc en général concevoir les fonctions de réaction aux entrées comme une réaction ponctuelle à un signal sans directement appliquer la conséquence de cette réaction qui aura elle lieu dans le `draw`.
 
 ```java
 int x = 0;
@@ -130,7 +130,7 @@ void keyReleased() {
 
 ## Fonctions et classes
 
-L'utilisation de [fonctions](cours/06-fonctions.md) et de [classes](cours/09-classes.md) n'est fondamentalement pas obligatoire pour mettre au point une solution, mais on se prive alors de mécanismes précieux permettant de simplifier le code, le rendre plus lisible, d'éviter la redondance, etc.
+L'utilisation de [fonctions](cours/06-fonctions.md) et de [classes](cours/09-classes.md) n'est fondamentalement pas obligatoire pour mettre au point une solution, mais on se prive alors de mécanismes précieux permettant de simplifier le code, de le rendre plus lisible, d'éviter la redondance, etc.
 
 Prenons par exemple un dessin où un personnage glisse sur le sol jusqu'à rencontrer un obstacle, auquel cas il trouve une nouvelle direction "libre" et continue sa glissade. Le code suivant nous permet facilement de comprendre *ce que fait le dessin*. *Comment* le dessin est effectivement réalisé dépendra de la façon dont on aura défini et implémenté les différentes classes/fonctions.
 
@@ -163,7 +163,7 @@ void draw() {
 }
 ```
 
-Il est parfois plus facile de concevoir directement la solution en orienté objet ("je vais faire des objets Balle"). Bien souvent, lorsque l'on détermine les informations nécessaires, elles-mêmes sont déduites des concepts qui peuvent directement être traduits en classes.
+Il est parfois plus facile de concevoir directement la solution en orienté objet ("je vais faire des objets Balle"). Bien souvent, lorsque l'on détermine les informations nécessaires, elles-mêmes sont déduites des concepts qui pourraient directement être traduits en classes.
 
 ## Conseils généraux
 - Aller à l'essentiel, d'abord faire fonctionner ce qu'on veut puis seulement essayer d'améliorer ou de simplifier

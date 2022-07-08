@@ -8,9 +8,9 @@ next_class: "04-alternatives"
 
 ### Définition
 
-Un **tableau** est une collection ordonnée de variables du même type. On accède a une variable du tableau grâce au nom du tableau et à la position de la variable dans celui-ci.
+Un **tableau** est une collection ordonnée de [variables](cours/01-variables-litteraux.md) du même type. On accède a une variable du tableau grâce au nom du tableau et à la position de la variable dans celui-ci.
 
-Un tableau est un type de données au même titre que le sont `int`, `float`, etc. Il s'agit cependant d'un type dit *référentiel* et non primitif, car la variable de type tableau contient en réalité une référence vers un une suite de blocs en mémoire contenant les variables du tableau.
+Un tableau est un type de données au même titre que le sont `int`, `float`, etc. Il s'agit cependant d'un type dit ***référentiel*** et non primitif, car la variable de type tableau contient en réalité une référence vers une suite de blocs en mémoire contenant les variables du tableau.
 
 ### Stockage en mémoire
 
@@ -26,7 +26,7 @@ Lorsqu'un programme processing s'exécute, il possède sa propre mémoire dans l
 
 ## Déclaration
 
-On déclare un tableau comme on déclare une [variable](cours/01-variables-litteraux.md), à ceci près qu'il faut rajouter l'opérateur `[]` pour indiquer qu'il s'agit d'un tableau. On peut ajouter cet opérateur soit après le **type** de données du tableau, soit après son nom. Il s'agit de déclarations équivalentes.
+On déclare un tableau comme on déclare une variable, à ceci près qu'il faut rajouter l'opérateur `[]` pour indiquer qu'il s'agit d'un tableau. On peut ajouter cet opérateur soit après le **type** de données du tableau, soit après son nom. Il s'agit de déclarations équivalentes.
 
 ```java
 int[] integers;
@@ -56,7 +56,13 @@ int[] integers = new int[6];
 int[] integers = new int[] { 1, 2, 4, 8, 16, 32 };
 ```
 
-Dans les deux cas, l'utilisation du mot clé `new` est obligatoire. Ce mot clé indique qu'on crée une nouvelle **référence** et est responsable de l'allocation en mémoire.
+Ou plus simplement 
+
+```java
+int[] integers = { 1, 2, 4, 8, 16, 32 };
+```
+
+Dans les deux cas, l'utilisation du mot clé `new` indique qu'on crée une nouvelle **référence** et est responsable de l'allocation en mémoire.
 
 ## Manipulation
 
@@ -64,7 +70,7 @@ Une fois un tableau déclaré et créé, on peut accéder à sa taille et aux di
 
 ### Taille du tableau
 
-La taille d'un tableau **est déterminée à sa création et ne peut pas être changée**, on peut la récupérer grâce au champ spécial `length` du tableau, de la façon suivante :
+La taille d'un tableau ***est déterminée à sa création et ne peut pas être changée***, on peut la récupérer grâce au champ spécial `length` du tableau, de la façon suivante :
 
 ```java
 int[] integers = new int[] { 1, 2, 3 };
@@ -77,7 +83,7 @@ Pour accéder à un élément particulier du tableau, il faut utiliser l'opérat
 
 > ⚠ En informatique, on commence à compter à partir de 0. Le premier élément aura donc l'indice 0, le deuxième l'indice 1, ainsi de suite.
 
-Lorsque l'on accède à un élément du tableau, on récupère une variable (celle stockée dans le heap), et on peut donc s'en servir comme tel ; c'est-à-dire lui assigner une valeur, ou l'évaluer dans des expressions.
+Lorsque l'on accède à un élément du tableau, on récupère une variable (celle stockée dans le heap), et on peut donc s'en servir comme tel ; c'est-à-dire lui assigner une valeur, ou l'évaluer dans des [expressions](cours/02-expressions.md).
 
 ```java
 int[] integers = new int[] { 1, 2, 3 };
@@ -97,7 +103,7 @@ println(integers[2]);
 
 ### Parcourir le tableau
 
-Pour parcourir un tableau, c'est-à-dire pour *itérer* sur chacun de ces éléments, il faudra utiliser une boucle dont les explications sont disponibles dans la leçon [06 - Boucles](cours/05-boucles.md).
+Pour parcourir un tableau, c'est-à-dire pour *itérer* sur chacun de ces éléments, il faudra utiliser une boucle dont les explications sont disponibles dans la leçon [05 - Boucles](cours/05-boucles.md).
 
 ### Erreurs
 

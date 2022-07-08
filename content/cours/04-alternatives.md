@@ -8,9 +8,9 @@ next_class: "05-boucles"
 
 Une alternative, ou branchement conditionnel, est un *bloc de code* dont l'exécution est **optionnelle** et dépend d'une certaine **condition**, **une [expression](cours/02-expressions.md) booléenne** dans laquelle on retrouve en général des variables utilisées avant cette alternative.
 
-## Branchement `if` simple {id="branchementsimple"}
+## Branchement `if` simple
 
-On commence toujours une alternative par le mot clé `if` suivi de la condition entre parenthèses. Le code optionnel est le bloc de code compris entre les accolades `{}` venant après le `if`.
+On commence toujours une alternative par le mot clé `if` suivi de la condition entre parenthèses. Le code optionnel est le [bloc](cours/07-blocs-contextes.md) de code compris entre les accolades `{}` venant après le `if`.
 
 ```java
 int i = int(random(-10, 10));

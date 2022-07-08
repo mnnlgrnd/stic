@@ -6,9 +6,9 @@ next_class: "10-strings"
 
 ## Définition
 
-Dans un langage *orienté objet* comme Java, on peut définir des *classes*. Une classe est un *prototype*, une maquette, représentant un concept souvent tiré du monde réel, et qui nous va permettre de plus facilement interagir avec ce concept.
+Dans un langage *orienté objet* comme Java, on peut définir des ***classes***. Une classe est un *prototype*, une maquette, représentant un concept souvent tiré du monde réel, et qui nous va permettre de plus facilement interagir avec ce concept.
 
-Un *objet* est une instance d'une classe, un cas concret correspondant au prototype défini.
+Un *objet* est une *instance* d'une classe, un cas concret correspondant au prototype défini.
 
 Imaginons par exemple une classe `Human`, chaque personne serait alors une instance de cette classe, une *réalisation* de ce qui définit un humain.
 
@@ -35,7 +35,7 @@ Une classe est généralement découpée en trois parties : les attributs, le co
 ### Attributs
 Les *attributs* d'une classe sont des variables que l'on déclare dans cette classe et qui représentent des informations qu'auront toujours des instances de la classe. La valeur de ces variables changera bien entendu d'une instance à l'autre.
 
-Pour notre classe `Human`, on aura par exemple un attribut `hungry` de type booléen, qui indique si une personne a faim.
+Pour notre classe `Human`, on aura par exemple un attribut `hungry` de type booléen, qui indique si une personne a faim. Tout le monde a faim, mais pas forcément en même temps ; chaque personne a sa propre "valeur" de faim.
 
 ```java
 class Human {
@@ -47,11 +47,11 @@ class Human {
 ```
 
 ### Constructeur
-Le *constructeur* est une sorte de fonction particulière qui permet d'instancier un nouvel objet de la classe. Cette "fonction" doit impérativement porter le même nom que la classe, et il ne faut pas définir un type de retour. On peut se dire que c'est parce que la valeur retournée par le constructeur sera toujours du type de la classe.
+Le *constructeur* est une sorte de fonction particulière qui permet d'instancier un nouvel objet de la classe. Cette "fonction" doit impérativement porter le même nom que la classe, et il ne faut pas définir un type de retour puisque la valeur retournée par le constructeur sera toujours du type de la classe.
 
-Le constructeur d'une classe est donc responsable de l'initialisation d'un objet de cette classe, et c'est là qu'on initialise les différents attributs, soit avec une valeur fixe, soit avec une valeur passée en paramètre.
+Le constructeur d'une classe est donc responsable de l'*initialisation* d'un objet de cette classe, et c'est là qu'on initialise les différents attributs, soit avec une valeur fixe, soit avec une valeur passée en paramètre.
 
-> ℹ On peut aussi initialiser les attributs quand on les déclare, comme pour des variables classiques
+> ℹ On peut aussi initialiser les attributs quand on les déclare, comme pour des variables classiques.
 
 Il est possible de définir plusieurs constructeurs tant que chaque constructeur a des paramètres différents ; on définit alors plusieurs façons différentes de créer un nouvel objet.
 
@@ -99,7 +99,13 @@ class Human {
 }
 ```
 
-Pour accéder explicitement à un attribut de la classe, on peut utiliser le mot clé `this`. Ce mot clé représente en quelque sorte l'instance de la classe sur laquelle on travaille, même si elle n'existe pas encore. Depuis ce `this`, on peut accéder à tous les attributs et aux méthodes avec la syntaxe this.\<attribut\> ou this.\<méthode\>. On peut ainsi utiliser la variable locale `hungry` pour mettre sa valeur dans l'attribut correspondant de l'instance `this.hungry` :
+Pour accéder explicitement à un attribut de la classe, on peut utiliser le mot clé `this`. Ce mot clé représente l'instance de la classe sur laquelle on travaille lorsque l'on sera dans le contexte d'exécution de l'objet. 
+
+Depuis ce `this`, on peut accéder à tous les attributs et aux méthodes avec la syntaxe 
+
+this.\<attribut\> ou this.\<méthode\>
+
+On peut ainsi utiliser la variable locale `hungry` pour mettre sa valeur dans l'attribut correspondant de l'instance `this.hungry` :
 
 ```java
 class Human {
@@ -186,7 +192,7 @@ println(human.hungry); // Affiche false
 
 ### `null`
 
-Si on n'initialise pas une variable objet, la référence n'est pas définie et est alors `null`. Cela signifie que la variable ne contient rien. On peut également "supprimer" la valeur contenue dans une variable objet en lui assignant la valeur `null`.
+Si on n'initialise pas une variable objet, la référence n'est pas définie et est alors `null`. Cela signifie que la variable ne contient rien. On peut également "supprimer" la référence contenue dans une variable objet en lui assignant la valeur `null` ; la variable ne référencera plus rien.
 
 ```java
 Human human = new Human();
@@ -202,7 +208,7 @@ Puisque les objets sont des *références* vers l'endroit en mémoire *heap* où
 
 Lorsque l'on passe un objet en paramètre, la fonction reçoit donc la *référence* et a accès aux vraies informations de l'objet. Si on modifie l'objet dans l'appel de la fonction, ce sera bien le même objet qui sera modifié.
 
-> ℹ Techniquement, en Java, l'objet contient la référence et c'est bien la *valeur* de cette référence qui est passée en paramètre ; il s'agit donc au sens propre du terme d'un passage par valeur, mais l'objet étant un type de référence et non primitif, il est plus facile de se représenter la situation comme un passage par référence classique. [https://www.educative.io/answers/pass-by-value-vs-pass-by-reference](https://www.educative.io/answers/pass-by-value-vs-pass-by-reference-)
+> ℹ Techniquement, en Java, l'objet contient la référence et c'est bien la *valeur* de cette référence qui est passée en paramètre ; il s'agit donc au sens propre du terme d'un passage par valeur, mais l'objet étant un type de référence et non primitif, il est plus facile de se représenter la situation comme un [passage par référence](https://www.educative.io/answers/pass-by-value-vs-pass-by-reference-) classique.
 
 ```java
 class MyClass {
@@ -238,9 +244,9 @@ void bar(MyClass o) {
 
 ## Listes d'objets
 
-Si l'on doit manipuler un grand nombre d'objets du même type, il y a deux solutions possibles :
+Si on doit manipuler un grand nombre d'objets du même type, il y a deux solutions possibles :
 - Ce nombre est fixe, on peut alors utiliser un tableau ; par exemple `Human[] humans = new Human[10];`
-- Ce nombre est variable et est amené à changer (nouveaux éléments, éléments en moins) pendant l'exécution du code. Dans ce cas, on peut utiliser une `ArrayList`, qui représente donc une liste d'éléments de taille variable.
+- Ce nombre est variable et est amené à changer (nouveaux éléments, éléments en moins) pendant l'exécution du code. Dans ce cas, on peut utiliser une [`ArrayList`](https://processing.org/reference/ArrayList.html), qui représente donc une liste d'éléments de taille variable.
 
 ### ArrayList
 

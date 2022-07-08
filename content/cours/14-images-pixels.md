@@ -6,7 +6,7 @@ next_class: '15-tables'
 
 ## Images
 
-Processing permet de charger des images depuis des fichiers et de les manipuler ensuite pour, notamment, les afficher dans la fenêtre. Ces images peuvent ensuite être sauvegardées dans un fichier.
+Processing permet de charger des images depuis des fichiers et de les manipuler ensuite pour, entre autres, les afficher dans la fenêtre. Ces images peuvent ensuite être sauvegardées dans un fichier.
 
 Une image est représentée par la classe [`PImage`](https://processing.org/reference/PImage.html).
 
@@ -31,8 +31,7 @@ Les formats d'image acceptés sont `gif`, `jpg`, `png` et `tga`.
 
 > ⚠ Si le chemin spécifié pour charger une image n'existe pas, la fonction renverra `null`.
 
-On peut sauvegarder une image grâce à la méthode `save` sur l'image en 
-passant en paramètre le chemin vers le fichier où on l'on veut sauver l'image. Si ce fichier n'existe pas, il sera créé.
+On peut sauvegarder une image grâce à la méthode [`save`](https://processing.org/reference/PImage_save_.html) sur l'image en passant en paramètre le chemin vers le fichier où l'on veut sauver l'image. Si ce fichier n'existe pas, il sera créé.
 
 ```java
 PImage img;
@@ -67,7 +66,7 @@ Une fois une image chargée, on a accès
 - A sa hauteur, via l'attribut `height`
 - Aux pixels qui la composent, stockés dans un attribut `pixels`, un *tableau à une dimension* de `color`.
 
-Comme les pixels sont stockés dans un tableau à une dimension, on ne peut pas directement accéder à un pixel via ses coordonnées "écran" *(x, y)*. Il faut d'abord convertir ces coordonnées dans un repère à deux dimensions (~ matrice) à leur coordonnée équivalente à une dimension. Ce calcul est relativement simple dès lors qu'on connaît la largeur de l'image (~ matrice), car le tableau a une dimension contient en fait le contenu de chaque *ligne* de la matrice, mise bout à bout.
+Comme les pixels sont stockés dans un tableau à une dimension, on ne peut pas directement accéder à un pixel via ses coordonnées "écran" *(x, y)*. Il faut d'abord convertir ces coordonnées à deux dimensions (~ matrice) dans leur coordonnée équivalente à une dimension. Ce calcul est relativement simple dès lors qu'on connaît la largeur de l'image (~ matrice), car le tableau a une dimension contient en fait le contenu de chaque *ligne* de la matrice, mise bout à bout.
 
 
 <p align="center">
@@ -76,9 +75,13 @@ Comme les pixels sont stockés dans un tableau à une dimension, on ne peut pas 
 </p>
 
 
-La formule pour passer des coordonnées *(x, y)* à deux dimensions à la coordonnée *k* à une dimension, connaissant la largeur *w*, est `k = y x w + x`. On multiplie *y*, le nombre de lignes, par la largeur de l'image *w*, car on aura, avant le *x*, l'indice de la colonne, tous les éléments des lignes d'avant, sachant qu'on a *w* éléments par ligne et *y* lignes.
+La formule pour passer des coordonnées *(x, y)* à deux dimensions à la coordonnée *k* à une dimension, connaissant la largeur *w*, est 
 
-Similairement, la formule pour passer de la coordonnée *k* à une dimension aux coordonnées *(x, y)*, connaissant la largeur w est :
+`k = y x w + x`. 
+
+On multiplie *y*, le nombre de lignes, par la largeur de l'image *w*, car on aura, avant le *x* (colonne), tous les éléments des lignes d'avant, sachant qu'on a *w* éléments par ligne et *y* lignes.
+
+Similairement, la formule pour passer de la coordonnée *k* à une dimension aux coordonnées *(x, y)*, connaissant la largeur *w* est :
 - `y = k / w`, la division ***entière*** de *k* par la largeur, pour savoir combien de lignes *complètes* sont incluses jusqu'à la position *k*
 -  `x = k % w`, le reste de la division entière de *k* par la largeur, pour savoir combien d'éléments il y a sur la ligne actuelle *incomplète* de la matrice où se situe *k*
 
@@ -113,20 +116,20 @@ void setup() {
 #### Méthodes
 
 La classe [`PImage`](https://processing.org/reference/PImage.html) propose des méthodes utilitaires pour plus facilement manipuler des images :
-- `get(x, y)` qui renvoie la couleur (`color`) du pixel en position *(x, y)* sur l'image.
-- `get(x, y, w, h)` qui renvoie une sous partie de l'image ; un rectangle dont le coin supérieur gauche est en position *(x, y)*, de largeur *w* et de hauteur *h*.
-- `set(x, y, c)` qui change la couleur du pixel en position *(x, y)* par la couleur *c* passée en paramètre.
-- `save(filename)` comme déjà mentionné, pour sauver l'image dans un fichier *filename*.
+- [`get(x, y)`](https://processing.org/reference/PImage_get_.html) qui renvoie la couleur (`color`) du pixel en position *(x, y)* sur l'image.
+- [`get(x, y, w, h)`](https://processing.org/reference/PImage_get_.html) qui renvoie une sous partie de l'image ; un rectangle dont le coin supérieur gauche est en position *(x, y)*, de largeur *w* et de hauteur *h*.
+- [`set(x, y, c)`](https://processing.org/reference/PImage_set_.html) qui change la couleur du pixel en position *(x, y)* par la couleur *c* passée en paramètre.
+- [`save(filename)`](https://processing.org/reference/PImage_save_.html) comme déjà mentionné, pour sauver l'image dans un fichier *filename*.
 
 Il est plus facile d'interagir avec les pixels de l'image avec les méthodes `get` et `set`, mais cela est moins efficace que d'accéder directement aux éléments du tableau de pixels.
 
 ## Pixels de la fenêtre
 
-La fenêtre de processing pouvant elle-même être considérée comme une image, processing permet d'en manipuler directement les pixels via un tableau de pixels `pixels`. 
+La fenêtre de processing pouvant elle-même être considérée comme une image, processing permet d'en manipuler directement les pixels.. 
 
 ### Chargement
 
-Pour pouvoir lire ou modifier directement les pixels de la fenêtre de processing, il faut d'abord les *charger* en appelant la fonction [`loadPixels()`](https://processing.org/reference/loadPixels_.html). Une fois cette fonction appelée, on aura accès à une variable globale processing `pixels`, qui est un tableau (à une dimension) de couleurs.
+Pour pouvoir lire ou modifier directement les pixels de la fenêtre de processing, il faut d'abord les *charger* en appelant la fonction [`loadPixels()`](https://processing.org/reference/loadPixels_.html). Une fois cette fonction appelée, on aura accès à la variable globale processing `pixels`, qui est un tableau (à une dimension) de couleurs `color`.
 
 ```java
 void setup() {

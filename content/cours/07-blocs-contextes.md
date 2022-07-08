@@ -9,7 +9,7 @@ next_class: "08-recursivite"
 Un *bloc de code* est une série de lignes de code délimitée par des accolades `{}`. Ces blocs sont, comme vu précédemment, liés à des [branchements conditionnels](cours/04-alternatives), des [boucles](cours/05-boucles) ou des [fonctions](cours/06-fonctions.md). Chaque bloc a son propre *contexte*.
 
 ## Contexte et portée
-La *portée* d'une variable définit dans quel contexte celle-ci est visible par du code et donc utilisable. Chaque bloc a accès aux variables déclarées dans son propre contexte et à celles déclarées dans le contexte "parent" ou englobant.
+La *portée* d'une variable définit dans quel *contexte* celle-ci est visible par du code et donc utilisable. Chaque bloc a accès aux variables déclarées dans son propre contexte et à celles déclarées dans le contexte "parent" ou englobant.
 
 ```java
 int i = 0;
@@ -29,7 +29,7 @@ if (i == 0) {
 
 ### Global
 
-Le contexte global est le contexte principal d'exécution du programme dans lequel on va retrouver des variables globales, des branchements, des boucles, des définitions de fonctions, etc.
+Le contexte global de processing est le contexte principal d'exécution du programme dans lequel on va retrouver des variables globales, des branchements, des boucles, des définitions de fonctions, etc.
 
 ### Branchements et boucles
 
@@ -39,7 +39,7 @@ Pour les boucles, chaque *itération* de la boucle est un contexte différent. L
 
 ### Fonctions
 
-Pour les fonctions, chaque *appel* de fonction est un contexte différent et **indépendant**, le contexte parent de l'appel de la fonction est le contexte global et non le bloc de code dans lequel se trouve l'appel à cette fonction. Les paramètres de la fonction sont également des variables locales à chaque appel de la fonction dont la valeur est celle qu'on a passée dans l'appel.
+Pour les fonctions, chaque *appel* de fonction est un contexte différent et **indépendant**. Le contexte parent de l'appel de la fonction est le contexte global et non le bloc de code dans lequel se trouve l'appel à cette fonction. Les paramètres de la fonction sont également des variables locales à chaque appel de la fonction dont la valeur est celle qu'on a passée dans l'appel.
 
 ```java
 int i = 1; // Variable globale

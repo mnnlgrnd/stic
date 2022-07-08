@@ -4,7 +4,7 @@ url: "tutoriels/debugger"
 ---
 
 ## Manuellement
-Pour débugger manuellement, le plus "facile" est parfois de simplement afficher en console, aux endroits importants du code, l'état de certaines variables, ou simplement un indicateur pour savoir si on est arrivé à cet endroit du code.
+Pour débugger manuellement, le plus facile est parfois de simplement afficher en console, aux endroits importants du code, l'état de certaines variables, ou simplement un indicateur pour savoir si on est arrivé à cet endroit du code.
 
 ```java
 void setup() {
@@ -38,7 +38,11 @@ Il s'agit en réalité d'un mode d'exécution du code différent, que l'on peut 
 
 ### Points d'arrêt
 
-Une fois le mode activé, la fenêtre de debug s'ouvre. Elle est actuellement vide puisqu'il n'y a pas encore de code en train d'être exécuté. On peut maintenant définir des points d'arrêt, ou *breakpoints*, en cliquant sur le numéro d'une ligne ; il y aura alors un symbole (losange) à la place du numéro de la ligne. Lorsque le code exécuté arrivera sur cette ligne de code, il se mettra en pause *avant* que cette ligne soit exécutée. Pour retirer le point d'arrêt, on peut cliquer sur le losange et il disparaîtra. On peut définir autant de points d'arrêt que l'on veut, tant qu'il s'agit d'une ligne *exécutable* (par une ligne vide, par exemple).
+Une fois le mode activé, la fenêtre de debug s'ouvre. Elle est initialement vide puisqu'il n'y a pas encore de code en train d'être exécuté. 
+
+On peut ensuite définir des points d'arrêt, ou *breakpoints*, en cliquant sur le numéro d'une ligne ; il y aura alors un symbole (losange) à la place du numéro de la ligne. Lorsque le code exécuté arrivera sur cette ligne de code, il se mettra en pause *avant* que cette ligne soit exécutée. 
+
+Pour retirer le point d'arrêt, on peut cliquer sur le losange et il disparaîtra. On peut définir autant de points d'arrêt que l'on veut, tant qu'il s'agit d'une ligne *exécutable* (par une ligne vide, par exemple).
 
 ![[tutoriels/images/breakpoints.png]]
 

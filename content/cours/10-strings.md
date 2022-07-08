@@ -7,7 +7,7 @@ next_class: "11-bases-processing"
 ## Définition
  Un **string** est un type de données particulier permettant de contenir une chaîne de caractères, du texte. Il ne s'agit pas d'un type primitif comme `int`, `float`, etc. mais d'une [classe](cours/09-classes.md) `String` existante dans le langage Java de base.
 
-Comme toute variable, on déclare un string en indiquant son type, `String`, et le nom de la variable. En Java, une chaîne de caractères est délimitée par des guillemets. Ainsi, toute valeur entre `" "` sera évaluée par processing comme étant du type `String`.
+Comme toute variable, on déclare un string en indiquant son type, `String`, et le nom de la variable. En Java, une chaîne de caractères est délimitée par des guillemets. Ainsi, toute valeur entre `""` sera évaluée par processing comme étant de type `String`.
 
 ```java
 String s = "Hello World!";
@@ -16,7 +16,7 @@ println(s); // Affiche Hello World!
 
 ### Objets et littéraux
 
-Bien que `String` soit une classe, Java permet d'utiliser des littéraux de type `String` : des chaînes de caractères entre guillements `"`. Ces littéraux sont stockés différemment que les objets en mémoire, de façon centrale, de sorte qu'une même chaîne de caractères utilisée plusieurs fois soit un seul littéral en mémoire.
+Bien que `String` soit une classe, Java permet d'utiliser des littéraux de type `String` : des chaînes de caractères entre guillements `""`. Ces littéraux sont stockés différemment des objets en mémoire, de façon centrale, de sorte qu'une même chaîne de caractères utilisée plusieurs fois soit un seul littéral en mémoire.
 
 ```java
 println("abc" == "abc"); // Affiche true
@@ -72,8 +72,8 @@ Comme on peut avoir des objets ou des littéraux `String`, et que les comparaiso
 #### `compareTo`
 
 La méthode `compareTo` disponible sur un `String` permet de comparer la chaîne de caractères de ce `String` avec celle passée en paramètre. La méthode renvoie un nombre entier :
-- Positif si le premier `String` est "plus grand" que le second, dans l'ordre croissant
-- Négatif si le premier `String` est "plus petit" que le second, dans l'ordre croissant
+- Positif (1) si le premier `String` est "plus grand" que le second, dans l'ordre croissant
+- Négatif (-1) si le premier `String` est "plus petit" que le second, dans l'ordre croissant
 - 0 si les deux `String` contiennent la même chaîne de caractères.
 
 ```java
@@ -86,7 +86,7 @@ println(abc.compareTo("abc")); // Affiche 0
 
 #### `equals`
 
-La méthode `equals` disponible sur un `String` permet de savoir si ce `String` contient la même chaîne de caractères qu'un autre `String`, utilisé en paramètre. Cette méthode renvoie donc le booléen `true` si les deux `String` contiennent la même chaîne de caractères, ou `false` dans le cas contraire.
+La méthode `equals` disponible sur un `String` permet de savoir si ce `String` contient la même chaîne de caractères qu'un autre `String`, passé en paramètre. Cette méthode renvoie donc le booléen `true` si les deux `String` contiennent la même chaîne de caractères, ou `false` dans le cas contraire.
 
 ```java
 String abc = "abc";
@@ -99,7 +99,7 @@ println(abc.equals("abc")); // Affiche true
 
 #### `length`
 
-On peut récupérer la taille d'une chaîne de caractères en appelant la fonction `length` sur cette chaîne de caractères.
+On peut récupérer la taille d'une chaîne de caractères en appelant la *fonction* `length` sur cette chaîne de caractères.
 
 ```java
 String s1 = "Hello";
@@ -108,9 +108,11 @@ println(s1.length()); // Affiche 5
 println(s2.length()); // Affiche 2
 ```
 
+> ⚠ Il s'agit bien d'un appel de fonction qui a donc besoin des parenthèses. Ce n'est pas la même chose que le champ `length` disponible sur les tableaux.
+
 #### `split`
 
-La méthode `split` permet de scinder une chaîne de caractères sur base d'un séparateur, une chaîne de caractères à passer en paramètre. Le `split` renvoie un tableau de `String` correspondant aux différentes parties de la chaîne initiale qui étaient séparées par le séparateur. Par exemple, utiliser `split(" ")` permet de couper une phrase sur les espaces et de récupérer un tableau de mots.
+La méthode `split` permet de scinder une chaîne de caractères sur base d'un séparateur, une chaîne de caractères à passer en paramètre. Le `split` renvoie un [tableau](cours/03-tableaux-matrices.md) de `String` correspondant aux différentes parties de la chaîne initiale qui étaient séparées par le séparateur. Par exemple, utiliser `split(" ")` permet de couper une phrase sur les espaces et de récupérer un tableau de mots.
 
 ```java
 String s = "Hello World!";
@@ -137,12 +139,15 @@ println(d); // Affiche d
 La méthode `substring` permet de récupérer une partie de la chaîne de caractères initiale. On peut appeler cette méthode de deux façons :
 
 - Avec un seul paramètre de type entier, qui est l'indice du caractère à partir duquel on veut la sous-chaîne de caractères, qui ira jusqu'à la fin de la chaîne de caractères initiale
+
 ```java
 String s = "Hello World!";
 String world = s.substring(6);
 println(world); // Affiche World!
 ```
+
 - Avec deux paramètres de type entier ; le premier est toujours l'indice du premier caractère de la sous-chaîne voulue, et le deuxième est l'indice du caractère (non-compris) de fin de la sous-chaîne
+
 ```java
 String s = "Hello World!";
 String hello = s.substring(0, 5);

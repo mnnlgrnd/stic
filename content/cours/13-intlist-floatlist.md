@@ -6,7 +6,11 @@ next_class: '14-images-pixels'
 
 ## Définition
 
-Il est possible de contenir un grand nombre de variables d'un même type dans [tableau](cours/03-tableaux-matrices.md) mais il s'agit d'une structure de données contraignante ; la taille du tableau est *fixe*, déterminée à sa création, et ne pourra pas changer. Si on devait retirer un élément de ce tableau, il faudrait en réalité créer un nouveau tableau de plus petite taille et y mettre les éléments à conserver. Pour des [objets](cours/09-classes.md), on peut utiliser des `ArrayList` qui sont des listes dynamiques, de taille variable donc, et processing propose deux classes similaires pour contenir non pas des objets, mais des variables de type `int` ou `float` ; [`IntList`](https://processing.org/reference/IntList.html) et [`FloatList`](https://processing.org/reference/FloatList.html).
+Il est possible de contenir un grand nombre de variables d'un même type dans un [tableau](cours/03-tableaux-matrices.md) mais il s'agit d'une structure de données contraignante ; la taille du tableau est *fixe*, déterminée à sa création, et ne pourra pas changer. 
+
+Si on devait retirer un élément de ce tableau, il faudrait en réalité créer un nouveau tableau de plus petite taille et y mettre les éléments à conserver. 
+
+Pour des [objets](cours/09-classes.md), on peut utiliser des [`ArrayList`](https://processing.org/reference/ArrayList.html) qui sont des listes dynamiques, de taille variable. Processing propose deux classes similaires pour contenir non pas des objets, mais des variables de type `int` ou `float` ; [`IntList`](https://processing.org/reference/IntList.html) et [`FloatList`](https://processing.org/reference/FloatList.html).
 
 Une [`IntList`](https://processing.org/reference/IntList.html) (resp. [`FloatList`](https://processing.org/reference/FloatList.html)) est donc une liste dynamique contenant des éléments de type `int` (resp. `float`), qui offre les mêmes possibilités qu'un tableau et en plus le fait de pouvoir supprimer des éléments de cette liste.
 
@@ -24,7 +28,7 @@ IntList empty = new IntList(); // Nouvelle liste vide, contiendra des entiers
 println(empty); // Affiche IntList size=0 [  ]
 ```
 
-On peut aussi créer une liste non vide en passant aux paramètres du constructeur un tableau d'entiers.
+On peut aussi créer une liste non vide en passant en paramètre du constructeur un tableau d'entiers.
 
 ```java
 IntList notEmpty = new IntList({ 0, 1, 2, 3 });
@@ -60,11 +64,11 @@ Si on essaie d'accéder directement à une position se situant hors du tableau d
 ### Autres méthodes utiles
 
 Au-delà de la manipulation par défaut des éléments d'une [`IntList`](https://processing.org/reference/IntList.html), il existe d'autres méthodes qui peuvent s'avérer utiles :
-- [`clear()`](https://processing.org/reference/IntList_clear_.html), qui retire tous les éléments de la liste ; elle sera à nouveau vide
-- [`shuffle()`](https://processing.org/reference/IntList_shuffle_.html), qui met les éléments de la liste dans un ordre aléatoire
-- [`sort()`](https://processing.org/reference/IntList_sort_.html), qui trie les éléments de la liste dans l'ordre croissant
-- [`reverse()`](https://processing.org/reference/IntList_reverse_.html), qui inverse l'ordre des éléments dans la liste
+- [`clear()`](https://processing.org/reference/IntList_clear_.html), qui retire tous les éléments de la liste ; elle sera à nouveau vide.
+- [`shuffle()`](https://processing.org/reference/IntList_shuffle_.html), qui met les éléments de la liste dans un ordre aléatoire.
+- [`sort()`](https://processing.org/reference/IntList_sort_.html), qui trie les éléments de la liste dans l'ordre croissant.
+- [`reverse()`](https://processing.org/reference/IntList_reverse_.html), qui inverse l'ordre des éléments dans la liste.
 - [`sortReverse()`](https://processing.org/reference/IntList_sortReverse_.html), qui trie les éléments dans l'ordre décroissant ; cela équivant à appeler consécutivement [`sort()`](https://processing.org/reference/IntList_sort_.html) et [`reverse()`](https://processing.org/reference/IntList_reverse_.html).
-- [`min()`](https://processing.org/reference/IntList_min_.html), qui renvoie le plus petit élément de la liste
-- [`max()`](https://processing.org/reference/IntList_max_.html), qui renvoie le plus grand élément de la liste
+- [`min()`](https://processing.org/reference/IntList_min_.html), qui renvoie le plus petit élément de la liste.
+- [`max()`](https://processing.org/reference/IntList_max_.html), qui renvoie le plus grand élément de la liste.
 

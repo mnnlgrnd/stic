@@ -61,7 +61,7 @@ L'assignation est donc une ligne de code du type :
   
 Le symbole **=** est **toujours** l'opérateur qui permet d'assigner une valeur à une variable. La comparaison de deux valeurs se fait avec le symbole **\=\=**.
 
-On peut mettre à droite d'une assignation tout ce qui sera _évalué_ par Processing au **même type** que la variable à laquelle on va assigner cette valeur.
+On peut mettre à droite d'une assignation tout ce qui sera _évalué_ par processing au **même type** que la variable à laquelle on va assigner cette valeur.
 
 #### Exemples
 
@@ -82,31 +82,6 @@ i = j * 2; // i va contenir j * 2 -> évalué à 10 * 2 -> évalué à 20
 #### Erreurs
 
 - Lorsque l'on veut assigner à une variable une valeur d'un type incompatible, par exemple `int i = 3.14;`, on aura une erreur du type `Type mismatch, "float" does not match with "int"`
-
-### Evaluation
-
-L'**évaluation** est l'interprétation, par Processing, d'un morceau de code, une **[expression](cours/02-expressions.md)**, pour en déduire une **valeur.** Une expression peut être 
-
--   Une valeur (par exemple `1`, `'a'`, `true`, etc.)
--   Une variable
--   Un appel de fonction : le type de la valeur sera le type de retour de cette fonction, par exemple `float f = random(0, 1)`, on assigne à la variable `f` un nombre aléatoire entre 0 et 1 que nous retourne la fonction `random`
--   Un calcul impliquant des valeurs, variables ou appels de fonction : processing respectera alors l'ordre des opérateurs/parenthèses
-
-Une expression peut donc être utilisée
-
--   Pour une assignation
-
-```java
-int i = 5;
-i = 5 * 2;
-i = i + 1;
-```
-
--   Dans un appel de fonction
-
-```java
-println(i); // On affiche ce que contient la variable i
-```
 
 ### Constantes
 
@@ -135,7 +110,7 @@ Tout comme une variable, un littéral a un type, mais celui est en général imp
 	- `1f` est de type `float`
 	- `3.14d` est de type `double`
 - Les littéraux de type caractère (`char`) comme `'a'`, `'+'`, etc. ; n'importe quel caractère entre deux `'`
-- Les littéraux de chaînes de caractères (strings), vu dans la leçon [09 - Strings](cours/10-strings.md)
+- Les littéraux de chaînes de caractères (strings), vues dans la leçon [09 - Strings](cours/10-strings.md)
 
 ### Assignation à une variable
 

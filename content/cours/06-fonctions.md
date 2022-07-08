@@ -15,7 +15,7 @@ Pour pouvoir appeler une fonction, il faut la déclarer en spécifiant :
 - Son **nom** ; à utiliser pour appeler la fonction
 - Ses **paramètres** ; leur type et leur nom
 
-Et le code de cette fonction entre accolades `{}` en respectant la syntaxe 
+Le code de cette fonction est à mettre entre accolades `{}` en respectant la syntaxe 
 
 *\<type\> \<nom\>(\<type_p_1\> \<nom_p_1\>, ..., \<type_p_n\> \<nom_p_n\>) { 
    // code
@@ -29,7 +29,7 @@ Le type de retour, le nom et le type des paramètres constituent ce qu'on appell
 
 ## Appel et exécution
 
-Un **appel** à une fonction consiste à utiliser le nom de la fonction suivi de parenthèses avec, éventuellement, les valeurs à passer aux paramètres de cette fonction. 
+Un **appel** à une fonction consiste à utiliser le nom de la fonction suivi de parenthèses avec, éventuellement, les *valeurs* à passer aux paramètres de cette fonction. 
 
 Il faut obligatoirement appeler la fonction en respectant sa signature ; les valeurs passées doivent correspondre en nombre et en type aux paramètres définis dans la signature de la fonction qu'on appelle. Sinon, le code affichera une erreur du type `The function "<name>" expects parameters like: <signature>`.
 
@@ -58,7 +58,9 @@ Lorsque l'exécution du code est terminée, la ligne de code suivant celle de l'
 
 ### Fonctions avec retour
 
-Une fonction qui *retourne* ou *renvoie* une valeur doit avoir défini son type de retour, c'est-à-dire le type de la valeur qu'elle renvoie. Pour qu'une fonction retourne effectivement une valeur, il faut utiliser le mot clé `return` suivi d'une expression, dans la fonction. Cette expression sera renvoyée par l'appel à la fonction, et on pourra utiliser des appels à cette fonction dans d'autres expressions.
+Une fonction qui *retourne* ou *renvoie* une valeur doit avoir défini son type de retour, c'est-à-dire le type de la valeur qu'elle renvoie. Pour qu'une fonction retourne effectivement une valeur, il faut utiliser le mot clé `return` suivi d'une [expression](cours/02-expressions.md), dans la fonction. 
+
+Cette expression sera renvoyée par l'appel à la fonction, et on pourra utiliser des appels à cette fonction dans d'autres expressions.
 
 ```java
 int foo() {
@@ -71,9 +73,14 @@ void setup() {
 }
 ```
 
-Dans le code ci-dessus, on appelle la fonction `foo` qui renvoie une valeur de type `int`. On utilise un appel à cette fonction dans l'expression utilisée pour l'assignation à la variable `i`. L'appel à foo est évalué : le code est exécuté et la valeur renvoyée est 1 ; on effectue ensuite la somme de cette valeur et de 1, qui vaut 2, et on assigne ce résultat à la variable `i` qui va donc contenir 2.
+Dans le code ci-dessus, on appelle la fonction `foo` qui renvoie une valeur de type `int`. On utilise un appel à cette fonction dans l'expression utilisée pour l'assignation à la variable `i` :
+
+- L'appel à foo est évalué : le code est exécuté et la valeur renvoyée est 1 ; 
+- On effectue ensuite la somme de cette valeur et de 1, qui vaut 2, et on assigne ce résultat à la variable `i` qui va donc contenir 2.
 
 Si la fonction contient des branchements conditionnels, il est **obligatoire** que, peu importe la branche exécutée, on atteigne un `return`. En effet, il faut que la fonction renvoie **toujours** une valeur. Dans le cas contraire, le code affichera une erreur du type `This method must return a result of type x`.
+
+Dès que l'on arrive sur une ligne de code `return` lors de l'exécution d'un appel de fonction, l'exécution prend fin ; l'appel à la fonction se termine sur cette valeur retournée et on revient à la ligne de code ayant fait l'appel pour utiliser cette valeur.
 
 ### Fonctions `void`
 
@@ -88,6 +95,8 @@ void setup() {
   foo();
 }
 ```
+
+Il est possible d'utiliser le mot clé `return` dans une fonction `void` sans mettre de valeur après ; l'effet du `return` est alors simplement la fin de l'exécution de l'appel.
 
 ## Paramètres
 ### Utilisation
@@ -106,10 +115,12 @@ void setup() {
 }
 ```
 
-On définit une fonction `square` qui va nous permettre de calculer le carré d'un nombre. Ce nombre, *n'importe lequel*, on le représente par le paramètre `i`, de type entier. La fonction calcule ensuite le carré de cette variable, `i * i` et renvoie cette valeur. Nous n'avons besoin de valeurs pour ce paramètre que lorsque l'on appelle effectivement la fonction, comme on le fait plus loin : `println(square(2))` par exemple, affiche en console le résultat de l'appel à la fonction `square` où le paramètre `i` vaut 2. L'appel renverra donc le carré de 2 : 4.
+On définit une fonction `square` qui va nous permettre de calculer le carré d'un nombre. Ce nombre, *n'importe lequel*, on le représente par le paramètre `i`, de type entier. La fonction calcule ensuite le carré de cette variable, `i * i` et renvoie cette valeur. 
+
+Nous n'avons besoin de valeurs pour ce paramètre que lorsque l'on appelle effectivement la fonction, comme on le fait plus loin : `println(square(2))` par exemple, affiche en console le résultat de l'appel à la fonction `square` où le paramètre `i` vaut 2. L'appel renverra donc le carré de 2 : 4.
 
 ### Passage par valeur
-Les variables de type primitif envoyées en paramètres à une fonction sont *passées par valeur*, comme dit plus haut. Concrètement, cela signifie que la fonction reçoit une *nouvelle* variable, locale à son propre [contexte](cours/07-blocs-contextes.md) qui contient la valeur passée en paramètre. Si on modifie cette variable, la variable potentiellement utilsée pour réaliser ce passage par valeur ne sera pas impactée.
+Les variables de type primitif envoyées en paramètres à une fonction sont *passées par valeur*. Concrètement, cela signifie que la fonction reçoit une *nouvelle* variable, locale à son propre [contexte](cours/07-blocs-contextes.md), qui contient la valeur passée en paramètre. Si on modifie cette variable, la variable potentiellement utilsée pour réaliser ce passage par valeur ne sera pas impactée.
 
 ```java
 void setup() {

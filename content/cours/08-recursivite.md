@@ -43,9 +43,13 @@ void bar() {
 
 ## Conditions d'arrêt
 
-Quand on définit une fonction récursive, il est impératif que cet appel récursif soit *conditionnel*. En effet, si l'appel récursif était toujours exécuté lors d'un appel à la fonction, on ne sortirait plus jamais du cycle d'appels. On parle alors de *conditions d'arrêt*, qui sont les situations dans lesquells il ne faut pas/plus faire d'appel récursif. 
+Quand on définit une fonction récursive, il est impératif que cet appel récursif soit *conditionnel*. En effet, si l'appel récursif était toujours exécuté lors d'un appel à la fonction, on ne sortirait plus jamais du cycle d'appels. On parle alors de *conditions d'arrêt*, qui sont les situations dans lesquelles il ne faut pas/plus faire d'appel récursif. 
 
-Ces conditions d'arrêt portent en général sur les paramètres de la fonction récursive, et chaque appel récursif doit inclure un changement dans la valeur de ces paramètres, de sorte que les conditions d'arrêt puissent avoir un résultat différent selon le contexte de l'appel.
+Cela peut se traduire concrètement par 
+- Un branchement conditionnel dans lequel on fait l'appel récursif ; la condition d'arrêt est alors l'inverse de la condition de ce branchement
+- Un branchement conditionnel situé *avant* l'appel récursif dans lequel on fait un `return`
+
+Les conditions d'arrêt portent en général sur les paramètres de la fonction récursive, et chaque appel récursif doit inclure un changement dans la valeur de ces paramètres, de sorte que les conditions d'arrêt puissent avoir un résultat différent selon le [contexte](cours/07-blocs-contextes.md) de l'appel.
 
 ```java
 void foo() {
@@ -63,9 +67,9 @@ Il pourrait aussi s'agir de variables globales, le principal étant que le *cont
 
 ## Stack d'appels
 
-Comme vu précédemment, un appel de fonction s'exécute dans son propre contexte ; il en va de même pour les appels récursifs. Un appel récursif induit un nouveau contexte "par-dessus", masquant l'existant, celui de l'appel récursif précédant. Lorsque l'on arrive au bout de l'exécution du code d'un appel récursif, on revient au contexte précédant, ainsi de suite, jusqu'à sortir complètement de ce "stack", cet empilement d'appels récursifs et leur contexte. 
+Comme vu précédemment, un appel de fonction s'exécute dans son propre contexte ; il en va de même pour les appels récursifs. Un appel récursif induit un nouveau contexte "par-dessus", masquant l'existant, celui de l'appel récursif précédant. Lorsque l'on arrive au bout de l'exécution du code d'un appel récursif, on revient au contexte précédent, ainsi de suite, jusqu'à sortir complètement de ce "stack", cet empilement d'appels récursifs et leur contexte. 
 
-Considérons la fonction récursive suivante.
+Considérons la fonction récursive suivante
 
 ```java
 void foo(int i) {
@@ -94,7 +98,7 @@ Et affichera en console
 
 ## Construire une solution récursive
 
-Si on construit une solution récursive pour un certain problème, cela signifie qu'il faut parvenir, dans le code de la fonction, à résoudre une *petite* partie de ce problème de sorte qu'il reste un problème similaire mais plus petit, que l'on résoudra via l'appel récursif.
+Si on construit une solution récursive pour un certain problème, cela signifie qu'il faut parvenir, dans le code de la fonction, à résoudre une *petite* partie de ce problème de sorte qu'il reste un problème similaire mais plus petit, que l'on résoudra via l'appel récursif. Il convient donc d'arriver à définir le problème comme étant un ensemble de sous-problèmes similaires.
 
 Prenons par exemple un problème qui consiste à suivre une série de directions. La fonction récursive va extraire une partie du problème, la première direction à suivre, et la résoudre ; on suit la direction indiquée. Il reste maintenant toutes les autres directions à suivre, mais on peut, pour ce faire, appeler récursivement la fonction. La condition d'arrêt sera ici lorsqu'il n'y a plus de directions à suivre.
 

@@ -15,7 +15,25 @@ En Java, une **expression** est une écriture possédant une ***valeur*** et un 
 
 La ***valeur*** d'une expression est calculée en tenant compte des valeurs contenues dans les variables apparaissant dans l'expression et des valeurs retournées par les appels de fonction. Le ***type*** de l'expression est le type de cette valeur, du résultat.
 
-Les opérateurs possibles dans une expression dépendent de son type. Comme dans des expressions mathématiques classiques, la priorité des opérateurs est respectée pour obtenir le résultat final, et on peut utiliser des parenthèses 
+Les opérateurs possibles dans une expression dépendent de son type. Comme dans des expressions mathématiques classiques, la priorité des opérateurs est respectée pour obtenir le résultat final, et on peut utiliser des parenthèses.
+
+## Evaluation
+
+L'**évaluation** est l'interprétation, par processing d'une expression pour en déduire une **valeur.** Une expression peut donc être utilisée
+
+-   Pour une assignation
+
+```java
+int i = 5;
+i = 5 * 2;
+i = i + 1;
+```
+
+-   Dans un appel de fonction
+
+```java
+println(i); // On affiche ce que contient la variable i
+```
 
 ## Expressions booléennes
 
@@ -114,7 +132,15 @@ Les sucres syntaxiques, ou *syntactic sugars*, sont des facilités, des raccourc
 
 #### Raccourcis mathématiques
 
-Pour les opérations mathématiques, Java propose des raccourcis pour les calculs de la forme *x = x \<opérateur\> \<expression\>*. C'est-à-dire quand on assigne à une variable le résultat d'une opération simple entre cette variable et une autre expression. On peut éviter de répéter la variable *x* en utilisant le sucre syntaxique correspondant *x \<opérateur\>= \<expression\>*. Ceci est valable pour les 4 opérateurs mathématiques standards `+`, `-`, `*` et `/`.
+Pour les opérations mathématiques, Java propose des raccourcis pour les calculs de la forme 
+
+*x = x \<opérateur\> \<expression\>*. 
+
+C'est-à-dire quand on assigne à une variable le résultat d'une opération simple entre cette variable et une autre expression. On peut éviter de répéter la variable *x* en utilisant le sucre syntaxique correspondant 
+
+*x \<opérateur\>= \<expression\>*. 
+
+Ceci est valable pour les 4 opérateurs mathématiques standards `+`, `-`, `*` et `/`.
 
 ```java
 int i = 0;
@@ -128,7 +154,7 @@ i *= 45 / 3; // Sucre syntaxique
 
 #### Incrémentation et décrémentation
 
-De plus, lorsque le calcul est de type *x = x + 1* ou *x = x - 1*, on peut davantage simplifier la ligne de code en utilisant les opérateurs d'incrémentation `++` et de décrémentation `--`.
+Lorsque le calcul est de type *x = x + 1* ou *x = x - 1*, on peut davantage simplifier la ligne de code en utilisant les opérateurs d'incrémentation `++` et de décrémentation `--`.
 
 ```java
 int i = 0;
@@ -142,11 +168,11 @@ i--; // Décrémentation
 
 ##### 🕵‍♀ Comme expression
 
-Les opérateurs `++` et `--` peuvent s'utiliser avant ou après la variable à incrémenter/décrémentér. Dans les deux cas, la valeur de la variable sera mise à jour avec le résultat de l'addition/soustraction avec 1.
+Les opérateurs `++` et `--` peuvent s'utiliser avant ou après la variable à incrémenter/décrémenter. Dans les deux cas, la valeur de la variable sera mise à jour avec le résultat de l'addition/soustraction avec 1.
 
-La différence réside dans le fait qu'il s'agit d'une expression ; on peut donc utiliser l'incrémentation/décrémentation comme expression pour une assignation : `int y = x++`. Dans ce cas, l'ordre dans lequel Java va effecter le calcul et l'évaluation de la valeur à assigner à la deuxième variable dépend du placement de l'opérateur `++` ou `--` :
+La différence réside dans le fait qu'il s'agit d'une expression qui sera évaluée différemment selon la position de l'opérateur.
 
-- Si l'opérateur se situe *après* la variable `x` , alors Java va d'abord évaluer la valeur actuelle de cette variable. Cette valeur sera assignée à la variable `y`, puis le calcul incrémental/décrémental sera effectué et la valeur de `x` changée
+- Si l'opérateur se situe *après* la variable `x` : `int y = x++` , alors Java va d'abord évaluer la valeur actuelle de cette variable. Cette valeur sera assignée à la variable `y`, puis le calcul incrémental ou décrémental sera effectué et la valeur de `x` changée.
 
 ```java
 int x = 0;
@@ -155,7 +181,7 @@ println(x); // Affiche 1
 println(y); // Affiche 0
 ```
 
-- Si l'opération se situe *avant* la variable `x`, c'est l'inverse. C'est d'abord l'incrémentation/décrémentation qui est faite, puis cette nouvelle valeur de `x` sera assignée à `y`.
+- Si l'opération se situe *avant* la variable `x` : `int y = ++x`, c'est l'inverse. C'est d'abord l'incrémentation ou la décrémentation qui est faite, puis cette nouvelle valeur de `x` sera assignée à `y`.
 
 ```java
 int x = 0;

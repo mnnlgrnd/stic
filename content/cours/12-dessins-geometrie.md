@@ -6,7 +6,7 @@ next_class: '13-intlist-floatlist'
 
 ## Fenêtre
 
-La fenêtre de processing est un repère à deux dimensions dans lequel une coordonnée *(x, y)* correspond à un pixel. L'axe horizontal, des x, croît de gauche à droite et l'axe vertical, des y, croît de bas en haut. L'origine *(0,0)* de ce repère est donc le coin supérieur gauche de la fenêtre.
+La fenêtre de processing est un *repère à deux dimensions* dans lequel des coordonnées *(x, y)* correspond à un *pixel*. L'axe horizontal, des *x*, croît de gauche à droite et l'axe vertical, des *y*, croît de bas en haut. L'origine *(0, 0)* de ce repère est donc le coin supérieur gauche de la fenêtre.
 
 <p align="center">
 <img src="/stic/images/grid-processing-dm.svg" class="svg-dark-mode w-50"/>
@@ -25,7 +25,7 @@ int middleGrey = 122;
 int white = 255;
 ```
 
-- En couleur ; la couleur est alors une valeur de type `color` contenant trois valeurs entières allant de 0 à 255 pour les composantes rouge, verte et bleue. On peut créer des couleurs grâce à la fonction [`color(r, g, b)`](https://processing.org/reference/color_.html) qui prend les valeurs des composantes en paramètre, ou en utilisant directement la notation hexadécimage d'une couleur.
+- En couleur ; la couleur est alors une valeur de type `color` définie par trois valeurs entières allant de 0 à 255 pour les composantes rouge, verte et bleue (on parle de RGB, en anglais). On peut créer des couleurs grâce à la fonction [`color(r, g, b)`](https://processing.org/reference/color_.html) qui prend les valeurs des composantes en paramètre, ou en utilisant directement la notation hexadécimale d'une couleur.
 
 ```
 color red = color(255, 0, 0);
@@ -37,7 +37,7 @@ color someColor = color(13, 201, 154);
 color fromHex = #ffffff;
 ```
 
-Soit une couleur RGB, de type `color`, on peut récupérer la valeur de chacune des composantes R, G, B, grâce aux fonctions [`red`](https://processing.org/reference/red_.html), [`green`](https://processing.org/reference/green_.html), [`blue`](https://processing.org/reference/blue_.html) :
+Soit une couleur RGB, de type `color`, on peut récupérer la valeur de chacune des composantes RGB grâce aux fonctions [`red`](https://processing.org/reference/red_.html), [`green`](https://processing.org/reference/green_.html)et [`blue`](https://processing.org/reference/blue_.html) :
 
 ```java
 color c = #FF10AA;
@@ -81,7 +81,7 @@ fill(color(255, 0, 0), 51); // Remplissage rouge à 20% d'opacité
 
 ### Points et lignes
 
-En processing, on peut dessiner un *point*, un pixel, grâce à la fonction [`point`](https://processing.org/reference/point_.html) qui prend en paramètre les coordonnées x et y du point.
+En processing, on peut dessiner un *point*, un pixel, grâce à la fonction [`point`](https://processing.org/reference/point_.html) qui prend en paramètre les coordonnées *(x, y)* du point.
 
 ```java
 void setup() {
@@ -110,10 +110,10 @@ void setup() {
 
 On dessine des rectangles grâce à la fonction [`rect`](https://processing.org/reference/rect_.html) qui prend toujours 4 paramètres. Ce que *sont* ces paramètres dépend du mode de dessin des rectangles ; il existe 4 modes différents :
 
-- `CORNER` : on indique les coordonnées *(x, y)* du coin supérieur gauche, la largeur *w* et la hauteur *h* du rectangle
-- `CORNERS` : on indique les coordonnées *(x1, y1)* d'un coin et les coordonnées *(x2, y2)* du coin opposé
-- `CENTER` : on indique les coordonnées *(x, y)* du centre du rectangle, la largeur *w* et la hauteur *h*
-- `RADIUS` : indique les coordonnées *(x, y)* du centre du rectangle, la moitié de la largeur *w* et la moitié de la hauteur *h* 
+- `CORNER` : on indique les coordonnées *(x, y)* du coin supérieur gauche, la largeur *w* et la hauteur *h* du rectangle.
+- `CORNERS` : on indique les coordonnées *(x1, y1)* d'un coin et les coordonnées *(x2, y2)* du coin opposé.
+- `CENTER` : on indique les coordonnées *(x, y)* du centre du rectangle, la largeur *w* et la hauteur *h*.
+- `RADIUS` : on indique les coordonnées *(x, y)* du centre du rectangle, la moitié de la largeur *w* et la moitié de la hauteur *h*.
 
 On définit le mode de dessin en appelant la fonction [`rectMode`](https://processing.org/reference/rectMode_.html) avec le mode souhaité. Le mode `CORNER` est le mode par défaut.
 
@@ -145,7 +145,7 @@ void setup() {
 }
 ```
 
-Peu importe le mode, les informations à passer à la fonction pour dessiner un rectangle nous permettent toujours d'obtenir toutes les autres informations du rectangle : les coordonnées de tous ses coins, de son centre, sa largeur et sa hauteur.
+Peu importe le mode, les informations à passer à la fonction pour dessiner un rectangle nous permettent *toujours* d'obtenir toutes les autres informations du rectangle : les coordonnées de tous ses coins, de son centre, sa largeur et sa hauteur.
 
 - `CORNER`, soit les coordonnées *(x, y)* du coin supérieur gauche, la largeur *w* et la hauteur *h* :
 	- Le coin supérieur droit est *(x + w, y)*
@@ -182,10 +182,10 @@ Peu importe le mode, les informations à passer à la fonction pour dessiner un 
 
 On dessine des ellipses grâce à la fonction [`ellipse`](https://processing.org/reference/ellipse_.html) qui prend toujours 4 paramètres. Ce que *sont* ces paramètres dépend du mode de dessin des ellipses ; il existe 4 modes différents :
 
-- `CORNER` : on indique les coordonnées *(x, y)* du coin supérieur gauche, la largeur *w* et la hauteur *h* du rectangle qui "encadre" l'ellipse à dessiner
-- `CORNERS` : on indique les coordonnées *(x1, y1)* d'un coin et les coordonnées *(x2, y2)* du coin opposé du rectangle qui "encadre" l'ellipse à dessiner
-- `CENTER` : on indique les coordonnées *(x, y)* du centre de l'ellipse, la largeur *w* (diamiètre sur l'axe horizontal) et la hauteur *h* (diamètre sur l'axe vertical)
-- `RADIUS` : indique les coordonnées *(x, y)* du centre de l'ellipse, la moitié de la largeur *w* (rayon sur l'axe horizontal) et la moitié de la hauteur *h* (rayon sur l'axe vertical)
+- `CORNER` : on indique les coordonnées *(x, y)* du coin supérieur gauche, la largeur *w* et la hauteur *h* du rectangle qui "encadre" l'ellipse à dessiner.
+- `CORNERS` : on indique les coordonnées *(x1, y1)* d'un coin et les coordonnées *(x2, y2)* du coin opposé du rectangle qui "encadre" l'ellipse à dessiner.
+- `CENTER` : on indique les coordonnées *(x, y)* du centre de l'ellipse, la largeur *w* (diamètre sur l'axe horizontal) et la hauteur *h* (diamètre sur l'axe vertical).
+- `RADIUS` : indique les coordonnées *(x, y)* du centre de l'ellipse, la moitié de la largeur *w* (rayon sur l'axe horizontal) et la moitié de la hauteur *h* (rayon sur l'axe vertical).
 
 On définit le mode de dessin en appelant la fonction [`ellipseMode`](https://processing.org/reference/ellipseMode_.html) avec le mode souhaité. Le mode `CENTER` est le mode par défaut.
 <p align="center">
@@ -204,7 +204,7 @@ Au-delà des formes géométriques, on peut également afficher du texte dans la
 On peut configurer l'apparence du texte :
 - Sa couleur, en appelant la fonction [`fill`](https://processing.org/reference/fill_.html) avec la couleur en paramètre
 - Sa taille, en appelant la fonction [`textSize`](https://processing.org/reference/textSize_.html) avec une taille en paramètre
-- Son alignment, par rapport aux coordonnées de sa position, en appelant la fonction [`textAlign`](https://processing.org/reference/textAlign_.html) avec un ou deux paramètres :
+- Son alignement, par rapport aux coordonnées de sa position, en appelant la fonction [`textAlign`](https://processing.org/reference/textAlign_.html) avec un ou deux paramètres :
 	- L'alignement horizontal, qui peut être `CENTER`, `LEFT` ou `RIGHT`
 	- L'alignement vertical qui peut être `CENTER`, `BOTTOM`, `TOP` ou `BASELINE`
 
@@ -218,6 +218,12 @@ void setup() {
   text("HELLO", width / 2, height / 2); // Affiche HELLO au milieu de la fenêtre
 }
 ```
+
+### Ordre des dessins
+
+Chaque nouveau dessin (ligne, rectangle, etc.) est réalisé "par-dessus" la version actuelle de la fenêtre. Ainsi, si on dessine par exemple consécutivement deux rectangles de même taille mais de couleur différente au même endroit, on ne verra plus que le deuxième.
+
+L'appel à [`background`](https://processing.org/reference/background_.html) remplit la fenêtre de la couleur indiquée et efface donc tout ce qui avait été dessiné avant ; c'est pourquoi on utilise en général [`background`](https://processing.org/reference/background_.html) au début de la fonction `draw` pour effacer la frame d'avant.
 
 ## Transformations 
 
@@ -281,7 +287,7 @@ On peut augmenter ou diminuer la taille des dessins grâce la transformation [`s
 
 ### `pushMatrix` et `popMatrix`
 
-Si l'on veut utiliser des transformations pour faciliter une partie de dessin, on peut se retrouver dans une situation où le nouveau système de coordonnées après cette partie ne convient pas du tout au reste du dessin. On pourrait envisager de refaire des transformations pour revenir à la situation précédente, mais l'exercice peut être pénible.
+Si l'on veut utiliser des transformations pour faciliter une partie du dessin, on peut se retrouver dans une situation où le nouveau système de coordonnées après ces transformations ne convient pas du tout au reste du dessin. On pourrait envisager de refaire des transformations pour revenir à la situation précédente, mais l'exercice peut être pénible.
 
 Processing permet de sauvegarder l'état du système de coordonnées grâce à la fonction [`pushMatrix`](https://processing.org/reference/pushMatrix_.html). Au moment où on appelle cette fonction, l'état actuel du système de coordonnées est ajouté sur une *stack*, une pile d'états. Plus tard dans le code, en appelant la fonction [`popMatrix`](https://processing.org/reference/popMatrix_.html), on récupère et rétablit le dernier état sauvegardé via [`pushMatrix`](https://processing.org/reference/pushMatrix_.html). On peut ainsi *stacker* plusieurs états et les récupérer un à un.
 
@@ -310,12 +316,12 @@ void setup() {
 ```
 
 
-> ⚠ Lorsque l'on réalise un dessin animé, toutes les transformations appliquées à l'origne et aux axes sont réinitialisés au début de chaque frame. C'est-à-dire que le dessin de chaque frame commence avec l'origine (0, 0) étant le coin supérieur gauche, et pas d'angle de rotation.
+> ⚠ Lorsque l'on réalise un dessin animé, toutes les transformations appliquées à l'origine et aux axes sont réinitialisées au début de chaque frame. C'est-à-dire que le dessin de chaque frame commence avec l'origine (0, 0) étant le coin supérieur gauche, et pas d'angle de rotation.
 
 ## Fonctions utiles
 ### Distance entre deux points
 
-Pour calculer la distance entre deux points, on peut simplement utiliser la fonction processing `dist`, qui prend les coordonnées de deux points en paramètre et renvoie la distance entre. On pourrait néanmoins facilement réécrire cette fonction
+Pour calculer la distance entre deux points, on peut simplement utiliser la fonction processing `dist`, qui prend les coordonnées de deux points en paramètre et renvoie la distance entre ces points. On pourrait néanmoins facilement réécrire cette fonction :
 
 ```java
 float distanceBetween(float x1, float y1, float x2, float y2) {
@@ -344,7 +350,7 @@ boolean isPointInRect(float x, float y,
 
 #### Entre deux rectangles
 
-Il y a intersection entre deux rectangles lorsque le coin supérieur gauche de chaque rectangle se situe plus haut et plus à gauche que le coin inférieur droit de l'autre rectangle.
+Il y a intersection entre deux rectangles lorsque le coin supérieur gauche de chaque rectangle se situe plus haut et plus à gauche que le coin inférieur droit de l'autre rectangle ; cette situation n'est possible que si les rectangles se croisent.
 
 On utilise les coordonnées du coin supérieur gauche, la largeur et la hauteur de chaque rectangle.
 
@@ -386,4 +392,4 @@ boolean isIntersectionCircles(
 }
 ```
 
-> ℹ Si on remplace `<` et `>` par `<=` et `>=` dans les conditions ci-dessus, on considère alors qu'il y a intersection si les bords se touchent ou si le point est sur le bord.
+> ℹ Si on remplace `<` et `>` par `<=` et `>=` dans les conditions ci-dessus, on considère alors qu'il y a aussi intersection si les bords se touchent ou si le point est sur le bord.

@@ -5,13 +5,17 @@ prev_class: '14-images-pixels'
 
 ## Définition
 
-Processing permet de charger des fichiers tabulaires (`csv`) pour en manipuler les données, supprimer/rajouter des lignes, etc. Ces données sont stockées dans une *table*, représentée par la classe [`Table`](https://processing.org/reference/Table.html). On peut facilement se représenter de quoi il s'agit en visualisant une feuille Excel. On peut aussi créer soi même des tables et les sauvegarder dans des fichiers.
+Processing permet de charger des fichiers tabulaires (`csv`) pour en manipuler les données, supprimer/rajouter des lignes, etc. 
 
-## Chargement, création et sauvegarde
+Ces données sont stockées dans une *table*, représentée par la classe [`Table`](https://processing.org/reference/Table.html). 
 
-### Chargement
+On peut facilement se représenter de quoi il s'agit en visualisant une feuille Excel. On peut aussi créer soi même des tables et les sauvegarder dans des fichiers.
 
-Pour charger une table depuis un fichier, il faut utiliser la fonction [`loadTable`](https://processing.org/reference/loadTable_.html), avec, en paramètre, une [chaîne de caractères](cours/10-strings.md) contenant le chemin vers le fichier. La logique de chargement est similaire à celle des [images](cours/14-images-pixels.md) ; le nom du fichier peut être un chemin relatif au sketch processing ou absolu, et on ne peut pas charger des tables avant le `setup`, s'il y a en un.
+## Chargement
+
+Pour charger une table depuis un fichier, il faut utiliser la fonction [`loadTable`](https://processing.org/reference/loadTable_.html), avec, en paramètre, une [chaîne de caractères](cours/10-strings.md) contenant le chemin vers le fichier. 
+
+La logique de chargement est similaire à celle des [images](cours/14-images-pixels.md) ; le nom du fichier peut être un chemin relatif au sketch processing ou absolu, et on ne peut pas charger des tables avant le `setup`, s'il y en a un.
 
 ```java
 Table table = loadTable("data.csv");
@@ -23,7 +27,7 @@ Lorsque l'on charge une table depuis un fichier, il est possible que le fichier 
 Table table = loadTable("data.csv", "header");
 ```
 
-### Création
+## Création
 
 Pour créer une nouvelle table, vide, il suffit simplement d'appeler le constructeur de la classe [`Table`](https://processing.org/reference/Table.html) avec le mot clé `new`.
 
@@ -31,7 +35,7 @@ Pour créer une nouvelle table, vide, il suffit simplement d'appeler le construc
 Table newTable = new Table();
 ```
 
-### Sauvegarde
+## Sauvegarde
 
 Pour sauvegarder le contenu d'une table dans un fichier, il faut appeler la fonction [`saveTable`](https://processing.org/reference/saveTable_.html) avec en paramètres la table à sauvegarder, et le nom/chemin du fichier où la sauvegarder.
 
@@ -44,10 +48,15 @@ saveTable(table, "renamedData.csv");
 
 ### Lecture
 La classe [`Table`](https://processing.org/reference/Table.html) a différentes méthodes qui permettent de lire son contenu ou les informations liées :
+
 - [`getRowCount()`](https://processing.org/reference/Table_getRowCount_.html) renvoie le nombre de lignes, sans inclure la ligne d'en-tête s'il y en a une, présentes dans la table.
+
 - [`getColumnCount()`](https://processing.org/reference/Table_getColumnCount_.html) renvoie le nombre de colonnes dans la table.
+
 - [`getString(i, j)`](https://processing.org/reference/Table_getString_.html) ou [`getString(i, name)`](https://processing.org/reference/Table_getString_.html) renvoie la valeur contenue dans la cellule en ligne *i*, colonne *j* (indice) ou *name* (en-tête) comme [`String`](cours/10-strings).
+
 - [`getFloat(i, j)`](https://processing.org/reference/Table_getFloat_.html)ou [`getFloat(i, name)`](https://processing.org/reference/Table_getFloat_.html) renvoie la valeur contenue dans la cellule en ligne *i*, colonne *j* (indice) ou *name* (en-tête) convertie en `float`.
+
 - [`getInt(i, j)`](https://processing.org/reference/Table_getInt_.html) ou [`getInt(i, name)`](https://processing.org/reference/Table_getInt_.html) renvoie la valeur contenue dans la cellule en ligne *i*, colonne *j* (indice) ou *name* (en-tête) convertie en `int`.
 
 Soit le fichier `data.csv`
@@ -70,8 +79,11 @@ println(table.getInt(1, "c2")); // Affiche 2
 ### Ecriture
 
 Pour modifier directement la valeur de cellules existantes dans la table, on peut utiliser les méthodes :
+
 - [`setString(i, j, s)`](https://processing.org/reference/Table_setString_.html) ou [`setString(i, name, s)`](https://processing.org/reference/Table_setString_.html) met la chaîne de caractères *s* dans la cellule en ligne *i*, colonne *j* (indice) ou *name* (en-tête).
+
 - [`setFloat(i, j, f)`](https://processing.org/reference/Table_setFloat_.html)ou [`setFloat(i, name, f)`](https://processing.org/reference/Table_setFloat_.html) met le nombre flottant *f* dans la cellule en ligne *i*, colonne *j* (indice) ou *name* (en-tête).
+
 - [`setInt(i, j, v)`](https://processing.org/reference/Table_setInt_.html) ou [`setInt(i, name, v)`](https://processing.org/reference/Table_setInt_.html) met la valeur entière *k* dans la cellule en ligne *i*, colonne *j* (indice) ou *name* (en-tête).
 
 Soit le fichier `data.csv`
@@ -101,15 +113,28 @@ c,3
 
 ### `TableRow`
 
-On peut accéder directement aux cellules de la table depuis l'objet table, de type [`Table`](https://processing.org/reference/Table.html), mais on peut également passer par l'étape intermédiaire qui consiste à récupérer l'objet représentant une ligne en appelant la méthode [`getRow(i)`](https://processing.org/reference/Table_getRow_.html) avec l'indice de la ligne voulue. Ces objets "lignes" sont de type [`TableRow`](https://processing.org/reference/TableRow.html), et on peut les manipuler de façon similaire à la table :
+On peut accéder directement aux cellules de la table depuis l'objet table, de type [`Table`](https://processing.org/reference/Table.html), mais on peut également passer par l'étape intermédiaire qui consiste à récupérer l'objet représentant une ligne en appelant la méthode [`getRow(i)`](https://processing.org/reference/Table_getRow_.html) avec l'indice de la ligne voulue. 
+
+Ces objets "lignes" sont de type [`TableRow`](https://processing.org/reference/TableRow.html), et on peut les manipuler de façon similaire à la table :
+
 - [`getColumnCount()`](https://processing.org/reference/TableRow_getColumnCount_.html) renvoie le nombre de colonnes dans la ligne.
-- [`getColumnTitle(j)`](https://processing.org/reference/TableRow_getColumnTitle_.html) renvoie l'en-tête de la colonne d'indice *j*
+
+- [`getColumnTitle(j)`](https://processing.org/reference/TableRow_getColumnTitle_.html) renvoie l'en-tête de la colonne d'indice *j*.
+
 - [`getString(j)`](https://processing.org/reference/TableRow_getString_.html) ou [`getString(name)`](https://processing.org/reference/TableRow_getString_.html) renvoie la valeur contenue dans la colonne *j* (indice) ou *name* (en-tête) de la ligne, comme [`String`](cours/10-strings).
+
 - [`getFloat(j)`](https://processing.org/reference/TableRow_getFloat_.html)ou [`getFloat(name)`](https://processing.org/reference/TableRow_getFloat_.html) renvoie la valeur contenue dans la colonne *j* (indice) ou *name* (en-tête) de la ligne, convertie en `float`.
+
 - [`getInt(j)`](https://processing.org/reference/TableRow_getInt_.html) ou [`getInt(name)`](https://processing.org/reference/TableRow_getInt_.html) renvoie la valeur contenue dans la colonne *j* (indice) ou *name* (en-tête) de la ligne, convertie en `int`.
+
 - [`setString(j, s)`](https://processing.org/reference/TableRow_setString_.html) ou [`setString(name, s)`](https://processing.org/reference/TableRow_setString_.html) met la chaîne de caractères *s* dans la colonne *j* (indice) ou *name* (en-tête) de la ligne.
+
 - [`setFloat(j, f)`](https://processing.org/reference/TableRow_setFloat_.html)ou [`setFloat(name, f)`](https://processing.org/reference/TableRow_setFloat_.html) met le nombre flottant *f* dans la colonne *j* (indice) ou *name* (en-tête) de la ligne.
+
 - [`setInt(j, v)`](https://processing.org/reference/TableRow_setInt_.html) ou [`setInt(name, v)`](https://processing.org/reference/TableRow_setInt_.html) met la valeur entière *k* dans la colonne *j* (indice) ou *name* (en-tête) de la ligne.
+
+
+Soit le fichier `data.csv`
 
 ```csv
 c1,c2
@@ -139,9 +164,13 @@ c,3
 ### Structure
 
 Pour modifier la structure d'une table, on peut utiliser les méthodes :
-- [`addRow()`](https://processing.org/reference/Table_addRow_.html) ajoute une nouvelle ligne (vide), tout en bas de la table. La ligne créée ([`TableRow`](https://processing.org/reference/TableRow.html)) est renvoyée. Si on passe une autre [`TableRow`](https://processing.org/reference/TableRow.html) en paramètre, la nouvelle ligne créée contiendra alors une copie des données de la ligne passée en paramètre.
+
+- [`addRow()`](https://processing.org/reference/Table_addRow_.html) ou [`addRow(tableRow)`](https://processing.org/reference/Table_addRow_.html) ajoute une nouvelle ligne, tout en bas de la table. La ligne créée ([`TableRow`](https://processing.org/reference/TableRow.html)) est renvoyée. Sans paramètre, cette ligne est vide. Si on envoie en paramètre une ligne [`TableRow`](https://processing.org/reference/TableRow.html), la nouvelle ligne contiendra une copie des données de cette ligne.
+
 - [`removeRow(i)`](https://processing.org/reference/Table_removeRow_.html) supprime la ligne à l'indice *i* dans la table.
-- [`addColumn()`](https://processing.org/reference/Table_addColumn_.html) ajoute une nouvelle colonne, vide pour chaque ligne, à droite de la table. Si on passe en paramètre le nom de la colonne, il s'agira de l'en-tête qui pourra ensuite être utilisée pour plus facilement accéder aux éléments de cette colonne. On peut éventuellement passer un deuxième paramètre correspondant au type de données attendu dans la colonne ; `Table.INT`, `Table.FLOAT` et `Table.STRING` (défaut).
+
+- [`addColumn()`](https://processing.org/reference/Table_addColumn_.html)  ou [`addColumn(name)`](https://processing.org/reference/Table_addColumn_.html) ajoute une nouvelle colonne, vide pour chaque ligne, à droite de la table. Si on passe en paramètre le nom de la colonne, il s'agira de l'en-tête qui pourra ensuite être utilisée pour plus facilement accéder aux éléments de cette colonne.
+
 - [`removeColumn(j)`](https://processing.org/reference/Table_removeColumn_.html) ou [`removeColumn(name)`](https://processing.org/reference/Table_removeColumn_.html) supprime la colonne à l'indice *j* ou avec le nom *name* spécifié en paramètre. 
 
 ```java

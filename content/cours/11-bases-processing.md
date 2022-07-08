@@ -16,17 +16,18 @@ Tout dessin processing complexe, c'est-à-dire qui va utiliser des fonctions, do
 ```java
 void setup() {
   size(800, 600);
-	
 }
 ```
 
 C'est également dans le [`setup`](https://processing.org/reference/setup_.html) qu'on va configurer les paramètres globaux du dessin comme :
 - Le framerate, le nombre de frames par seconde, via la fonction [`frameRate(x)`](https://processing.org/reference/frameRate_.html) où x sera la valeur souhaitée. Par défaut, le framerate est 60.
-- Des spécifités du dessin qui ne changeront pas ([`noStroke()`](https://processing.org/reference/noStroke_.html), etc.)
+- Des spécifités du dessin qui ne changeront pas ([`noStroke()`](https://processing.org/reference/noStroke_.html), etc.).
 
 ### Boucle principale `draw`
 
-La "boucle principale" est une boucle implicite qui permet de passer à l'étape suivante du code. En processing, cette boucle principale est la fonction [`draw`](https://processing.org/reference/draw_.html), et une étape est une *frame* du dessin. C'est donc de cette fonction que partira la majorité de la logique du code : la représentation, le dessin, et l'évolution des données.
+La "boucle principale" d'animation processing est une boucle implicite qui permet de passer à l'étape suivante du dessin. En processing, le code de cette boucle principale est à mettre dans la fonction [`draw`](https://processing.org/reference/draw_.html), et une étape est une *frame* du dessin. 
+
+C'est donc de cette fonction que partira la majorité de la logique du code : la représentation, le dessin, et l'évolution des données.
 
 ```java
 void draw() {
@@ -65,20 +66,23 @@ Pour une entrée souris, il y aura toujours les évènements :
 </p>
 
 ## Variables processing
-- `width` et `height` contiennent la largeur et la hauteur de la fenêtre processing, disponibles indéfiniment après l'appel de `size`  ou `fullScreen` dans le `setup`
+- `width` et `height` contiennent la largeur et la hauteur de la fenêtre processing, disponibles indéfiniment après l'appel de `size` ou `fullScreen` dans le `setup`
 - `frameCount` contient le numéro de la frame actuellement dessinée par `draw`. Commence à 1.
 - `frameRate` contient le nombre de frames par seconde défini par la fonction `frameRate(x)`, ou 60 par défaut.
-- `mouseX` et `mouseY` contiennent les coordonnées (x,y) de la position du curseur de la souris dans le dessin
-- `pmouseX` et `pmouseY` contiennent les coordonnées (x,y) de la position du curseur dans la frame précédente.
+- `mouseX` et `mouseY` contiennent les coordonnées *(x, y)* de la position du curseur de la souris dans le dessin
+- `pmouseX` et `pmouseY` contiennent les coordonnées *(x, y)* de la position du curseur dans la frame précédente.
 - `keyCode` contient une représentation codifée de la touche sur laquelle on vient d'appuyer : par exemple `ENTER`. Toutes les touches ne sont pas codifiées.
 - `key` contient le caractère correspondant à la touche sur laquelle on vient d'appuyer : par exemple `' '` pour la touche espace.
 - Des constantes correspondant à des "codes", comme pour les touches standards du clavier (`ENTER`, `LEFT`, `RIGHT`, etc.)
 
 ## Imprimer en console
 Pour afficher des informations dans la console de processing, il existe plusieurs fonctions :
+
 - [`println`](https://processing.org/reference/println_.html) qui prend en paramètres un nombre arbitraire de chaînes de caractères et les affichera sur une ligne séparés par un espace, puis fait un retour à la ligne dans la console
 	- `println()` fera juste un retour à la ligne dans la console
 	- `println("a")` imprimera `a` en console puis fera un retour à la ligne
 	- `println("a", "b", "c", "d", "e")` imprimera `a b c d e` en console puis fera un retour à la ligne
+
 - [`print`](https://processing.org/reference/print_.html) qui est similaire à [`println`](https://processing.org/reference/println_.html) à la différence qu'il ne fait pas de retour à la ligne à la fin. En conséquence, si on imprime par la suite quelque chose d'autre dans le code, ce sera sur la même ligne qu'avant.
+
 - [`printArray`](https://processing.org/reference/printArray_.html) qui prend en paramètre un [tableau](cours/03-tableaux-matrices.md) et affiche ses éléments (un par ligne) en console
